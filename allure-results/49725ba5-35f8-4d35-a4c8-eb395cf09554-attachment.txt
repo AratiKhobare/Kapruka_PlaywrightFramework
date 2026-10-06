@@ -1,0 +1,2 @@
+Selected currency value: INR
+Selected currency value: USD

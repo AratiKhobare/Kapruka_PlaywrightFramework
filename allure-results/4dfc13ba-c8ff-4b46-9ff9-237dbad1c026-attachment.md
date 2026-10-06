@@ -1,0 +1,6260 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e\scroll.spec.ts >> Kapruka Scrolling to Element >> Scroll to Events: Special Events
+- Location: tests\e2e\scroll.spec.ts:14:9
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.waitFor: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('heading', { name: 'Gifts to Sri Lanka - Best Sellers' }) to be visible
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link [ref=e5] [cursor=pointer]:
+      - /url: https://www.kapruka.com
+      - img "logo area" [ref=e6]
+    - generic [ref=e10]:
+      - textbox "SEARCH PRODUCTS.." [ref=e11]
+      - button "online search" [ref=e12] [cursor=pointer]:
+        - img "Search" [ref=e13]
+    - generic [ref=e14]:
+      - combobox "Select Currency" [ref=e15]:
+        - option "INR" [selected]
+        - option "USD"
+      - combobox "Select language" [ref=e16]:
+        - option "Lang"
+        - option "සිං"
+        - option "Eng" [selected]
+      - link [ref=e19] [cursor=pointer]:
+        - /url: /shops/checkout/deliveryCartViewPage.jsp
+      - link "Check Order Status" [ref=e27] [cursor=pointer]:
+        - /url: https://www.kapruka.com/contactUs/orderStatus.jsp
+        - img "status" [ref=e28]
+      - link "Login to Your Account" [ref=e30] [cursor=pointer]:
+        - /url: https://www.kapruka.com/shops/customerAccounts/accountLogin.jsp
+  - list [ref=e35]:
+    - listitem [ref=e36]:
+      - generic: All Categories
+    - listitem [ref=e39]:
+      - link "Ask Aloka, Kapruka's personal shopping assistant" [ref=e40] [cursor=pointer]:
+        - /url: https://www.kapruka.com/aloka/?src=menu
+        - generic [ref=e43]: Ask Aloka
+        - generic [ref=e44]: NEW
+    - listitem [ref=e45]:
+      - 'link "Event Icon World Boss`s Day offers" [ref=e46] [cursor=pointer]':
+        - /url: https://www.kapruka.com/online/world_boss_day
+        - img "Event Icon" [ref=e48]
+        - generic [ref=e49]: "World Boss`s Day offers"
+    - listitem [ref=e50]:
+      - link "Same Day Rush delivery" [ref=e51] [cursor=pointer]:
+        - /url: https://www.kapruka.com/online/samedaydelivery
+        - img "Same Day" [ref=e53]
+        - generic [ref=e54]: Rush delivery
+    - listitem [ref=e55]:
+      - link "On Sale" [ref=e56] [cursor=pointer]:
+        - /url: https://www.kapruka.com/online/promotions
+    - listitem [ref=e59]:
+      - link "Events" [ref=e60] [cursor=pointer]:
+        - /url: https://www.kapruka.com/shops/events_home.jsp
+    - listitem [ref=e63]:
+      - link "Brands" [ref=e64] [cursor=pointer]:
+        - /url: https://www.kapruka.com/online_brands.jsp
+    - listitem [ref=e67]:
+      - link "For You" [ref=e68] [cursor=pointer]:
+        - /url: https://www.kapruka.com/online/combogifts
+  - generic [ref=e72]:
+    - generic [ref=e74]:
+      - heading "Send Gifts For Events in Sri Lanka" [level=1] [ref=e76]
+      - generic [ref=e78]:
+        - generic [ref=e79]:
+          - link "Did you know? Kapruka is Sri Lanka's largest online shop! Read More" [ref=e80] [cursor=pointer]:
+            - /url: /contactUs/about_us.jsp
+            - generic [ref=e83]:
+              - generic [ref=e84]: Did you know?
+              - generic [ref=e85]: Kapruka is Sri Lanka's largest online shop!
+              - generic [ref=e86]: Read More
+          - heading "Best Selling Gifts For Events" [level=1] [ref=e88]
+          - link "Birthday Gifts See Offers" [ref=e89] [cursor=pointer]:
+            - /url: /online/birthday
+            - generic [ref=e91]:
+              - text: Birthday Gifts
+              - generic [ref=e92]: See Offers
+          - link "Anniversary Gifts See Offers" [ref=e93] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/anniversary
+            - generic [ref=e95]:
+              - text: Anniversary Gifts
+              - generic [ref=e96]: See Offers
+          - link "I Love You See Offers" [ref=e97] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/lover
+            - generic [ref=e99]:
+              - text: I Love You
+              - generic [ref=e100]: See Offers
+          - link "Best sellers See Offers" [ref=e101] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/bestsellers
+            - generic [ref=e103]:
+              - text: Best sellers
+              - generic [ref=e104]: See Offers
+          - link "To Father See Offers" [ref=e105] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/father
+            - generic [ref=e107]:
+              - text: To Father
+              - generic [ref=e108]: See Offers
+          - link "To Mother See Offers" [ref=e109] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/mother
+            - generic [ref=e111]:
+              - text: To Mother
+              - generic [ref=e112]: See Offers
+          - link "For Kids See Offers" [ref=e113] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/kid
+            - generic [ref=e115]:
+              - text: For Kids
+              - generic [ref=e116]: See Offers
+          - link "Weddings See Offers" [ref=e117] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/wedding
+            - generic [ref=e119]:
+              - text: Weddings
+              - generic [ref=e120]: See Offers
+          - link "New Baby See Offers" [ref=e121] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/newborn
+            - generic [ref=e123]:
+              - text: New Baby
+              - generic [ref=e124]: See Offers
+          - link "Sympathy See Offers" [ref=e125] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/sympathies
+            - generic [ref=e127]:
+              - text: Sympathy
+              - generic [ref=e128]: See Offers
+          - link "Unique Gifts See Offers" [ref=e129] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/uniquegifts
+            - generic [ref=e131]:
+              - text: Unique Gifts
+              - generic [ref=e132]: See Offers
+          - link "You and Me collection See Offers" [ref=e133] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/youandme
+            - generic [ref=e135]:
+              - text: You and Me collection
+              - generic [ref=e136]: See Offers
+          - link "Corporate Gifts See Offers" [ref=e137] [cursor=pointer]:
+            - /url: https://www.kapruka.com/corporate/gifts.jsp
+            - generic [ref=e139]:
+              - text: Corporate Gifts
+              - generic [ref=e140]: See Offers
+          - link "Graduation See Offers" [ref=e141] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/graduation
+            - generic [ref=e143]:
+              - text: Graduation
+              - generic [ref=e144]: See Offers
+          - link "Bride to Be See Offers" [ref=e145] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/bridetobe
+            - generic [ref=e147]:
+              - text: Bride to Be
+              - generic [ref=e148]: See Offers
+          - link "Mom to Be See Offers" [ref=e149] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/momtobe
+            - generic [ref=e151]:
+              - text: Mom to Be
+              - generic [ref=e152]: See Offers
+          - link "Screw you gifts See Offers" [ref=e153] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/screwyougifts
+            - generic [ref=e155]:
+              - text: Screw you gifts
+              - generic [ref=e156]: See Offers
+        - heading "Special Events" [level=2] [ref=e157]
+        - generic [ref=e158]:
+          - link "birthday Birthday" [ref=e159] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/birthday
+            - img "birthday" [ref=e161]
+            - generic [ref=e162]: Birthday
+          - link "father Father" [ref=e164] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/father
+            - img "father" [ref=e166]
+            - generic [ref=e167]: Father
+          - link "lover Lover" [ref=e169] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/lover
+            - img "lover" [ref=e171]
+            - generic [ref=e172]: Lover
+          - link "sympathies Sympathies" [ref=e174] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/sympathies
+            - img "sympathies" [ref=e176]
+            - generic [ref=e177]: Sympathies
+          - link "wedding Wedding" [ref=e179] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/wedding
+            - img "wedding" [ref=e181]
+            - generic [ref=e182]: Wedding
+          - link "newborn Newborn" [ref=e184] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/newborn
+            - img "newborn" [ref=e186]
+            - generic [ref=e187]: Newborn
+          - link "newyear Newyear" [ref=e189] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/newyear
+            - img "newyear" [ref=e191]
+            - generic [ref=e192]: Newyear
+          - link "childrensday Children's Day" [ref=e194] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/childrensday
+            - img "childrensday" [ref=e196]
+            - generic [ref=e197]: Children's Day
+          - link "teachersday Teacher's Day" [ref=e199] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/teachersday
+            - img "teachersday" [ref=e201]
+            - generic [ref=e202]: Teacher's Day
+          - link "womensday Women's Day" [ref=e204] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/womenday
+            - img "womensday" [ref=e206]
+            - generic [ref=e207]: Women's Day
+          - link "christmas Christmas" [ref=e209] [cursor=pointer]:
+            - /url: https://www.kapruka.com/online/christmas
+            - img "christmas" [ref=e211]
+            - generic [ref=e212]: Christmas
+          - link "corporate Corporate" [ref=e214] [cursor=pointer]:
+            - /url: https://www.kapruka.com/corporate/gifts.jsp
+            - img "corporate" [ref=e216]
+            - generic [ref=e217]: Corporate
+    - generic [ref=e220]:
+      - strong [ref=e221]: Payments are secure
+      - text: in Kapruka. Live order tracking for all orders islandwide.%>
+    - generic [ref=e223]:
+      - heading "Popular Searches Today:" [level=3] [ref=e225]
+      - list [ref=e226]:
+        - listitem [ref=e227]:
+          - link "OSCOO" [ref=e228] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/oscoo
+        - listitem [ref=e229]:
+          - link "MOBILES_&_TABLETS" [ref=e230] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mobiles_&_tablets
+        - listitem [ref=e231]:
+          - link "REFRIGERATORS" [ref=e232] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/refrigerators
+        - listitem [ref=e233]:
+          - link "FLASK" [ref=e234] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/flask
+        - listitem [ref=e235]:
+          - link "GATEAU" [ref=e236] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gateau
+        - listitem [ref=e237]:
+          - link "TROUSER" [ref=e238] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/trouser
+        - listitem [ref=e239]:
+          - link "CAKE WITH FLOWERS" [ref=e240] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cake_with_flowers
+        - listitem [ref=e241]:
+          - link "ORTHOPEDIC" [ref=e242] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/orthopedic
+        - listitem [ref=e243]:
+          - link "ON_THE_GO" [ref=e244] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/on_the_go
+        - listitem [ref=e245]:
+          - link "CAT" [ref=e246] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cat
+        - listitem [ref=e247]:
+          - link "CAR" [ref=e248] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/car
+        - listitem [ref=e249]:
+          - link "MOTHA" [ref=e250] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/motha
+        - listitem [ref=e251]:
+          - link "SHOES_FOR_MEN_SRI_LANKA" [ref=e252] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/shoes_for_men_sri_lanka
+        - listitem [ref=e253]:
+          - link "CAM" [ref=e254] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cam
+        - listitem [ref=e255]:
+          - link "HAMPER" [ref=e256] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hamper
+        - listitem [ref=e257]:
+          - link "WHISK" [ref=e258] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/whisk
+        - listitem [ref=e259]:
+          - link "BREAKFAST" [ref=e260] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/breakfast
+        - listitem [ref=e261]:
+          - link "MOBILE_SPA" [ref=e262] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mobile_spa
+        - listitem [ref=e263]:
+          - link "FENDER" [ref=e264] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fender
+        - listitem [ref=e265]:
+          - link "PRESSURE-COOKER" [ref=e266] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pressure-cooker
+        - listitem [ref=e267]:
+          - link "WHEY" [ref=e268] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/whey
+        - listitem [ref=e269]:
+          - link "SNEAKERS" [ref=e270] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sneakers
+        - listitem [ref=e271]:
+          - link "JAVA_CHOCOLATE" [ref=e272] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/java_chocolate
+        - listitem [ref=e273]:
+          - link "NIGHT DRESSES" [ref=e274] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/night_dresses
+        - listitem [ref=e275]:
+          - link "UNISEX" [ref=e276] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/unisex
+        - listitem [ref=e277]:
+          - link "CHAMPAIGN" [ref=e278] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/champaign
+        - listitem [ref=e279]:
+          - link "DINNER_SET" [ref=e280] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dinner_set
+        - listitem [ref=e281]:
+          - link "SHANGRI_LA" [ref=e282] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/shangri_la
+        - listitem [ref=e283]:
+          - link "EASTERN-WEAR" [ref=e284] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/eastern-wear
+        - listitem [ref=e285]:
+          - link "SOUNDCORE" [ref=e286] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/soundcore
+        - listitem [ref=e287]:
+          - link "DETAILING_PAD" [ref=e288] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/detailing_pad
+        - listitem [ref=e289]:
+          - link "AIR_CONDITIONING" [ref=e290] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/air_conditioning
+        - listitem [ref=e291]:
+          - link "KINDER" [ref=e292] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kinder
+        - listitem [ref=e293]:
+          - link "KINK" [ref=e294] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kink
+        - listitem [ref=e295]:
+          - link "SATIN_SILK_SAREE" [ref=e296] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/satin_silk_saree
+        - listitem [ref=e297]:
+          - link "RATHTHI" [ref=e298] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/raththi
+        - listitem [ref=e299]:
+          - link "COFFEE" [ref=e300] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/coffee
+        - listitem [ref=e301]:
+          - link "MAXI" [ref=e302] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/maxi
+        - listitem [ref=e303]:
+          - link "PS4 PS5 XBOX GAME PRICES SRI LANKA" [ref=e304] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ps4_ps5_xbox_game_prices_sri_lanka
+        - listitem [ref=e305]:
+          - link "CHEESE CAKE" [ref=e306] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cheese_cake
+        - listitem [ref=e307]:
+          - link "BEST SELLING FLOWERS-VALENTINE" [ref=e308] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/best_selling_flowers-valentine
+        - listitem [ref=e309]:
+          - link "BONSAI_PLANT" [ref=e310] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bonsai_plant
+        - listitem [ref=e311]:
+          - link "CAR-SEATS" [ref=e312] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/car-seats
+        - listitem [ref=e313]:
+          - link "TRAY" [ref=e314] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tray
+        - listitem [ref=e315]:
+          - link "CONDITIONER" [ref=e316] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/conditioner
+        - listitem [ref=e317]:
+          - link "FROZEN" [ref=e318] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/frozen
+        - listitem [ref=e319]:
+          - link "LED_LIGHT_ORNAMENT" [ref=e320] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/led_light_ornament
+        - listitem [ref=e321]:
+          - link "PIRIKARA" [ref=e322] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pirikara
+        - listitem [ref=e323]:
+          - link "SMART_TELEVISIONS" [ref=e324] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/smart_televisions
+        - listitem [ref=e325]:
+          - link "SCREW YOU-VALENTINE" [ref=e326] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/screw_you-valentine
+        - listitem [ref=e327]:
+          - link "MIRRORS" [ref=e328] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mirrors
+        - listitem [ref=e329]:
+          - link "SKIN-CARE-TOOLS" [ref=e330] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/skin-care-tools
+        - listitem [ref=e331]:
+          - link "VISION_CARE" [ref=e332] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vision_care
+        - listitem [ref=e333]:
+          - link "HEADSETS" [ref=e334] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/headsets
+        - listitem [ref=e335]:
+          - link "BAIRAHA" [ref=e336] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bairaha
+        - listitem [ref=e337]:
+          - link "PRAYERS" [ref=e338] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/prayers
+        - listitem [ref=e339]:
+          - link "EXERCISE_BOOK" [ref=e340] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/exercise_book
+        - listitem [ref=e341]:
+          - link "TAPES" [ref=e342] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tapes
+        - listitem [ref=e343]:
+          - link "MOBILE_CHARGERS" [ref=e344] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mobile_chargers
+        - listitem [ref=e345]:
+          - link "DRAWING_BOOKS" [ref=e346] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/drawing_books
+        - listitem [ref=e347]:
+          - link "WEDDING_JEWELLRY" [ref=e348] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wedding_jewellry
+        - listitem [ref=e349]:
+          - link "EDUCATION_AND_TEXTBOOKS" [ref=e350] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/education_and_textbooks
+        - listitem [ref=e351]:
+          - link "FEEDING" [ref=e352] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/feeding
+        - listitem [ref=e353]:
+          - link "GLOW COLLAGEN" [ref=e354] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/glow_collagen
+        - listitem [ref=e355]:
+          - link "ALOE_VERA" [ref=e356] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/aloe_vera
+        - listitem [ref=e357]:
+          - link "FERRERO ROCHER" [ref=e358] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ferrero_rocher
+        - listitem [ref=e359]:
+          - link "WHIPS" [ref=e360] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/whips
+        - listitem [ref=e361]:
+          - link "TODDLERS" [ref=e362] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/toddlers
+        - listitem [ref=e363]:
+          - link "SENSOR_MODULE" [ref=e364] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sensor_module
+        - listitem [ref=e365]:
+          - link "TONER_CARTRIDGE" [ref=e366] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/toner_cartridge
+        - listitem [ref=e367]:
+          - link "MEN'S_JEWELRY" [ref=e368] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/men's_jewelry
+        - listitem [ref=e369]:
+          - link "GIFT FOR GIRL" [ref=e370] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_for_girl
+        - listitem [ref=e371]:
+          - link "SLEEVES" [ref=e372] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sleeves
+        - listitem [ref=e373]:
+          - link "AIR-CONDITIONERS" [ref=e374] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/air-conditioners
+        - listitem [ref=e375]:
+          - link "GREENTELL" [ref=e376] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/greentell
+        - listitem [ref=e377]:
+          - link "CERAMICS" [ref=e378] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ceramics
+        - listitem [ref=e379]:
+          - link "ROMANCE" [ref=e380] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/romance
+        - listitem [ref=e381]:
+          - link "NOKIA_MOBILES" [ref=e382] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nokia_mobiles
+        - listitem [ref=e383]:
+          - link "SLEEPWEAR" [ref=e384] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sleepwear
+        - listitem [ref=e385]:
+          - link "ANIMALS" [ref=e386] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/animals
+        - listitem [ref=e387]:
+          - link "BIRTHDAY_CAKE_FOR_GIRL" [ref=e388] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birthday_cake_for_girl
+        - listitem [ref=e389]:
+          - link "DIWYARSHI" [ref=e390] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/diwyarshi
+        - listitem [ref=e391]:
+          - link "SANDWICHES" [ref=e392] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sandwiches
+        - listitem [ref=e393]:
+          - link "GAS-COOKER" [ref=e394] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gas-cooker
+        - listitem [ref=e395]:
+          - link "T-SHIRTS_&_SHIRTS" [ref=e396] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/t-shirts_&_shirts
+        - listitem [ref=e397]:
+          - link "PAPAYA" [ref=e398] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/papaya
+        - listitem [ref=e399]:
+          - link "HOUSEHOLD" [ref=e400] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/household
+        - listitem [ref=e401]:
+          - link "MOTO_TOOLS_&_MAINTENANCE" [ref=e402] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/moto_tools_&_maintenance
+        - listitem [ref=e403]:
+          - link "CHILDRENS_BOOKS" [ref=e404] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/childrens_books
+        - listitem [ref=e405]:
+          - link "THAIPONGAL" [ref=e406] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/thaipongal
+        - listitem [ref=e407]:
+          - link "I_LOVE_YOU_MUG" [ref=e408] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/i_love_you_mug
+        - listitem [ref=e409]:
+          - link "WHEY PROTEIN" [ref=e410] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/whey_protein
+        - listitem [ref=e411]:
+          - link "MOISTURIZERS" [ref=e412] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/moisturizers
+        - listitem [ref=e413]:
+          - link "COOLING_&_HEATING" [ref=e414] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cooling_&_heating
+        - listitem [ref=e415]:
+          - link "TAX_FILING" [ref=e416] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tax_filing
+        - listitem [ref=e417]:
+          - link "USB_CABLE" [ref=e418] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/usb_cable
+        - listitem [ref=e419]:
+          - link "TABLEMAT" [ref=e420] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tablemat
+        - listitem [ref=e421]:
+          - link "BRACKETS" [ref=e422] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/brackets
+        - listitem [ref=e423]:
+          - link "SALAD" [ref=e424] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/salad
+        - listitem [ref=e425]:
+          - link "KEERI" [ref=e426] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/keeri
+        - listitem [ref=e427]:
+          - link "CAKE" [ref=e428] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cake
+        - listitem [ref=e429]:
+          - link "TEES" [ref=e430] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tees
+        - listitem [ref=e431]:
+          - link "ARIEL" [ref=e432] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ariel
+        - listitem [ref=e433]:
+          - link "SANDALS" [ref=e434] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sandals
+        - listitem [ref=e435]:
+          - link "MENS-WALLETS-CARDHOLDERS" [ref=e436] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mens-wallets-cardholders
+        - listitem [ref=e437]:
+          - link "SILK_SAREES" [ref=e438] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/silk_sarees
+        - listitem [ref=e439]:
+          - link "COFFEE_MACHINE" [ref=e440] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/coffee_machine
+        - listitem [ref=e441]:
+          - link "AIR-FRESHENERS" [ref=e442] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/air-fresheners
+        - listitem [ref=e443]:
+          - link "OUD" [ref=e444] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/oud
+        - listitem [ref=e445]:
+          - link "DIVING-SNORKELING-SWIMMING-FINS" [ref=e446] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/diving-snorkeling-swimming-fins
+        - listitem [ref=e447]:
+          - link "ACADEMIC" [ref=e448] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/academic
+        - listitem [ref=e449]:
+          - link "LENS-ACCESSORIES" [ref=e450] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lens-accessories
+        - listitem [ref=e451]:
+          - link "BODY LOTION" [ref=e452] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/body_lotion
+        - listitem [ref=e453]:
+          - link "DEODORANT_SPRAY" [ref=e454] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/deodorant_spray
+        - listitem [ref=e455]:
+          - link "COATS" [ref=e456] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/coats
+        - listitem [ref=e457]:
+          - link "MATS" [ref=e458] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mats
+        - listitem [ref=e459]:
+          - link "SAREE_WEDDING" [ref=e460] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/saree_wedding
+        - listitem [ref=e461]:
+          - link "HANDBAGS AND WALLETS-VALENTINE" [ref=e462] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/handbags_and_wallets-valentine
+        - listitem [ref=e463]:
+          - link "EAR_STUD_SET" [ref=e464] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ear_stud_set
+        - listitem [ref=e465]:
+          - link "LADIES_LUNGI" [ref=e466] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ladies_lungi
+        - listitem [ref=e467]:
+          - link "VELVET" [ref=e468] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/velvet
+        - listitem [ref=e469]:
+          - link "MATH" [ref=e470] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/math
+        - listitem [ref=e471]:
+          - link "SRI_LANKAN_WINE_AND_SPIRTIS_ONLINE" [ref=e472] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sri_lankan_wine_and_spirtis_online
+        - listitem [ref=e473]:
+          - link "MENS-CLOTHING" [ref=e474] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mens-clothing
+        - listitem [ref=e475]:
+          - link "WATERFILTER" [ref=e476] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/waterfilter
+        - listitem [ref=e477]:
+          - link "DRINKING_WATER_FILTERS" [ref=e478] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/drinking_water_filters
+        - listitem [ref=e479]:
+          - link "JEANS" [ref=e480] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/jeans
+        - listitem [ref=e481]:
+          - link "RAMADAN" [ref=e482] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ramadan
+        - listitem [ref=e483]:
+          - link "GUNS" [ref=e484] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/guns
+        - listitem [ref=e485]:
+          - link "PLAY_SUITS" [ref=e486] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/play_suits
+        - listitem [ref=e487]:
+          - link "SWAROVSKI" [ref=e488] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/swarovski
+        - listitem [ref=e489]:
+          - link "CATS" [ref=e490] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cats
+        - listitem [ref=e491]:
+          - link "TOOTHPASTE" [ref=e492] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/toothpaste
+        - listitem [ref=e493]:
+          - link "MEDICINES" [ref=e494] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/medicines
+        - listitem [ref=e495]:
+          - link "CABLES" [ref=e496] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cables
+        - listitem [ref=e497]:
+          - link "EAR BUDS" [ref=e498] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ear_buds
+        - listitem [ref=e499]:
+          - link "CUTTLEFISH" [ref=e500] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cuttlefish
+        - listitem [ref=e501]:
+          - link "DOLL" [ref=e502] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/doll
+        - listitem [ref=e503]:
+          - link "GRADUATION CAKE" [ref=e504] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/graduation_cake
+        - listitem [ref=e505]:
+          - link "PERSONALIZED_GREETING_CARDS" [ref=e506] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/personalized_greeting_cards
+        - listitem [ref=e507]:
+          - link "FATHER'S_DAY" [ref=e508] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/father's_day
+        - listitem [ref=e509]:
+          - link "HIGH-SCHOOL-ENGLISH-TEXT-BOOKS" [ref=e510] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/high-school-english-text-books
+        - listitem [ref=e511]:
+          - link "SMART_TVS" [ref=e512] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/smart_tvs
+        - listitem [ref=e513]:
+          - link "FOOTBALLS" [ref=e514] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/footballs
+        - listitem [ref=e515]:
+          - link "FAN" [ref=e516] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fan
+        - listitem [ref=e517]:
+          - link "SOFT_TOY" [ref=e518] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/soft_toy
+        - listitem [ref=e519]:
+          - link "ELASTICATED_PANT" [ref=e520] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/elasticated_pant
+        - listitem [ref=e521]:
+          - link "GEN_Z" [ref=e522] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gen_z
+        - listitem [ref=e523]:
+          - link "GIFT BOX FOR MEN" [ref=e524] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_box_for_men
+        - listitem [ref=e525]:
+          - link "ELECTRIC_OVENS" [ref=e526] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/electric_ovens
+        - listitem [ref=e527]:
+          - link "CANNED_FOOD" [ref=e528] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/canned_food
+        - listitem [ref=e529]:
+          - link "BIRTHDAY GIFT PACK" [ref=e530] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birthday_gift_pack
+        - listitem [ref=e531]:
+          - link "FAB" [ref=e532] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fab
+        - listitem [ref=e533]:
+          - link "ANNIVERSARY CAKE" [ref=e534] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/anniversary_cake
+        - listitem [ref=e535]:
+          - link "LOVE CAKE" [ref=e536] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/love_cake
+        - listitem [ref=e537]:
+          - link "LIQUOR" [ref=e538] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/liquor
+        - listitem [ref=e539]:
+          - link "VIDEO_GAME" [ref=e540] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/video_game
+        - listitem [ref=e541]:
+          - link "CHAIN" [ref=e542] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chain
+        - listitem [ref=e543]:
+          - link "SUPPLEMENTS" [ref=e544] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/supplements
+        - listitem [ref=e545]:
+          - link "TRUCKS" [ref=e546] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/trucks
+        - listitem [ref=e547]:
+          - link "HIRU" [ref=e548] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hiru
+        - listitem [ref=e549]:
+          - link "HEART CAKE" [ref=e550] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/heart_cake
+        - listitem [ref=e551]:
+          - link "GOURDS" [ref=e552] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gourds
+        - listitem [ref=e553]:
+          - link "BLUETOOTH" [ref=e554] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bluetooth
+        - listitem [ref=e555]:
+          - link "BYD" [ref=e556] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/byd
+        - listitem [ref=e557]:
+          - link "MARSHMALLOWS" [ref=e558] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/marshmallows
+        - listitem [ref=e559]:
+          - link "CUP CAKES" [ref=e560] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cup_cakes
+        - listitem [ref=e561]:
+          - link "HDMI_CABLE" [ref=e562] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hdmi_cable
+        - listitem [ref=e563]:
+          - link "CLUBS" [ref=e564] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/clubs
+        - listitem [ref=e565]:
+          - link "NURSERY_FURNITURE" [ref=e566] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nursery_furniture
+        - listitem [ref=e567]:
+          - link "MANICURE" [ref=e568] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/manicure
+        - listitem [ref=e569]:
+          - link "BICYCLES" [ref=e570] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bicycles
+        - listitem [ref=e571]:
+          - link "CHRISTMAS COOKIES" [ref=e572] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/christmas_cookies
+        - listitem [ref=e573]:
+          - link "EGGLESSCAKE" [ref=e574] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/egglesscake
+        - listitem [ref=e575]:
+          - link "NET_SAREES" [ref=e576] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/net_sarees
+        - listitem [ref=e577]:
+          - link "XBOX" [ref=e578] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/xbox
+        - listitem [ref=e579]:
+          - link "PENCIL" [ref=e580] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pencil
+        - listitem [ref=e581]:
+          - link "TIMSUN" [ref=e582] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/timsun
+        - listitem [ref=e583]:
+          - link "ARTHUR" [ref=e584] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/arthur
+        - listitem [ref=e585]:
+          - link "PET_COMB" [ref=e586] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pet_comb
+        - listitem [ref=e587]:
+          - link "HAPPY BIRTHDAY" [ref=e588] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/happy_birthday
+        - listitem [ref=e589]:
+          - link "ECO-FRIENDLY" [ref=e590] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/eco-friendly
+        - listitem [ref=e591]:
+          - link "SOMERSBY-BEER" [ref=e592] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/somersby-beer
+        - listitem [ref=e593]:
+          - link "SELFIE_STICK" [ref=e594] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/selfie_stick
+        - listitem [ref=e595]:
+          - link "NOKIA" [ref=e596] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nokia
+        - listitem [ref=e597]:
+          - link "CARD" [ref=e598] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/card
+        - listitem [ref=e599]:
+          - link "CANDLES" [ref=e600] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/candles
+        - listitem [ref=e601]:
+          - link "INSTRUMENT" [ref=e602] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/instrument
+        - listitem [ref=e603]:
+          - link "MUSIC_BOX" [ref=e604] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/music_box
+        - listitem [ref=e605]:
+          - link "LOCAL_LIQUOR" [ref=e606] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/local_liquor
+        - listitem [ref=e607]:
+          - link "SOUNDBARS" [ref=e608] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/soundbars
+        - listitem [ref=e609]:
+          - link "PENDANT" [ref=e610] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pendant
+        - listitem [ref=e611]:
+          - link "MOM CAKE" [ref=e612] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mom_cake
+        - listitem [ref=e613]:
+          - link "NASI_GORENG" [ref=e614] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nasi_goreng
+        - listitem [ref=e615]:
+          - link "EDUAIDS" [ref=e616] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/eduaids
+        - listitem [ref=e617]:
+          - link "HOUSEWARMING_GIFTS" [ref=e618] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/housewarming_gifts
+        - listitem [ref=e619]:
+          - link "POWDERS" [ref=e620] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/powders
+        - listitem [ref=e621]:
+          - link "CANDLE" [ref=e622] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/candle
+        - listitem [ref=e623]:
+          - link "NECKLACE" [ref=e624] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/necklace
+        - listitem [ref=e625]:
+          - link "EVERLAST" [ref=e626] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/everlast
+        - listitem [ref=e627]:
+          - link "GIFT_TAGS" [ref=e628] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_tags
+        - listitem [ref=e629]:
+          - link "CATCH" [ref=e630] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/catch
+        - listitem [ref=e631]:
+          - link "OMAC" [ref=e632] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/omac
+        - listitem [ref=e633]:
+          - link "BABY PRODUCTS" [ref=e634] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/baby_products
+        - listitem [ref=e635]:
+          - link "NUTS" [ref=e636] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nuts
+        - listitem [ref=e637]:
+          - link "MAPED" [ref=e638] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/maped
+        - listitem [ref=e639]:
+          - link "DERMA" [ref=e640] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/derma
+        - listitem [ref=e641]:
+          - link "LAUREL" [ref=e642] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/laurel
+        - listitem [ref=e643]:
+          - link "LIGHTS" [ref=e644] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lights
+        - listitem [ref=e645]:
+          - link "STAR" [ref=e646] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/star
+        - listitem [ref=e647]:
+          - link "CHILDREN'S_BOOKS" [ref=e648] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/children's_books
+        - listitem [ref=e649]:
+          - link "PARATHA" [ref=e650] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/paratha
+        - listitem [ref=e651]:
+          - link "PENCIL CASE" [ref=e652] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pencil_case
+        - listitem [ref=e653]:
+          - link "OFFICEWEAR" [ref=e654] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/officewear
+        - listitem [ref=e655]:
+          - link "ANAL PLUG" [ref=e656] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/anal_plug
+        - listitem [ref=e657]:
+          - link "MASSAGE_OILS" [ref=e658] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/massage_oils
+        - listitem [ref=e659]:
+          - link "GENTS" [ref=e660] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gents
+        - listitem [ref=e661]:
+          - link "NETS" [ref=e662] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nets
+        - listitem [ref=e663]:
+          - link "EARTH" [ref=e664] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/earth
+        - listitem [ref=e665]:
+          - link "CAPS" [ref=e666] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/caps
+        - listitem [ref=e667]:
+          - link "VIDEO_ACCESSORIES" [ref=e668] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/video_accessories
+        - listitem [ref=e669]:
+          - link "WALLETS" [ref=e670] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wallets
+        - listitem [ref=e671]:
+          - link "WAXING" [ref=e672] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/waxing
+        - listitem [ref=e673]:
+          - link "WOMENS-COIN-PURSES" [ref=e674] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/womens-coin-purses
+        - listitem [ref=e675]:
+          - link "GARDENING" [ref=e676] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gardening
+        - listitem [ref=e677]:
+          - link "GET WELL SOON" [ref=e678] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/get_well_soon
+        - listitem [ref=e679]:
+          - link "THANIKADA_DEALS" [ref=e680] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/thanikada_deals
+        - listitem [ref=e681]:
+          - link "TRIPODS" [ref=e682] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tripods
+        - listitem [ref=e683]:
+          - link "ALLI" [ref=e684] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/alli
+        - listitem [ref=e685]:
+          - link "DUBAI_CHOCOLATE" [ref=e686] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dubai_chocolate
+        - listitem [ref=e687]:
+          - link "EAU_DE_TOILETTE" [ref=e688] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/eau_de_toilette
+        - listitem [ref=e689]:
+          - link "SARONG" [ref=e690] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sarong
+        - listitem [ref=e691]:
+          - link "BEDROOM_DECORATION" [ref=e692] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bedroom_decoration
+        - listitem [ref=e693]:
+          - link "PIERCING" [ref=e694] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/piercing
+        - listitem [ref=e695]:
+          - link "TASH_GEM" [ref=e696] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tash_gem
+        - listitem [ref=e697]:
+          - link "DOGS" [ref=e698] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dogs
+        - listitem [ref=e699]:
+          - link "EXTERIOR_VEHICLE_CARE" [ref=e700] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/exterior_vehicle_care
+        - listitem [ref=e701]:
+          - link "CANADA" [ref=e702] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/canada
+        - listitem [ref=e703]:
+          - link "SATA_SSD" [ref=e704] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sata_ssd
+        - listitem [ref=e705]:
+          - link "PADS" [ref=e706] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pads
+        - listitem [ref=e707]:
+          - link "FAB CAKE" [ref=e708] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fab_cake
+        - listitem [ref=e709]:
+          - link "KIDS" [ref=e710] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kids
+        - listitem [ref=e711]:
+          - link "HARDWARE" [ref=e712] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hardware
+        - listitem [ref=e713]:
+          - link "COSMETIC" [ref=e714] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cosmetic
+        - listitem [ref=e715]:
+          - link "WOMEN_ACTIVEWEAR" [ref=e716] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/women_activewear
+        - listitem [ref=e717]:
+          - link "CAR-SAFETY-SECURITY" [ref=e718] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/car-safety-security
+        - listitem [ref=e719]:
+          - link "DUFFEL_BAG" [ref=e720] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/duffel_bag
+        - listitem [ref=e721]:
+          - link "FERTILITY" [ref=e722] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fertility
+        - listitem [ref=e723]:
+          - link "LIQUOR-VALENTINE" [ref=e724] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/liquor-valentine
+        - listitem [ref=e725]:
+          - link "CHOCOLATE_CHIPS" [ref=e726] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chocolate_chips
+        - listitem [ref=e727]:
+          - link "BARCODE_PRINTER" [ref=e728] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/barcode_printer
+        - listitem [ref=e729]:
+          - link "HANGER" [ref=e730] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hanger
+        - listitem [ref=e731]:
+          - link "ENTRASOL" [ref=e732] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/entrasol
+        - listitem [ref=e733]:
+          - link "SECURITY" [ref=e734] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/security
+        - listitem [ref=e735]:
+          - link "PRIMA" [ref=e736] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/prima
+        - listitem [ref=e737]:
+          - link "GAMING_CONSOLE" [ref=e738] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gaming_console
+        - listitem [ref=e739]:
+          - link "AYURVEDIC" [ref=e740] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ayurvedic
+        - listitem [ref=e741]:
+          - link "UHT-MILK-MILK-POWDER" [ref=e742] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/uht-milk-milk-powder
+        - listitem [ref=e743]:
+          - link "ELECTRICAL" [ref=e744] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/electrical
+        - listitem [ref=e745]:
+          - link "PIJAMA_SET" [ref=e746] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pijama_set
+        - listitem [ref=e747]:
+          - link "SPAGHETTI" [ref=e748] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/spaghetti
+        - listitem [ref=e749]:
+          - link "LOVER" [ref=e750] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lover
+        - listitem [ref=e751]:
+          - link "HAPPY_BIRTHDAY_AMMA" [ref=e752] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/happy_birthday_amma
+        - listitem [ref=e753]:
+          - link "PADLOCK" [ref=e754] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/padlock
+        - listitem [ref=e755]:
+          - link "GIRLS" [ref=e756] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/girls
+        - listitem [ref=e757]:
+          - link "KIDS-BIRTHDAY-CAKES" [ref=e758] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kids-birthday-cakes
+        - listitem [ref=e759]:
+          - link "NATIVITY SET" [ref=e760] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nativity_set
+        - listitem [ref=e761]:
+          - link "WORLDBOSSDAY" [ref=e762] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/worldbossday
+        - listitem [ref=e763]:
+          - link "DOLLHOUSES" [ref=e764] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dollhouses
+        - listitem [ref=e765]:
+          - link "CLEANING_TOOLS" [ref=e766] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cleaning_tools
+        - listitem [ref=e767]:
+          - link "SAREES" [ref=e768] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sarees
+        - listitem [ref=e769]:
+          - link "EXTERIOR-VEHICLE-CARE" [ref=e770] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/exterior-vehicle-care
+        - listitem [ref=e771]:
+          - link "CLOCK_WALL" [ref=e772] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/clock_wall
+        - listitem [ref=e773]:
+          - link "CONTROLLER" [ref=e774] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/controller
+        - listitem [ref=e775]:
+          - link "BIRTHDAY GIFT" [ref=e776] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birthday_gift
+        - listitem [ref=e777]:
+          - link "GRAM" [ref=e778] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gram
+        - listitem [ref=e779]:
+          - link "SHALWAR" [ref=e780] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/shalwar
+        - listitem [ref=e781]:
+          - link "HAIRCOLOUR" [ref=e782] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/haircolour
+        - listitem [ref=e783]:
+          - link "WAGONS" [ref=e784] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wagons
+        - listitem [ref=e785]:
+          - link "HOUSE_WARMING_GIFT" [ref=e786] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/house_warming_gift
+        - listitem [ref=e787]:
+          - link "SAMSUNG_GALAXY" [ref=e788] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/samsung_galaxy
+        - listitem [ref=e789]:
+          - link "FACE" [ref=e790] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/face
+        - listitem [ref=e791]:
+          - link "GARLIC" [ref=e792] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/garlic
+        - listitem [ref=e793]:
+          - link "LIP_BALM" [ref=e794] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lip_balm
+        - listitem [ref=e795]:
+          - link "USBOURBON" [ref=e796] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/usbourbon
+        - listitem [ref=e797]:
+          - link "OTHERS" [ref=e798] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/others
+        - listitem [ref=e799]:
+          - link "KITCHEN" [ref=e800] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kitchen
+        - listitem [ref=e801]:
+          - link "WALL-ART" [ref=e802] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wall-art
+        - listitem [ref=e803]:
+          - link "EARPHONE" [ref=e804] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/earphone
+        - listitem [ref=e805]:
+          - link "SIGNATURE" [ref=e806] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/signature
+        - listitem [ref=e807]:
+          - link "BED SHEET" [ref=e808] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bed_sheet
+        - listitem [ref=e809]:
+          - link "COOKER" [ref=e810] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cooker
+        - listitem [ref=e811]:
+          - link "PARTY" [ref=e812] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/party
+        - listitem [ref=e813]:
+          - link "BLACK FOREST CAKE" [ref=e814] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/black_forest_cake
+        - listitem [ref=e815]:
+          - link "LEDLIGHT" [ref=e816] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ledlight
+        - listitem [ref=e817]:
+          - link "PURSE" [ref=e818] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/purse
+        - listitem [ref=e819]:
+          - link "PANTIES" [ref=e820] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/panties
+        - listitem [ref=e821]:
+          - link "CLUTCHES" [ref=e822] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/clutches
+        - listitem [ref=e823]:
+          - link "LOUNGEWEAR" [ref=e824] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/loungewear
+        - listitem [ref=e825]:
+          - link "COLOUR_PENCILS" [ref=e826] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/colour_pencils
+        - listitem [ref=e827]:
+          - link "TORCHES" [ref=e828] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/torches
+        - listitem [ref=e829]:
+          - link "SHORTS" [ref=e830] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/shorts
+        - listitem [ref=e831]:
+          - link "COMPUTER-ACCESSORIES" [ref=e832] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/computer-accessories
+        - listitem [ref=e833]:
+          - link "XIAOMI" [ref=e834] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/xiaomi
+        - listitem [ref=e835]:
+          - link "NECKLACES" [ref=e836] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/necklaces
+        - listitem [ref=e837]:
+          - link "HANDLOOM" [ref=e838] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/handloom
+        - listitem [ref=e839]:
+          - link "UGREEN" [ref=e840] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ugreen
+        - listitem [ref=e841]:
+          - link "OPTICAL" [ref=e842] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/optical
+        - listitem [ref=e843]:
+          - link "COMPUTER_GLASSES" [ref=e844] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/computer_glasses
+        - listitem [ref=e845]:
+          - link "PIZZA HUT" [ref=e846] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pizza_hut
+        - listitem [ref=e847]:
+          - link "WASHERS-DRYERS" [ref=e848] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/washers-dryers
+        - listitem [ref=e849]:
+          - link "WALL_SHELF" [ref=e850] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wall_shelf
+        - listitem [ref=e851]:
+          - link "CHOCALATE CAKE" [ref=e852] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chocalate_cake
+        - listitem [ref=e853]:
+          - link "SILICA_GEL" [ref=e854] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/silica_gel
+        - listitem [ref=e855]:
+          - link "CHOCOLATE_DAY" [ref=e856] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chocolate_day
+        - listitem [ref=e857]:
+          - link "LIGHTUPS" [ref=e858] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lightups
+        - listitem [ref=e859]:
+          - link "OSARI_SAREE" [ref=e860] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/osari_saree
+        - listitem [ref=e861]:
+          - link "HEADSET" [ref=e862] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/headset
+        - listitem [ref=e863]:
+          - link "CAKES-VALENTINE" [ref=e864] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cakes-valentine
+        - listitem [ref=e865]:
+          - link "SEALER" [ref=e866] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sealer
+        - listitem [ref=e867]:
+          - link "POWER_CABLES" [ref=e868] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/power_cables
+        - listitem [ref=e869]:
+          - link "HARNESS_STRAP_ON" [ref=e870] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/harness_strap_on
+        - listitem [ref=e871]:
+          - link "COCONUT MILK" [ref=e872] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/coconut_milk
+        - listitem [ref=e873]:
+          - link "BEDDING-SETS" [ref=e874] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bedding-sets
+        - listitem [ref=e875]:
+          - link "SOOTHERS" [ref=e876] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/soothers
+        - listitem [ref=e877]:
+          - link "SHOES" [ref=e878] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/shoes
+        - listitem [ref=e879]:
+          - link "LUGGAGE" [ref=e880] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/luggage
+        - listitem [ref=e881]:
+          - link "COMPUTER-COMPONENTS" [ref=e882] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/computer-components
+        - listitem [ref=e883]:
+          - link "THREADING" [ref=e884] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/threading
+        - listitem [ref=e885]:
+          - link "SERUM" [ref=e886] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/serum
+        - listitem [ref=e887]:
+          - link "TASH" [ref=e888] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tash
+        - listitem [ref=e889]:
+          - link "CONFETTI" [ref=e890] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/confetti
+        - listitem [ref=e891]:
+          - link "HARVEST" [ref=e892] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/harvest
+        - listitem [ref=e893]:
+          - link "WREATHS" [ref=e894] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wreaths
+        - listitem [ref=e895]:
+          - link "BUNNY_PLUSH" [ref=e896] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bunny_plush
+        - listitem [ref=e897]:
+          - link "MENS GIFT" [ref=e898] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mens_gift
+        - listitem [ref=e899]:
+          - link "SWITCHES" [ref=e900] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/switches
+        - listitem [ref=e901]:
+          - link "HANDWORK_SAREES" [ref=e902] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/handwork_sarees
+        - listitem [ref=e903]:
+          - link "CHILDRENS" [ref=e904] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/childrens
+        - listitem [ref=e905]:
+          - link "NOKIA_1100" [ref=e906] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nokia_1100
+        - listitem [ref=e907]:
+          - link "PET_WALKING" [ref=e908] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pet_walking
+        - listitem [ref=e909]:
+          - link "LACE_PAJAMAS_SET" [ref=e910] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lace_pajamas_set
+        - listitem [ref=e911]:
+          - link "CHOCOLATES" [ref=e912] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chocolates
+        - listitem [ref=e913]:
+          - link "PARTYBOX" [ref=e914] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/partybox
+        - listitem [ref=e915]:
+          - link "VASELINE" [ref=e916] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vaseline
+        - listitem [ref=e917]:
+          - link "RICE-COOKER" [ref=e918] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/rice-cooker
+        - listitem [ref=e919]:
+          - link "KANDY" [ref=e920] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kandy
+        - listitem [ref=e921]:
+          - link "LAUNDRY" [ref=e922] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/laundry
+        - listitem [ref=e923]:
+          - link "MONITOR" [ref=e924] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/monitor
+        - listitem [ref=e925]:
+          - link "CETAPHIL PRODUCTS" [ref=e926] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cetaphil_products
+        - listitem [ref=e927]:
+          - link "ROTI" [ref=e928] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/roti
+        - listitem [ref=e929]:
+          - link "BLOCKS" [ref=e930] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/blocks
+        - listitem [ref=e931]:
+          - link "INJECTOR_CLEANER" [ref=e932] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/injector_cleaner
+        - listitem [ref=e933]:
+          - link "BOTTLE" [ref=e934] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bottle
+        - listitem [ref=e935]:
+          - link "SKIN_TONER" [ref=e936] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/skin_toner
+        - listitem [ref=e937]:
+          - link "ERASERS" [ref=e938] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/erasers
+        - listitem [ref=e939]:
+          - link "MEDICAL_CARE" [ref=e940] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/medical_care
+        - listitem [ref=e941]:
+          - link "JEWELLERY AND GIFTS-VALENTINE" [ref=e942] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/jewellery_and_gifts-valentine
+        - listitem [ref=e943]:
+          - link "BATH-BODY-WORK" [ref=e944] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bath-body-work
+        - listitem [ref=e945]:
+          - link "HAIR STRAIGHTENER" [ref=e946] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hair_straightener
+        - listitem [ref=e947]:
+          - link "PHOTO" [ref=e948] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/photo
+        - listitem [ref=e949]:
+          - link "ICE CREAM" [ref=e950] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ice_cream
+        - listitem [ref=e951]:
+          - link "YOU_AND_ME" [ref=e952] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/you_and_me
+        - listitem [ref=e953]:
+          - link "SKIRTS" [ref=e954] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/skirts
+        - listitem [ref=e955]:
+          - link "WINSOR" [ref=e956] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/winsor
+        - listitem [ref=e957]:
+          - link "ORAL_CARE" [ref=e958] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/oral_care
+        - listitem [ref=e959]:
+          - link "HATCHBACKS" [ref=e960] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hatchbacks
+        - listitem [ref=e961]:
+          - link "PARTY_BOXES" [ref=e962] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/party_boxes
+        - listitem [ref=e963]:
+          - link "ROSE" [ref=e964] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/rose
+        - listitem [ref=e965]:
+          - link "MUTTON" [ref=e966] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mutton
+        - listitem [ref=e967]:
+          - link "FACIA" [ref=e968] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/facia
+        - listitem [ref=e969]:
+          - link "CEREALS" [ref=e970] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cereals
+        - listitem [ref=e971]:
+          - link "PAINTING-DECORATING" [ref=e972] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/painting-decorating
+        - listitem [ref=e973]:
+          - link "MAGAZINE" [ref=e974] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/magazine
+        - listitem [ref=e975]:
+          - link "STROLLER" [ref=e976] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/stroller
+        - listitem [ref=e977]:
+          - link "KINGSBURY" [ref=e978] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kingsbury
+        - listitem [ref=e979]:
+          - link "PIPE_CLEANERS" [ref=e980] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pipe_cleaners
+        - listitem [ref=e981]:
+          - link "JOURNAL_BOOK" [ref=e982] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/journal_book
+        - listitem [ref=e983]:
+          - link "GLOVES" [ref=e984] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gloves
+        - listitem [ref=e985]:
+          - link "CARAVAN FRESH" [ref=e986] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/caravan_fresh
+        - listitem [ref=e987]:
+          - link "SISTERSDAY" [ref=e988] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sistersday
+        - listitem [ref=e989]:
+          - link "RADIO" [ref=e990] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/radio
+        - listitem [ref=e991]:
+          - link "REGISTERS" [ref=e992] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/registers
+        - listitem [ref=e993]:
+          - link "AIRPORT_PICKUP" [ref=e994] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/airport_pickup
+        - listitem [ref=e995]:
+          - link "BIRYANI" [ref=e996] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/biryani
+        - listitem [ref=e997]:
+          - link "BLENDER" [ref=e998] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/blender
+        - listitem [ref=e999]:
+          - link "APPLE" [ref=e1000] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/apple
+        - listitem [ref=e1001]:
+          - link "CONDOMS" [ref=e1002] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/condoms
+        - listitem [ref=e1003]:
+          - link "HOSE" [ref=e1004] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hose
+        - listitem [ref=e1005]:
+          - link "MEMORY" [ref=e1006] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/memory
+        - listitem [ref=e1007]:
+          - link "CUSTOM_FRUIT_BASKETS" [ref=e1008] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/custom_fruit_baskets
+        - listitem [ref=e1009]:
+          - link "BMW" [ref=e1010] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bmw
+        - listitem [ref=e1011]:
+          - link "KIDS CAKE" [ref=e1012] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kids_cake
+        - listitem [ref=e1013]:
+          - link "USA" [ref=e1014] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/usa
+        - listitem [ref=e1015]:
+          - link "DELI" [ref=e1016] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/deli
+        - listitem [ref=e1017]:
+          - link "BAKERY_CAKES" [ref=e1018] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bakery_cakes
+        - listitem [ref=e1019]:
+          - link "CERAMIC_COATING" [ref=e1020] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ceramic_coating
+        - listitem [ref=e1021]:
+          - link "READYMADE_SAREE_BLOUSE" [ref=e1022] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/readymade_saree_blouse
+        - listitem [ref=e1023]:
+          - link "THINKING_OF_YOU_CARDS" [ref=e1024] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/thinking_of_you_cards
+        - listitem [ref=e1025]:
+          - link "DISHES" [ref=e1026] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dishes
+        - listitem [ref=e1027]:
+          - link "HOODIE" [ref=e1028] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hoodie
+        - listitem [ref=e1029]:
+          - link "BLOOD_PRESSURE" [ref=e1030] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/blood_pressure
+        - listitem [ref=e1031]:
+          - link "MENS_CLOTHING" [ref=e1032] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mens_clothing
+        - listitem [ref=e1033]:
+          - link "FOR_WIFE" [ref=e1034] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/for_wife
+        - listitem [ref=e1035]:
+          - link "PROBLEM_SOLVING_SETS" [ref=e1036] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/problem_solving_sets
+        - listitem [ref=e1037]:
+          - link "DUSTPROOF" [ref=e1038] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dustproof
+        - listitem [ref=e1039]:
+          - link "FRIENDSHIPDAY" [ref=e1040] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/friendshipday
+        - listitem [ref=e1041]:
+          - link "METAL_DILDOS" [ref=e1042] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/metal_dildos
+        - listitem [ref=e1043]:
+          - link "HAIRCUTS" [ref=e1044] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/haircuts
+        - listitem [ref=e1045]:
+          - link "STORY_BOOK" [ref=e1046] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/story_book
+        - listitem [ref=e1047]:
+          - link "DUVETS" [ref=e1048] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/duvets
+        - listitem [ref=e1049]:
+          - link "DANDRUFF" [ref=e1050] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dandruff
+        - listitem [ref=e1051]:
+          - link "MINI CAKE" [ref=e1052] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mini_cake
+        - listitem [ref=e1053]:
+          - link "PUPPETS" [ref=e1054] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/puppets
+        - listitem [ref=e1055]:
+          - link "FACEWASHES" [ref=e1056] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/facewashes
+        - listitem [ref=e1057]:
+          - link "TRAVEL" [ref=e1058] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/travel
+        - listitem [ref=e1059]:
+          - link "TOWELS" [ref=e1060] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/towels
+        - listitem [ref=e1061]:
+          - link "BEDDING" [ref=e1062] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bedding
+        - listitem [ref=e1063]:
+          - link "WHITE_CHOCOLATE" [ref=e1064] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/white_chocolate
+        - listitem [ref=e1065]:
+          - link "CARAVAN" [ref=e1066] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/caravan
+        - listitem [ref=e1067]:
+          - link "CHOCOLATE" [ref=e1068] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chocolate
+        - listitem [ref=e1069]:
+          - link "PROPS" [ref=e1070] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/props
+        - listitem [ref=e1071]:
+          - link "PLANTS_AND_FLOWERS" [ref=e1072] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/plants_and_flowers
+        - listitem [ref=e1073]:
+          - link "LEGO_SETS" [ref=e1074] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lego_sets
+        - listitem [ref=e1075]:
+          - link "CARCARE" [ref=e1076] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/carcare
+        - listitem [ref=e1077]:
+          - link "HYGIENE" [ref=e1078] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hygiene
+        - listitem [ref=e1079]:
+          - link "SAUCE" [ref=e1080] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sauce
+        - listitem [ref=e1081]:
+          - link "SUNSCREEN" [ref=e1082] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sunscreen
+        - listitem [ref=e1083]:
+          - link "SCREEN_PROTECTOR" [ref=e1084] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/screen_protector
+        - listitem [ref=e1085]:
+          - link "FOOTBALL" [ref=e1086] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/football
+        - listitem [ref=e1087]:
+          - link "DENVER" [ref=e1088] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/denver
+        - listitem [ref=e1089]:
+          - link "TEACHERS_DAY" [ref=e1090] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/teachers_day
+        - listitem [ref=e1091]:
+          - link "PRIDE" [ref=e1092] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pride
+        - listitem [ref=e1093]:
+          - link "MENS-WAISTCOATS" [ref=e1094] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mens-waistcoats
+        - listitem [ref=e1095]:
+          - link "ALMOND" [ref=e1096] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/almond
+        - listitem [ref=e1097]:
+          - link "KEYCHAIN" [ref=e1098] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/keychain
+        - listitem [ref=e1099]:
+          - link "JEDEL" [ref=e1100] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/jedel
+        - listitem [ref=e1101]:
+          - link "CRICKET_BATS" [ref=e1102] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cricket_bats
+        - listitem [ref=e1103]:
+          - link "VACUUM_PACKING" [ref=e1104] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vacuum_packing
+        - listitem [ref=e1105]:
+          - link "TYPE_C" [ref=e1106] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/type_c
+        - listitem [ref=e1107]:
+          - link "HOSE_HANGER" [ref=e1108] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hose_hanger
+        - listitem [ref=e1109]:
+          - link "BARAKA NATURALS KAPRUKA" [ref=e1110] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/baraka_naturals_kapruka
+        - listitem [ref=e1111]:
+          - link "BUTTER CAKE" [ref=e1112] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/butter_cake
+        - listitem [ref=e1113]:
+          - link "CROP_TOP" [ref=e1114] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/crop_top
+        - listitem [ref=e1115]:
+          - link "BEST SELLING COMBO OFFERS-VALENTINE" [ref=e1116] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/best_selling_combo_offers-valentine
+        - listitem [ref=e1117]:
+          - link "STORAGE_ORGANIZATION" [ref=e1118] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/storage_organization
+        - listitem [ref=e1119]:
+          - link "CHOCOLATE BOUQUET" [ref=e1120] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chocolate_bouquet
+        - listitem [ref=e1121]:
+          - link "DANKOTUWA" [ref=e1122] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dankotuwa
+        - listitem [ref=e1123]:
+          - link "HOODS" [ref=e1124] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hoods
+        - listitem [ref=e1125]:
+          - link "TOTE_BAG" [ref=e1126] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tote_bag
+        - listitem [ref=e1127]:
+          - link "DRESS_UP_PLAYSETS" [ref=e1128] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dress_up_playsets
+        - listitem [ref=e1129]:
+          - link "BLUE_LIGHT_BLOCKING_GLASSES" [ref=e1130] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/blue_light_blocking_glasses
+        - listitem [ref=e1131]:
+          - link "STITCH" [ref=e1132] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/stitch
+        - listitem [ref=e1133]:
+          - link "SHEETS" [ref=e1134] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sheets
+        - listitem [ref=e1135]:
+          - link "WEDDING GIFT" [ref=e1136] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wedding_gift
+        - listitem [ref=e1137]:
+          - link "TEDDY BEAR" [ref=e1138] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/teddy_bear
+        - listitem [ref=e1139]:
+          - link "BREAD_TOASTER" [ref=e1140] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bread_toaster
+        - listitem [ref=e1141]:
+          - link "RICE" [ref=e1142] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/rice
+        - listitem [ref=e1143]:
+          - link "TRIMS" [ref=e1144] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/trims
+        - listitem [ref=e1145]:
+          - link "YONEX" [ref=e1146] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/yonex
+        - listitem [ref=e1147]:
+          - link "LANDSCAPING" [ref=e1148] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/landscaping
+        - listitem [ref=e1149]:
+          - link "AIRPODS" [ref=e1150] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/airpods
+        - listitem [ref=e1151]:
+          - link "BALLS" [ref=e1152] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/balls
+        - listitem [ref=e1153]:
+          - link "CONGRATULATIONS CAKE" [ref=e1154] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/congratulations_cake
+        - listitem [ref=e1155]:
+          - link "HAIRBAND" [ref=e1156] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hairband
+        - listitem [ref=e1157]:
+          - link "TV-AUDIO-VIDEO-GAMING-WEARABLES" [ref=e1158] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tv-audio-video-gaming-wearables
+        - listitem [ref=e1159]:
+          - link "SKINCARE" [ref=e1160] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/skincare
+        - listitem [ref=e1161]:
+          - link "OILS" [ref=e1162] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/oils
+        - listitem [ref=e1163]:
+          - link "FURNITURE" [ref=e1164] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/furniture
+        - listitem [ref=e1165]:
+          - link "PERSONALSCALE" [ref=e1166] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/personalscale
+        - listitem [ref=e1167]:
+          - link "BAKERY" [ref=e1168] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bakery
+        - listitem [ref=e1169]:
+          - link "NEW_BORN_BABY" [ref=e1170] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/new_born_baby
+        - listitem [ref=e1171]:
+          - link "BOUQUET" [ref=e1172] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bouquet
+        - listitem [ref=e1173]:
+          - link "ELSA" [ref=e1174] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/elsa
+        - listitem [ref=e1175]:
+          - link "OVEN" [ref=e1176] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/oven
+        - listitem [ref=e1177]:
+          - link "BROWSER_BATCH" [ref=e1178] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/browser_batch
+        - listitem [ref=e1179]:
+          - link "TALC" [ref=e1180] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/talc
+        - listitem [ref=e1181]:
+          - link "MUSHROOM" [ref=e1182] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mushroom
+        - listitem [ref=e1183]:
+          - link "MOUSES" [ref=e1184] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mouses
+        - listitem [ref=e1185]:
+          - link "CHRISTMAS MUG" [ref=e1186] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/christmas_mug
+        - listitem [ref=e1187]:
+          - link "BLUETOOTH_EARPHONES" [ref=e1188] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bluetooth_earphones
+        - listitem [ref=e1189]:
+          - link "REDMI_NOTE_15" [ref=e1190] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/redmi_note_15
+        - listitem [ref=e1191]:
+          - link "SUNGLASS" [ref=e1192] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sunglass
+        - listitem [ref=e1193]:
+          - link "JAVA_LOUNGE" [ref=e1194] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/java_lounge
+        - listitem [ref=e1195]:
+          - link "WIRELESS_HEADPHONES" [ref=e1196] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wireless_headphones
+        - listitem [ref=e1197]:
+          - link "NAIL_CARE_SUPPLEMENTS" [ref=e1198] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nail_care_supplements
+        - listitem [ref=e1199]:
+          - link "MENS WALLET" [ref=e1200] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mens_wallet
+        - listitem [ref=e1201]:
+          - link "CUPCAKE_TOPPERS" [ref=e1202] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cupcake_toppers
+        - listitem [ref=e1203]:
+          - link "CANVASES" [ref=e1204] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/canvases
+        - listitem [ref=e1205]:
+          - link "PHONE" [ref=e1206] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/phone
+        - listitem [ref=e1207]:
+          - link "VENUS" [ref=e1208] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/venus
+        - listitem [ref=e1209]:
+          - link "MALEMASTURBATOR" [ref=e1210] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/malemasturbator
+        - listitem [ref=e1211]:
+          - link "MATTRESS_PADS" [ref=e1212] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mattress_pads
+        - listitem [ref=e1213]:
+          - link "BRONZE" [ref=e1214] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bronze
+        - listitem [ref=e1215]:
+          - link "RAG_DOLLS" [ref=e1216] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/rag_dolls
+        - listitem [ref=e1217]:
+          - link "BELIEFS" [ref=e1218] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/beliefs
+        - listitem [ref=e1219]:
+          - link "MUSTARD" [ref=e1220] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mustard
+        - listitem [ref=e1221]:
+          - link "VOUCHER" [ref=e1222] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/voucher
+        - listitem [ref=e1223]:
+          - link "ART-DRAWING" [ref=e1224] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/art-drawing
+        - listitem [ref=e1225]:
+          - link "REAL_ESTATE" [ref=e1226] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/real_estate
+        - listitem [ref=e1227]:
+          - link "KOKIS" [ref=e1228] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kokis
+        - listitem [ref=e1229]:
+          - link "ORAL-CARE" [ref=e1230] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/oral-care
+        - listitem [ref=e1231]:
+          - link "WIPES" [ref=e1232] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wipes
+        - listitem [ref=e1233]:
+          - link "BALL_GAG" [ref=e1234] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ball_gag
+        - listitem [ref=e1235]:
+          - link "DILDOS" [ref=e1236] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dildos
+        - listitem [ref=e1237]:
+          - link "BIKE_TIRES" [ref=e1238] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bike_tires
+        - listitem [ref=e1239]:
+          - link "CAMPING" [ref=e1240] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/camping
+        - listitem [ref=e1241]:
+          - link "NIGHTY" [ref=e1242] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nighty
+        - listitem [ref=e1243]:
+          - link "CUSHIONS" [ref=e1244] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cushions
+        - listitem [ref=e1245]:
+          - link "KHOMBA" [ref=e1246] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/khomba
+        - listitem [ref=e1247]:
+          - link "DILDO" [ref=e1248] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dildo
+        - listitem [ref=e1249]:
+          - link "LOVE_PILLOW" [ref=e1250] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/love_pillow
+        - listitem [ref=e1251]:
+          - link "WOMEN'S_SHORTS" [ref=e1252] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/women's_shorts
+        - listitem [ref=e1253]:
+          - link "WHEELS_TIRES_ACCESSORIES" [ref=e1254] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wheels_tires_accessories
+        - listitem [ref=e1255]:
+          - link "ADULT_CARE" [ref=e1256] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/adult_care
+        - listitem [ref=e1257]:
+          - link "WEED-PEST-CONTROL" [ref=e1258] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/weed-pest-control
+        - listitem [ref=e1259]:
+          - link "ORANGE-FLOWERS" [ref=e1260] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/orange-flowers
+        - listitem [ref=e1261]:
+          - link "SINGLE ROSE" [ref=e1262] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/single_rose
+        - listitem [ref=e1263]:
+          - link "CONTAINERS" [ref=e1264] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/containers
+        - listitem [ref=e1265]:
+          - link "PROMOTIONS" [ref=e1266] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/promotions
+        - listitem [ref=e1267]:
+          - link "BROWNIE" [ref=e1268] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/brownie
+        - listitem [ref=e1269]:
+          - link "EARNINGS" [ref=e1270] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/earnings
+        - listitem [ref=e1271]:
+          - link "PLUSH_TOY" [ref=e1272] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/plush_toy
+        - listitem [ref=e1273]:
+          - link "VACUUM-CLEANERS-AND-ACCESSORIES" [ref=e1274] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vacuum-cleaners-and-accessories
+        - listitem [ref=e1275]:
+          - link "EAU_DE_PARFUM" [ref=e1276] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/eau_de_parfum
+        - listitem [ref=e1277]:
+          - link "SCHOOLBAGS" [ref=e1278] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/schoolbags
+        - listitem [ref=e1279]:
+          - link "KANDYAN_OSARI_SAREE" [ref=e1280] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kandyan_osari_saree
+        - listitem [ref=e1281]:
+          - link "SYMPATHY" [ref=e1282] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sympathy
+        - listitem [ref=e1283]:
+          - link "MATTRESS_PROTECTOR" [ref=e1284] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mattress_protector
+        - listitem [ref=e1285]:
+          - link "CASUALWEAR" [ref=e1286] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/casualwear
+        - listitem [ref=e1287]:
+          - link "HEATER" [ref=e1288] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/heater
+        - listitem [ref=e1289]:
+          - link "POWDER" [ref=e1290] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/powder
+        - listitem [ref=e1291]:
+          - link "MALIBAN" [ref=e1292] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/maliban
+        - listitem [ref=e1293]:
+          - link "KUNAFA" [ref=e1294] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kunafa
+        - listitem [ref=e1295]:
+          - link "TRAVEL_BAG" [ref=e1296] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/travel_bag
+        - listitem [ref=e1297]:
+          - link "TRAMPOLINE" [ref=e1298] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/trampoline
+        - listitem [ref=e1299]:
+          - link "BRANDY" [ref=e1300] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/brandy
+        - listitem [ref=e1301]:
+          - link "BARCLAYS_COMPUTERS" [ref=e1302] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/barclays_computers
+        - listitem [ref=e1303]:
+          - link "BABY_FOOD" [ref=e1304] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/baby_food
+        - listitem [ref=e1305]:
+          - link "BLACKHEAD_REMOVER" [ref=e1306] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/blackhead_remover
+        - listitem [ref=e1307]:
+          - link "PET-SUPPLIES" [ref=e1308] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pet-supplies
+        - listitem [ref=e1309]:
+          - link "RED" [ref=e1310] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/red
+        - listitem [ref=e1311]:
+          - link "OIL_LAMP" [ref=e1312] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/oil_lamp
+        - listitem [ref=e1313]:
+          - link "EXTENDER" [ref=e1314] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/extender
+        - listitem [ref=e1315]:
+          - link "HEELS" [ref=e1316] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/heels
+        - listitem [ref=e1317]:
+          - link "DRAGON_PLUSH" [ref=e1318] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dragon_plush
+        - listitem [ref=e1319]:
+          - link "CHARGING_DOCK" [ref=e1320] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/charging_dock
+        - listitem [ref=e1321]:
+          - link "CERAMIC_POTS" [ref=e1322] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ceramic_pots
+        - listitem [ref=e1323]:
+          - link "PENCIL_BOX" [ref=e1324] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pencil_box
+        - listitem [ref=e1325]:
+          - link "EAZYKITCHEN" [ref=e1326] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/eazykitchen
+        - listitem [ref=e1327]:
+          - link "LADIES WATCH" [ref=e1328] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ladies_watch
+        - listitem [ref=e1329]:
+          - link "SPEAKERS" [ref=e1330] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/speakers
+        - listitem [ref=e1331]:
+          - link "AUTOMOTIVE-SERVICE-INSTALLATIONS" [ref=e1332] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/automotive-service-installations
+        - listitem [ref=e1333]:
+          - link "WIRELESS_CHARGERS" [ref=e1334] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wireless_chargers
+        - listitem [ref=e1335]:
+          - link "CHRISTMAS GIFT" [ref=e1336] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/christmas_gift
+        - listitem [ref=e1337]:
+          - link "GRADUATION" [ref=e1338] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/graduation
+        - listitem [ref=e1339]:
+          - link "PREVENSE" [ref=e1340] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/prevense
+        - listitem [ref=e1341]:
+          - link "ESSENTIAL OILS" [ref=e1342] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/essential_oils
+        - listitem [ref=e1343]:
+          - link "CONDOLENCE_CARDS" [ref=e1344] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/condolence_cards
+        - listitem [ref=e1345]:
+          - link "CONGRATULATIONS" [ref=e1346] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/congratulations
+        - listitem [ref=e1347]:
+          - link "BIRD" [ref=e1348] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bird
+        - listitem [ref=e1349]:
+          - link "HONDA-VEZEL" [ref=e1350] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/honda-vezel
+        - listitem [ref=e1351]:
+          - link "FURNITURE-DECOR" [ref=e1352] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/furniture-decor
+        - listitem [ref=e1353]:
+          - link "COFFEE CAKE" [ref=e1354] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/coffee_cake
+        - listitem [ref=e1355]:
+          - link "LAPTOP_BAGS" [ref=e1356] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/laptop_bags
+        - listitem [ref=e1357]:
+          - link "TECHNOLOGY" [ref=e1358] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/technology
+        - listitem [ref=e1359]:
+          - link "STORAGE-ORGANIZATION" [ref=e1360] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/storage-organization
+        - listitem [ref=e1361]:
+          - link "MARSHAMALLOWS" [ref=e1362] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/marshamallows
+        - listitem [ref=e1363]:
+          - link "VITAMIN" [ref=e1364] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vitamin
+        - listitem [ref=e1365]:
+          - link "DERWENT" [ref=e1366] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/derwent
+        - listitem [ref=e1367]:
+          - link "EYE_LENS" [ref=e1368] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/eye_lens
+        - listitem [ref=e1369]:
+          - link "ELVES" [ref=e1370] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/elves
+        - listitem [ref=e1371]:
+          - link "POWER_OUTLETS" [ref=e1372] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/power_outlets
+        - listitem [ref=e1373]:
+          - link "LIPS" [ref=e1374] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lips
+        - listitem [ref=e1375]:
+          - link "IRONS" [ref=e1376] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/irons
+        - listitem [ref=e1377]:
+          - link "VEGETABLES_FRESH_ONLINE" [ref=e1378] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vegetables_fresh_online
+        - listitem [ref=e1379]:
+          - link "TEDDIES AND GIFTS-VALENTINE" [ref=e1380] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/teddies_and_gifts-valentine
+        - listitem [ref=e1381]:
+          - link "AVENGERS" [ref=e1382] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/avengers
+        - listitem [ref=e1383]:
+          - link "PEARL_JEWELLERY" [ref=e1384] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pearl_jewellery
+        - listitem [ref=e1385]:
+          - link "TRUNK_MAT" [ref=e1386] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/trunk_mat
+        - listitem [ref=e1387]:
+          - link "BIRIYANI" [ref=e1388] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/biriyani
+        - listitem [ref=e1389]:
+          - link "PLAY_SET" [ref=e1390] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/play_set
+        - listitem [ref=e1391]:
+          - link "DIABETIC" [ref=e1392] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/diabetic
+        - listitem [ref=e1393]:
+          - link "HOT" [ref=e1394] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hot
+        - listitem [ref=e1395]:
+          - link "EAR_STUD" [ref=e1396] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ear_stud
+        - listitem [ref=e1397]:
+          - link "MAXI_SKIRT" [ref=e1398] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/maxi_skirt
+        - listitem [ref=e1399]:
+          - link "FLOWER" [ref=e1400] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/flower
+        - listitem [ref=e1401]:
+          - link "RELIGION" [ref=e1402] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/religion
+        - listitem [ref=e1403]:
+          - link "GREEN-APPLE-JUICE" [ref=e1404] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/green-apple-juice
+        - listitem [ref=e1405]:
+          - link "DIABETASOL" [ref=e1406] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/diabetasol
+        - listitem [ref=e1407]:
+          - link "STEAMER" [ref=e1408] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/steamer
+        - listitem [ref=e1409]:
+          - link "CRICKET_BALL" [ref=e1410] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cricket_ball
+        - listitem [ref=e1411]:
+          - link "SILK_SAREE" [ref=e1412] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/silk_saree
+        - listitem [ref=e1413]:
+          - link "SCARVES" [ref=e1414] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/scarves
+        - listitem [ref=e1415]:
+          - link "CULTURAL" [ref=e1416] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cultural
+        - listitem [ref=e1417]:
+          - link "KEERI SAMBA" [ref=e1418] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/keeri_samba
+        - listitem [ref=e1419]:
+          - link "MENTORING" [ref=e1420] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mentoring
+        - listitem [ref=e1421]:
+          - link "GOURMET GIFTS-VALENTINE" [ref=e1422] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gourmet_gifts-valentine
+        - listitem [ref=e1423]:
+          - link "GIFT FOR HIM" [ref=e1424] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_for_him
+        - listitem [ref=e1425]:
+          - link "PERFUMES" [ref=e1426] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/perfumes
+        - listitem [ref=e1427]:
+          - link "CONVERTER" [ref=e1428] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/converter
+        - listitem [ref=e1429]:
+          - link "NOTES" [ref=e1430] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/notes
+        - listitem [ref=e1431]:
+          - link "CHARGER" [ref=e1432] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/charger
+        - listitem [ref=e1433]:
+          - link "DIAPER" [ref=e1434] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/diaper
+        - listitem [ref=e1435]:
+          - link "UTENSILS" [ref=e1436] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/utensils
+        - listitem [ref=e1437]:
+          - link "ACCESSORIES" [ref=e1438] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/accessories
+        - listitem [ref=e1439]:
+          - link "KRAFT" [ref=e1440] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kraft
+        - listitem [ref=e1441]:
+          - link "LIPSTICK" [ref=e1442] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lipstick
+        - listitem [ref=e1443]:
+          - link "EMBROIDERY_SAREE" [ref=e1444] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/embroidery_saree
+        - listitem [ref=e1445]:
+          - link "LED-TELEVISIONS" [ref=e1446] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/led-televisions
+        - listitem [ref=e1447]:
+          - link "BATTERY" [ref=e1448] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/battery
+        - listitem [ref=e1449]:
+          - link "RAM" [ref=e1450] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ram
+        - listitem [ref=e1451]:
+          - link "BRANDEDPERFUMES" [ref=e1452] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/brandedperfumes
+        - listitem [ref=e1453]:
+          - link "SAREE_SHOPPING" [ref=e1454] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/saree_shopping
+        - listitem [ref=e1455]:
+          - link "WEB_DESIGN" [ref=e1456] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/web_design
+        - listitem [ref=e1457]:
+          - link "CAT_FOOD" [ref=e1458] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cat_food
+        - listitem [ref=e1459]:
+          - link "DRIVES" [ref=e1460] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/drives
+        - listitem [ref=e1461]:
+          - link "ROMANCE_CARDS" [ref=e1462] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/romance_cards
+        - listitem [ref=e1463]:
+          - link "INNOVEX" [ref=e1464] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/innovex
+        - listitem [ref=e1465]:
+          - link "EGR" [ref=e1466] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/egr
+        - listitem [ref=e1467]:
+          - link "COOLER_BOX" [ref=e1468] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cooler_box
+        - listitem [ref=e1469]:
+          - link "PHILIPS" [ref=e1470] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/philips
+        - listitem [ref=e1471]:
+          - link "BATH_CUP" [ref=e1472] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bath_cup
+        - listitem [ref=e1473]:
+          - link "COFFEE_MAKER" [ref=e1474] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/coffee_maker
+        - listitem [ref=e1475]:
+          - link "DISNEY" [ref=e1476] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/disney
+        - listitem [ref=e1477]:
+          - link "EARINGS" [ref=e1478] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/earings
+        - listitem [ref=e1479]:
+          - link "HARD_DRIVE" [ref=e1480] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hard_drive
+        - listitem [ref=e1481]:
+          - link "BAG" [ref=e1482] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bag
+        - listitem [ref=e1483]:
+          - link "LAPTOPS_AND_NOTEBOOKS" [ref=e1484] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/laptops_and_notebooks
+        - listitem [ref=e1485]:
+          - link "BRIDE_TO_BE" [ref=e1486] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bride_to_be
+        - listitem [ref=e1487]:
+          - link "WATER_APPLIANCES" [ref=e1488] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/water_appliances
+        - listitem [ref=e1489]:
+          - link "BEAUTY" [ref=e1490] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/beauty
+        - listitem [ref=e1491]:
+          - link "GRAMMAR" [ref=e1492] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/grammar
+        - listitem [ref=e1493]:
+          - link "GIFTS FOR SWEETHEART-VALENTINE" [ref=e1494] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gifts_for_sweetheart-valentine
+        - listitem [ref=e1495]:
+          - link "BIRTHDAY CARD" [ref=e1496] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birthday_card
+        - listitem [ref=e1497]:
+          - link "KOTTU" [ref=e1498] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kottu
+        - listitem [ref=e1499]:
+          - link "CHESS_BOARD" [ref=e1500] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chess_board
+        - listitem [ref=e1501]:
+          - link "ANIMAL" [ref=e1502] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/animal
+        - listitem [ref=e1503]:
+          - link "KEVILTON" [ref=e1504] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kevilton
+        - listitem [ref=e1505]:
+          - link "BEDDING-BATH" [ref=e1506] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bedding-bath
+        - listitem [ref=e1507]:
+          - link "SOFT TOYS" [ref=e1508] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/soft_toys
+        - listitem [ref=e1509]:
+          - link "EPSON" [ref=e1510] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/epson
+        - listitem [ref=e1511]:
+          - link "TRAINING" [ref=e1512] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/training
+        - listitem [ref=e1513]:
+          - link "BRIEF" [ref=e1514] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/brief
+        - listitem [ref=e1515]:
+          - link "KITCHEN ITEMS" [ref=e1516] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kitchen_items
+        - listitem [ref=e1517]:
+          - link "HERO" [ref=e1518] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hero
+        - listitem [ref=e1519]:
+          - link "BREADTALK" [ref=e1520] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/breadtalk
+        - listitem [ref=e1521]:
+          - link "LILY" [ref=e1522] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lily
+        - listitem [ref=e1523]:
+          - link "TABS" [ref=e1524] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tabs
+        - listitem [ref=e1525]:
+          - link "BOYS" [ref=e1526] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/boys
+        - listitem [ref=e1527]:
+          - link "CASSAVA_CHIPS" [ref=e1528] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cassava_chips
+        - listitem [ref=e1529]:
+          - link "CUPCAKE" [ref=e1530] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cupcake
+        - listitem [ref=e1531]:
+          - link "GAME" [ref=e1532] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/game
+        - listitem [ref=e1533]:
+          - link "HOUSES" [ref=e1534] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/houses
+        - listitem [ref=e1535]:
+          - link "SPORTSWEAR" [ref=e1536] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sportswear
+        - listitem [ref=e1537]:
+          - link "HOME-DECOR" [ref=e1538] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/home-decor
+        - listitem [ref=e1539]:
+          - link "STATIONERY_GIFTS" [ref=e1540] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/stationery_gifts
+        - listitem [ref=e1541]:
+          - link "ODOMOS_MOSQUITO_REPELLENT" [ref=e1542] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/odomos_mosquito_repellent
+        - listitem [ref=e1543]:
+          - link "BRIDE" [ref=e1544] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bride
+        - listitem [ref=e1545]:
+          - link "PARTY_CAKES" [ref=e1546] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/party_cakes
+        - listitem [ref=e1547]:
+          - link "BLUETOOTH_HEADSET" [ref=e1548] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bluetooth_headset
+        - listitem [ref=e1549]:
+          - link "MOSES" [ref=e1550] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/moses
+        - listitem [ref=e1551]:
+          - link "FRELLA" [ref=e1552] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/frella
+        - listitem [ref=e1553]:
+          - link "CAKE TOPPER" [ref=e1554] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cake_topper
+        - listitem [ref=e1555]:
+          - link "GAMING_ACCESSORIES" [ref=e1556] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gaming_accessories
+        - listitem [ref=e1557]:
+          - link "PROMISE_RING" [ref=e1558] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/promise_ring
+        - listitem [ref=e1559]:
+          - link "CRYSTAL BALL" [ref=e1560] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/crystal_ball
+        - listitem [ref=e1561]:
+          - link "BURBERRY" [ref=e1562] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/burberry
+        - listitem [ref=e1563]:
+          - link "EGGLESS" [ref=e1564] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/eggless
+        - listitem [ref=e1565]:
+          - link "DATES" [ref=e1566] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dates
+        - listitem [ref=e1567]:
+          - link "SPAS" [ref=e1568] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/spas
+        - listitem [ref=e1569]:
+          - link "GROOMING" [ref=e1570] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/grooming
+        - listitem [ref=e1571]:
+          - link "SCHOOL_ESSENTIALS" [ref=e1572] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/school_essentials
+        - listitem [ref=e1573]:
+          - link "THONG" [ref=e1574] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/thong
+        - listitem [ref=e1575]:
+          - link "SOAP_HOLDER" [ref=e1576] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/soap_holder
+        - listitem [ref=e1577]:
+          - link "SILVER_RING" [ref=e1578] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/silver_ring
+        - listitem [ref=e1579]:
+          - link "REDMI" [ref=e1580] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/redmi
+        - listitem [ref=e1581]:
+          - link "FASHION AND COSMETICS-VALENTINE" [ref=e1582] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fashion_and_cosmetics-valentine
+        - listitem [ref=e1583]:
+          - link "CETAPHIL_PRODUCTS" [ref=e1584] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cetaphil_products
+        - listitem [ref=e1585]:
+          - link "SHIRTS" [ref=e1586] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/shirts
+        - listitem [ref=e1587]:
+          - link "WATERS EDGE" [ref=e1588] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/waters_edge
+        - listitem [ref=e1589]:
+          - link "SHOOTING" [ref=e1590] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/shooting
+        - listitem [ref=e1591]:
+          - link "LADIES_WALLET" [ref=e1592] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ladies_wallet
+        - listitem [ref=e1593]:
+          - link "VACUUM_CLEANER" [ref=e1594] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vacuum_cleaner
+        - listitem [ref=e1595]:
+          - link "BOWL" [ref=e1596] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bowl
+        - listitem [ref=e1597]:
+          - link "RULERS" [ref=e1598] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/rulers
+        - listitem [ref=e1599]:
+          - link "WALL_LIGHT_LAMP_DESIGN" [ref=e1600] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wall_light_lamp_design
+        - listitem [ref=e1601]:
+          - link "BIKE" [ref=e1602] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bike
+        - listitem [ref=e1603]:
+          - link "RED ROSE" [ref=e1604] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/red_rose
+        - listitem [ref=e1605]:
+          - link "ARTIFICIAL" [ref=e1606] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/artificial
+        - listitem [ref=e1607]:
+          - link "EDITING" [ref=e1608] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/editing
+        - listitem [ref=e1609]:
+          - link "TOOL_STORAGE" [ref=e1610] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tool_storage
+        - listitem [ref=e1611]:
+          - link "TOILETRY" [ref=e1612] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/toiletry
+        - listitem [ref=e1613]:
+          - link "TROLLEY_BAG" [ref=e1614] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/trolley_bag
+        - listitem [ref=e1615]:
+          - link "POMEGRANATE" [ref=e1616] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pomegranate
+        - listitem [ref=e1617]:
+          - link "LOVE" [ref=e1618] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/love
+        - listitem [ref=e1619]:
+          - link "WOMENS_CLOTHING" [ref=e1620] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/womens_clothing
+        - listitem [ref=e1621]:
+          - link "BERRIES" [ref=e1622] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/berries
+        - listitem [ref=e1623]:
+          - link "KEYBOARDS" [ref=e1624] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/keyboards
+        - listitem [ref=e1625]:
+          - link "SPORTS" [ref=e1626] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sports
+        - listitem [ref=e1627]:
+          - link "ANTIOXIDANTS" [ref=e1628] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/antioxidants
+        - listitem [ref=e1629]:
+          - link "IPAD" [ref=e1630] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ipad
+        - listitem [ref=e1631]:
+          - link "FACE-MASK" [ref=e1632] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/face-mask
+        - listitem [ref=e1633]:
+          - link "HISTORY" [ref=e1634] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/history
+        - listitem [ref=e1635]:
+          - link "BARBIE" [ref=e1636] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/barbie
+        - listitem [ref=e1637]:
+          - link "DHAL" [ref=e1638] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dhal
+        - listitem [ref=e1639]:
+          - link "C-VITAMIN" [ref=e1640] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/c-vitamin
+        - listitem [ref=e1641]:
+          - link "GRADUATION TEDDY" [ref=e1642] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/graduation_teddy
+        - listitem [ref=e1643]:
+          - link "MICROWAVE" [ref=e1644] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/microwave
+        - listitem [ref=e1645]:
+          - link "GIFTFORKID" [ref=e1646] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/giftforkid
+        - listitem [ref=e1647]:
+          - link "WALKINGSTICK" [ref=e1648] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/walkingstick
+        - listitem [ref=e1649]:
+          - link "HUSBAND" [ref=e1650] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/husband
+        - listitem [ref=e1651]:
+          - link "CHRISTMAS TREE" [ref=e1652] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/christmas_tree
+        - listitem [ref=e1653]:
+          - link "WOMEN PERFUME" [ref=e1654] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/women_perfume
+        - listitem [ref=e1655]:
+          - link "ADIDAS" [ref=e1656] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/adidas
+        - listitem [ref=e1657]:
+          - link "ENTERTAINMENT" [ref=e1658] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/entertainment
+        - listitem [ref=e1659]:
+          - link "EARRINGS" [ref=e1660] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/earrings
+        - listitem [ref=e1661]:
+          - link "POWERBANKS" [ref=e1662] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/powerbanks
+        - listitem [ref=e1663]:
+          - link "SWEETS" [ref=e1664] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sweets
+        - listitem [ref=e1665]:
+          - link "SUNFLOWER_OIL" [ref=e1666] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sunflower_oil
+        - listitem [ref=e1667]:
+          - link "SPRING-ONIONS" [ref=e1668] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/spring-onions
+        - listitem [ref=e1669]:
+          - link "SCENTED CANDLE" [ref=e1670] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/scented_candle
+        - listitem [ref=e1671]:
+          - link "UAE" [ref=e1672] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/uae
+        - listitem [ref=e1673]:
+          - link "WALL_ART" [ref=e1674] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wall_art
+        - listitem [ref=e1675]:
+          - link "GIFT VOUCHERS-VALENTINE" [ref=e1676] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_vouchers-valentine
+        - listitem [ref=e1677]:
+          - link "THERMOMETER" [ref=e1678] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/thermometer
+        - listitem [ref=e1679]:
+          - link "FLOWER BOUQUET" [ref=e1680] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/flower_bouquet
+        - listitem [ref=e1681]:
+          - link "MINNIE_MOUSE" [ref=e1682] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/minnie_mouse
+        - listitem [ref=e1683]:
+          - link "OLIVE OIL" [ref=e1684] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/olive_oil
+        - listitem [ref=e1685]:
+          - link "BIRTHDAY CAKE FOR KIDS" [ref=e1686] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birthday_cake_for_kids
+        - listitem [ref=e1687]:
+          - link "CASUAL" [ref=e1688] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/casual
+        - listitem [ref=e1689]:
+          - link "HALF_SAREE" [ref=e1690] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/half_saree
+        - listitem [ref=e1691]:
+          - link "MOTHER" [ref=e1692] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mother
+        - listitem [ref=e1693]:
+          - link "LIPCARE" [ref=e1694] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lipcare
+        - listitem [ref=e1695]:
+          - link "TRIPOD" [ref=e1696] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tripod
+        - listitem [ref=e1697]:
+          - link "SHAVING" [ref=e1698] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/shaving
+        - listitem [ref=e1699]:
+          - link "VACUUMS" [ref=e1700] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vacuums
+        - listitem [ref=e1701]:
+          - link "WIND_SHIELD" [ref=e1702] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wind_shield
+        - listitem [ref=e1703]:
+          - link "OFFERINGS" [ref=e1704] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/offerings
+        - listitem [ref=e1705]:
+          - link "SADDLE" [ref=e1706] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/saddle
+        - listitem [ref=e1707]:
+          - link "HULK" [ref=e1708] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hulk
+        - listitem [ref=e1709]:
+          - link "NEW YEAR CAKE" [ref=e1710] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/new_year_cake
+        - listitem [ref=e1711]:
+          - link "CASES" [ref=e1712] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cases
+        - listitem [ref=e1713]:
+          - link "DENIM" [ref=e1714] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/denim
+        - listitem [ref=e1715]:
+          - link "DARK" [ref=e1716] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dark
+        - listitem [ref=e1717]:
+          - link "DRY_FISH" [ref=e1718] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dry_fish
+        - listitem [ref=e1719]:
+          - link "BIRTHDAY GIFTS" [ref=e1720] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birthday_gifts
+        - listitem [ref=e1721]:
+          - link "LOTION" [ref=e1722] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lotion
+        - listitem [ref=e1723]:
+          - link "PRINTER" [ref=e1724] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/printer
+        - listitem [ref=e1725]:
+          - link "LILLY" [ref=e1726] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lilly
+        - listitem [ref=e1727]:
+          - link "CURLER" [ref=e1728] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/curler
+        - listitem [ref=e1729]:
+          - link "LADDER" [ref=e1730] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ladder
+        - listitem [ref=e1731]:
+          - link "PERSONAL_GROWTH" [ref=e1732] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/personal_growth
+        - listitem [ref=e1733]:
+          - link "HANDMADE_DOLLS" [ref=e1734] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/handmade_dolls
+        - listitem [ref=e1735]:
+          - link "CODING" [ref=e1736] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/coding
+        - listitem [ref=e1737]:
+          - link "SMARTPHONE" [ref=e1738] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/smartphone
+        - listitem [ref=e1739]:
+          - link "CAR_AUDIO" [ref=e1740] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/car_audio
+        - listitem [ref=e1741]:
+          - link "LEEKS" [ref=e1742] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/leeks
+        - listitem [ref=e1743]:
+          - link "BIRTH DAY CAKE" [ref=e1744] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birth_day_cake
+        - listitem [ref=e1745]:
+          - link "TUBES" [ref=e1746] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tubes
+        - listitem [ref=e1747]:
+          - link "FRIDGES" [ref=e1748] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fridges
+        - listitem [ref=e1749]:
+          - link "DAD_CAKE" [ref=e1750] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dad_cake
+        - listitem [ref=e1751]:
+          - link "PANTS" [ref=e1752] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pants
+        - listitem [ref=e1753]:
+          - link "GAMING_ROOM_ACCESSORIES" [ref=e1754] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gaming_room_accessories
+        - listitem [ref=e1755]:
+          - link "DECORATIVE_CORDS" [ref=e1756] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/decorative_cords
+        - listitem [ref=e1757]:
+          - link "SRI_LANKAN_PRODUCTS" [ref=e1758] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sri_lankan_products
+        - listitem [ref=e1759]:
+          - link "KKY" [ref=e1760] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kky
+        - listitem [ref=e1761]:
+          - link "TEFAL" [ref=e1762] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tefal
+        - listitem [ref=e1763]:
+          - link "HOME-SERVICES-SRI-LANKA" [ref=e1764] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/home-services-sri-lanka
+        - listitem [ref=e1765]:
+          - link "BOOTS" [ref=e1766] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/boots
+        - listitem [ref=e1767]:
+          - link "WHEEL" [ref=e1768] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wheel
+        - listitem [ref=e1769]:
+          - link "KITHUL" [ref=e1770] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kithul
+        - listitem [ref=e1771]:
+          - link "WATER-PUMPS" [ref=e1772] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/water-pumps
+        - listitem [ref=e1773]:
+          - link "WELLNESS_FOR_MOMS" [ref=e1774] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wellness_for_moms
+        - listitem [ref=e1775]:
+          - link "BATIK_SAREE" [ref=e1776] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/batik_saree
+        - listitem [ref=e1777]:
+          - link "HALLOWEEN" [ref=e1778] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/halloween
+        - listitem [ref=e1779]:
+          - link "ELECTRONIC" [ref=e1780] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/electronic
+        - listitem [ref=e1781]:
+          - link "VEGETABLES" [ref=e1782] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vegetables
+        - listitem [ref=e1783]:
+          - link "CASHEW" [ref=e1784] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cashew
+        - listitem [ref=e1785]:
+          - link "VOUCHERS" [ref=e1786] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vouchers
+        - listitem [ref=e1787]:
+          - link "CHARGER_DUAL" [ref=e1788] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/charger_dual
+        - listitem [ref=e1789]:
+          - link "YOGA" [ref=e1790] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/yoga
+        - listitem [ref=e1791]:
+          - link "VINYL" [ref=e1792] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vinyl
+        - listitem [ref=e1793]:
+          - link "SNACKS" [ref=e1794] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/snacks
+        - listitem [ref=e1795]:
+          - link "MAKEUP SET" [ref=e1796] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/makeup_set
+        - listitem [ref=e1797]:
+          - link "APPLEIPHONE" [ref=e1798] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/appleiphone
+        - listitem [ref=e1799]:
+          - link "SMALL CAKE" [ref=e1800] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/small_cake
+        - listitem [ref=e1801]:
+          - link "LABELS" [ref=e1802] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/labels
+        - listitem [ref=e1803]:
+          - link "CONSOLES" [ref=e1804] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/consoles
+        - listitem [ref=e1805]:
+          - link "BIRTHDAY_MUG" [ref=e1806] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birthday_mug
+        - listitem [ref=e1807]:
+          - link "NEON_LIGHTS" [ref=e1808] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/neon_lights
+        - listitem [ref=e1809]:
+          - link "CAR_CHARGERS" [ref=e1810] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/car_chargers
+        - listitem [ref=e1811]:
+          - link "BODY-WASH" [ref=e1812] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/body-wash
+        - listitem [ref=e1813]:
+          - link "ANKER_POWERBANK" [ref=e1814] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/anker_powerbank
+        - listitem [ref=e1815]:
+          - link "SPICES" [ref=e1816] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/spices
+        - listitem [ref=e1817]:
+          - link "VACUUM" [ref=e1818] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vacuum
+        - listitem [ref=e1819]:
+          - link "CLOTHING_AND_FASHION" [ref=e1820] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/clothing_and_fashion
+        - listitem [ref=e1821]:
+          - link "GIFT_SETS" [ref=e1822] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_sets
+        - listitem [ref=e1823]:
+          - link "BEST_SELLERS" [ref=e1824] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/best_sellers
+        - listitem [ref=e1825]:
+          - link "SOCIAL_SCIENCE" [ref=e1826] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/social_science
+        - listitem [ref=e1827]:
+          - link "SEX TOYS" [ref=e1828] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sex_toys
+        - listitem [ref=e1829]:
+          - link "TEMPERED_GLASS" [ref=e1830] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tempered_glass
+        - listitem [ref=e1831]:
+          - link "SALON_AT_HOME_MEN" [ref=e1832] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/salon_at_home_men
+        - listitem [ref=e1833]:
+          - link "BEST_GIFTS_FOR_YOUR_GRANDPARENTS" [ref=e1834] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/best_gifts_for_your_grandparents
+        - listitem [ref=e1835]:
+          - link "RAMEN" [ref=e1836] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ramen
+        - listitem [ref=e1837]:
+          - link "PETCARE" [ref=e1838] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/petcare
+        - listitem [ref=e1839]:
+          - link "COFFEEMAKERS" [ref=e1840] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/coffeemakers
+        - listitem [ref=e1841]:
+          - link "SUNGLASSES" [ref=e1842] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sunglasses
+        - listitem [ref=e1843]:
+          - link "ORNAMENTS" [ref=e1844] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ornaments
+        - listitem [ref=e1845]:
+          - link "FUNERAL" [ref=e1846] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/funeral
+        - listitem [ref=e1847]:
+          - link "KIDS_BAG" [ref=e1848] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kids_bag
+        - listitem [ref=e1849]:
+          - link "CAMERA" [ref=e1850] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/camera
+        - listitem [ref=e1851]:
+          - link "LAPTOP_SLEEVES" [ref=e1852] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/laptop_sleeves
+        - listitem [ref=e1853]:
+          - link "HONOR" [ref=e1854] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/honor
+        - listitem [ref=e1855]:
+          - link "EYEGLASSES" [ref=e1856] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/eyeglasses
+        - listitem [ref=e1857]:
+          - link "FOOD-PREPARATION" [ref=e1858] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/food-preparation
+        - listitem [ref=e1859]:
+          - link "RUGS" [ref=e1860] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/rugs
+        - listitem [ref=e1861]:
+          - link "ARTIFICIAL FLOWERS" [ref=e1862] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/artificial_flowers
+        - listitem [ref=e1863]:
+          - link "PET_HEALTH" [ref=e1864] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pet_health
+        - listitem [ref=e1865]:
+          - link "WATER_FILTERS" [ref=e1866] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/water_filters
+        - listitem [ref=e1867]:
+          - link "MARIO" [ref=e1868] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mario
+        - listitem [ref=e1869]:
+          - link "CLIPPER" [ref=e1870] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/clipper
+        - listitem [ref=e1871]:
+          - link "CLEANING-PRODUCTS" [ref=e1872] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cleaning-products
+        - listitem [ref=e1873]:
+          - link "COLOGNE" [ref=e1874] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cologne
+        - listitem [ref=e1875]:
+          - link "TOYSSET" [ref=e1876] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/toysset
+        - listitem [ref=e1877]:
+          - link "WASHING MACHINE" [ref=e1878] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/washing_machine
+        - listitem [ref=e1879]:
+          - link "TENNIS_BALLS" [ref=e1880] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tennis_balls
+        - listitem [ref=e1881]:
+          - link "SILK" [ref=e1882] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/silk
+        - listitem [ref=e1883]:
+          - link "GREETING CARDS-VALENTINE" [ref=e1884] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/greeting_cards-valentine
+        - listitem [ref=e1885]:
+          - link "VOGUE" [ref=e1886] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vogue
+        - listitem [ref=e1887]:
+          - link "BRUSH" [ref=e1888] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/brush
+        - listitem [ref=e1889]:
+          - link "BANANA" [ref=e1890] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/banana
+        - listitem [ref=e1891]:
+          - link "LILIES" [ref=e1892] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lilies
+        - listitem [ref=e1893]:
+          - link "TOMAHAWK" [ref=e1894] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tomahawk
+        - listitem [ref=e1895]:
+          - link "SEX TOY" [ref=e1896] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sex_toy
+        - listitem [ref=e1897]:
+          - link "HOT WHEELS" [ref=e1898] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hot_wheels
+        - listitem [ref=e1899]:
+          - link "FOLDABLE" [ref=e1900] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/foldable
+        - listitem [ref=e1901]:
+          - link "FISH_OIL_AND_OMEGA" [ref=e1902] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fish_oil_and_omega
+        - listitem [ref=e1903]:
+          - link "BICYCLE" [ref=e1904] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bicycle
+        - listitem [ref=e1905]:
+          - link "BOOK" [ref=e1906] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/book
+        - listitem [ref=e1907]:
+          - link "WOMENSWATCH" [ref=e1908] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/womenswatch
+        - listitem [ref=e1909]:
+          - link "CCTV" [ref=e1910] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cctv
+        - listitem [ref=e1911]:
+          - link "FRIED" [ref=e1912] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fried
+        - listitem [ref=e1913]:
+          - link "PANASONIC" [ref=e1914] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/panasonic
+        - listitem [ref=e1915]:
+          - link "HAT" [ref=e1916] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hat
+        - listitem [ref=e1917]:
+          - link "SEASONING" [ref=e1918] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/seasoning
+        - listitem [ref=e1919]:
+          - link "BIRTHDAY" [ref=e1920] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birthday
+        - listitem [ref=e1921]:
+          - link "KAFTAN" [ref=e1922] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kaftan
+        - listitem [ref=e1923]:
+          - link "PURPLE FLOWERS" [ref=e1924] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/purple_flowers
+        - listitem [ref=e1925]:
+          - link "ENERGIZER" [ref=e1926] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/energizer
+        - listitem [ref=e1927]:
+          - link "CIGARETTES" [ref=e1928] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cigarettes
+        - listitem [ref=e1929]:
+          - link "VIAGRA" [ref=e1930] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/viagra
+        - listitem [ref=e1931]:
+          - link "FATHER" [ref=e1932] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/father
+        - listitem [ref=e1933]:
+          - link "HERBAL_OIL" [ref=e1934] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/herbal_oil
+        - listitem [ref=e1935]:
+          - link "PRESSURE_MACHINE" [ref=e1936] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pressure_machine
+        - listitem [ref=e1937]:
+          - link "HOMEMADE_PRODUCTS" [ref=e1938] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/homemade_products
+        - listitem [ref=e1939]:
+          - link "EQUIPMENT" [ref=e1940] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/equipment
+        - listitem [ref=e1941]:
+          - link "FISHING-RODS-REEL-SETS" [ref=e1942] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fishing-rods-reel-sets
+        - listitem [ref=e1943]:
+          - link "HEALTH_SUPPLEMENTS" [ref=e1944] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/health_supplements
+        - listitem [ref=e1945]:
+          - link "NEXGARD" [ref=e1946] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nexgard
+        - listitem [ref=e1947]:
+          - link "3Q" [ref=e1948] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/3q
+        - listitem [ref=e1949]:
+          - link "JUMP_SUITS" [ref=e1950] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/jump_suits
+        - listitem [ref=e1951]:
+          - link "GIFT HAMPERS" [ref=e1952] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_hampers
+        - listitem [ref=e1953]:
+          - link "BONE" [ref=e1954] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bone
+        - listitem [ref=e1955]:
+          - link "WHISKY" [ref=e1956] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/whisky
+        - listitem [ref=e1957]:
+          - link "VITAMINS_AND_SUPPLEMENTS" [ref=e1958] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vitamins_and_supplements
+        - listitem [ref=e1959]:
+          - link "BISCUITS" [ref=e1960] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/biscuits
+        - listitem [ref=e1961]:
+          - link "HAIR OIL" [ref=e1962] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hair_oil
+        - listitem [ref=e1963]:
+          - link "CCTV_CAMERA" [ref=e1964] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cctv_camera
+        - listitem [ref=e1965]:
+          - link "FRYERS" [ref=e1966] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fryers
+        - listitem [ref=e1967]:
+          - link "JACKFRUIT" [ref=e1968] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/jackfruit
+        - listitem [ref=e1969]:
+          - link "BOILER" [ref=e1970] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/boiler
+        - listitem [ref=e1971]:
+          - link "SPOON" [ref=e1972] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/spoon
+        - listitem [ref=e1973]:
+          - link "KFC" [ref=e1974] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kfc
+        - listitem [ref=e1975]:
+          - link "MOBILES" [ref=e1976] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mobiles
+        - listitem [ref=e1977]:
+          - link "TEDDIES" [ref=e1978] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/teddies
+        - listitem [ref=e1979]:
+          - link "SOFT_BALL" [ref=e1980] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/soft_ball
+        - listitem [ref=e1981]:
+          - link "REVELLO" [ref=e1982] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/revello
+        - listitem [ref=e1983]:
+          - link "BIKE_JACKETS" [ref=e1984] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bike_jackets
+        - listitem [ref=e1985]:
+          - link "SAUSAGES" [ref=e1986] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sausages
+        - listitem [ref=e1987]:
+          - link "BODYCON" [ref=e1988] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bodycon
+        - listitem [ref=e1989]:
+          - link "PANTHER" [ref=e1990] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/panther
+        - listitem [ref=e1991]:
+          - link "AUSSIE_ESSENTIALS_MART" [ref=e1992] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/aussie_essentials_mart
+        - listitem [ref=e1993]:
+          - link "BACKPACKS" [ref=e1994] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/backpacks
+        - listitem [ref=e1995]:
+          - link "EXERCISE_BIKES" [ref=e1996] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/exercise_bikes
+        - listitem [ref=e1997]:
+          - link "TRAVEL_CASES" [ref=e1998] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/travel_cases
+        - listitem [ref=e1999]:
+          - link "AIR FRYER" [ref=e2000] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/air_fryer
+        - listitem [ref=e2001]:
+          - link "KEY_TAGS" [ref=e2002] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/key_tags
+        - listitem [ref=e2003]:
+          - link "TOOLS" [ref=e2004] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tools
+        - listitem [ref=e2005]:
+          - link "BIRTHDAY_CAKE_FOR_BOYFRIEND" [ref=e2006] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birthday_cake_for_boyfriend
+        - listitem [ref=e2007]:
+          - link "BABY_CARRIER" [ref=e2008] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/baby_carrier
+        - listitem [ref=e2009]:
+          - link "CRYSTALVODKA" [ref=e2010] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/crystalvodka
+        - listitem [ref=e2011]:
+          - link "LINGERIE" [ref=e2012] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lingerie
+        - listitem [ref=e2013]:
+          - link "FLOORCARE-APPLIANCES" [ref=e2014] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/floorcare-appliances
+        - listitem [ref=e2015]:
+          - link "COMFORT" [ref=e2016] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/comfort
+        - listitem [ref=e2017]:
+          - link "DOG_FOOD_AND_TREATS" [ref=e2018] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dog_food_and_treats
+        - listitem [ref=e2019]:
+          - link "CLOTHS" [ref=e2020] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cloths
+        - listitem [ref=e2021]:
+          - link "BLOUSE" [ref=e2022] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/blouse
+        - listitem [ref=e2023]:
+          - link "IPHONE" [ref=e2024] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/iphone
+        - listitem [ref=e2025]:
+          - link "CALCULATOR" [ref=e2026] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/calculator
+        - listitem [ref=e2027]:
+          - link "MULTI_COOKER" [ref=e2028] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/multi_cooker
+        - listitem [ref=e2029]:
+          - link "GEN Z-VALENTINE" [ref=e2030] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gen_z-valentine
+        - listitem [ref=e2031]:
+          - link "SAMSUNG_POWER_ADAPTER" [ref=e2032] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/samsung_power_adapter
+        - listitem [ref=e2033]:
+          - link "BACKPACK" [ref=e2034] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/backpack
+        - listitem [ref=e2035]:
+          - link "FISH" [ref=e2036] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fish
+        - listitem [ref=e2037]:
+          - link "AUDIO" [ref=e2038] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/audio
+        - listitem [ref=e2039]:
+          - link "CHRISTMAS CARD" [ref=e2040] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/christmas_card
+        - listitem [ref=e2041]:
+          - link "LEECHES_SOCKS" [ref=e2042] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/leeches_socks
+        - listitem [ref=e2043]:
+          - link "VODKA" [ref=e2044] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vodka
+        - listitem [ref=e2045]:
+          - link "NEW_YEAR" [ref=e2046] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/new_year
+        - listitem [ref=e2047]:
+          - link "BALLOONS" [ref=e2048] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/balloons
+        - listitem [ref=e2049]:
+          - link "BIRTHDAY CAKES" [ref=e2050] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birthday_cakes
+        - listitem [ref=e2051]:
+          - link "WEDDING_CAKE_BOXES" [ref=e2052] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wedding_cake_boxes
+        - listitem [ref=e2053]:
+          - link "SPIDER_MAN_CAKE" [ref=e2054] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/spider_man_cake
+        - listitem [ref=e2055]:
+          - link "IRON_MAN" [ref=e2056] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/iron_man
+        - listitem [ref=e2057]:
+          - link "BODY WASH" [ref=e2058] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/body_wash
+        - listitem [ref=e2059]:
+          - link "TOASTER" [ref=e2060] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/toaster
+        - listitem [ref=e2061]:
+          - link "CARTRIDGES" [ref=e2062] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cartridges
+        - listitem [ref=e2063]:
+          - link "RINGS" [ref=e2064] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/rings
+        - listitem [ref=e2065]:
+          - link "DIGITAL_PRINT" [ref=e2066] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/digital_print
+        - listitem [ref=e2067]:
+          - link "ART-SUPPLIES" [ref=e2068] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/art-supplies
+        - listitem [ref=e2069]:
+          - link "UNIQUE" [ref=e2070] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/unique
+        - listitem [ref=e2071]:
+          - link "MULTI_COMPARTMENT_WALLET" [ref=e2072] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/multi_compartment_wallet
+        - listitem [ref=e2073]:
+          - link "CURTAINS" [ref=e2074] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/curtains
+        - listitem [ref=e2075]:
+          - link "ENGLISH_TRANSLATE_TO_SINHALA" [ref=e2076] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/english_translate_to_sinhala
+        - listitem [ref=e2077]:
+          - link "COOKWARE" [ref=e2078] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cookware
+        - listitem [ref=e2079]:
+          - link "EMERGENCY_LIGHT" [ref=e2080] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/emergency_light
+        - listitem [ref=e2081]:
+          - link "MILK_TOFFEE" [ref=e2082] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/milk_toffee
+        - listitem [ref=e2083]:
+          - link "DVD" [ref=e2084] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dvd
+        - listitem [ref=e2085]:
+          - link "WEDDING CAKE" [ref=e2086] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wedding_cake
+        - listitem [ref=e2087]:
+          - link "TRESEMME" [ref=e2088] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tresemme
+        - listitem [ref=e2089]:
+          - link "GIFTS FOR MEN" [ref=e2090] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gifts_for_men
+        - listitem [ref=e2091]:
+          - link "HEMACHANDRA" [ref=e2092] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hemachandra
+        - listitem [ref=e2093]:
+          - link "SHAMPOO" [ref=e2094] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/shampoo
+        - listitem [ref=e2095]:
+          - link "HAIRCARE" [ref=e2096] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/haircare
+        - listitem [ref=e2097]:
+          - link "CHARITY-AND-DONATION" [ref=e2098] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/charity-and-donation
+        - listitem [ref=e2099]:
+          - link "BEAUTY-TOOLS" [ref=e2100] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/beauty-tools
+        - listitem [ref=e2101]:
+          - link "OREO" [ref=e2102] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/oreo
+        - listitem [ref=e2103]:
+          - link "PLATTER" [ref=e2104] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/platter
+        - listitem [ref=e2105]:
+          - link "NAILS" [ref=e2106] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nails
+        - listitem [ref=e2107]:
+          - link "PERFUME_FOGG" [ref=e2108] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/perfume_fogg
+        - listitem [ref=e2109]:
+          - link "BOOKS" [ref=e2110] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/books
+        - listitem [ref=e2111]:
+          - link "IPHONE_SRI_LANKA" [ref=e2112] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/iphone_sri_lanka
+        - listitem [ref=e2113]:
+          - link "GRASS_CUTTER" [ref=e2114] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/grass_cutter
+        - listitem [ref=e2115]:
+          - link "HOME_ENTERTAINMENT" [ref=e2116] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/home_entertainment
+        - listitem [ref=e2117]:
+          - link "STYLER" [ref=e2118] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/styler
+        - listitem [ref=e2119]:
+          - link "SEATS" [ref=e2120] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/seats
+        - listitem [ref=e2121]:
+          - link "PRINTING" [ref=e2122] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/printing
+        - listitem [ref=e2123]:
+          - link "GYMBAG" [ref=e2124] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gymbag
+        - listitem [ref=e2125]:
+          - link "CLEANING" [ref=e2126] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cleaning
+        - listitem [ref=e2127]:
+          - link "GROCERY_ESSENTIAL_IN_SRI_LANKA" [ref=e2128] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/grocery_essential_in_sri_lanka
+        - listitem [ref=e2129]:
+          - link "BRACELETS" [ref=e2130] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bracelets
+        - listitem [ref=e2131]:
+          - link "BLUETOOTH SPEAKER" [ref=e2132] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bluetooth_speaker
+        - listitem [ref=e2133]:
+          - link "NAIL_MAKEUP" [ref=e2134] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nail_makeup
+        - listitem [ref=e2135]:
+          - link "MOBILE PHONE" [ref=e2136] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mobile_phone
+        - listitem [ref=e2137]:
+          - link "BBQ-GRILLS" [ref=e2138] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bbq-grills
+        - listitem [ref=e2139]:
+          - link "BADMINTON" [ref=e2140] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/badminton
+        - listitem [ref=e2141]:
+          - link "CHIPS" [ref=e2142] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chips
+        - listitem [ref=e2143]:
+          - link "4_SLICE_TOASTER" [ref=e2144] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/4_slice_toaster
+        - listitem [ref=e2145]:
+          - link "PROTEIN" [ref=e2146] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/protein
+        - listitem [ref=e2147]:
+          - link "NAIL-POLISH-SETS" [ref=e2148] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nail-polish-sets
+        - listitem [ref=e2149]:
+          - link "LABUBU" [ref=e2150] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/labubu
+        - listitem [ref=e2151]:
+          - link "CHOCOLATES BEST SELLERS-VALENTINE" [ref=e2152] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chocolates_best_sellers-valentine
+        - listitem [ref=e2153]:
+          - link "HAPPY_BIRTHDAY_CAKE" [ref=e2154] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/happy_birthday_cake
+        - listitem [ref=e2155]:
+          - link "KINGSTONE" [ref=e2156] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kingstone
+        - listitem [ref=e2157]:
+          - link "GIFT CARDS" [ref=e2158] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_cards
+        - listitem [ref=e2159]:
+          - link "PERSONALIZED GIFTS-VALENTINE" [ref=e2160] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/personalized_gifts-valentine
+        - listitem [ref=e2161]:
+          - link "BODY_CARE" [ref=e2162] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/body_care
+        - listitem [ref=e2163]:
+          - link "FATHERS_DAY_CARDS" [ref=e2164] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fathers_day_cards
+        - listitem [ref=e2165]:
+          - link "JOINT_PAIN" [ref=e2166] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/joint_pain
+        - listitem [ref=e2167]:
+          - link "GOLD_RING" [ref=e2168] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gold_ring
+        - listitem [ref=e2169]:
+          - link "HAIR-STYLER" [ref=e2170] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hair-styler
+        - listitem [ref=e2171]:
+          - link "HAPPY BIRTHDAY DAD" [ref=e2172] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/happy_birthday_dad
+        - listitem [ref=e2173]:
+          - link "ATAPRIKARA" [ref=e2174] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ataprikara
+        - listitem [ref=e2175]:
+          - link "BINDERS" [ref=e2176] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/binders
+        - listitem [ref=e2177]:
+          - link "FITNESS_SUPPLEMENTS" [ref=e2178] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fitness_supplements
+        - listitem [ref=e2179]:
+          - link "GADGETS" [ref=e2180] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gadgets
+        - listitem [ref=e2181]:
+          - link "GIFT_BASKET" [ref=e2182] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_basket
+        - listitem [ref=e2183]:
+          - link "MENSDAY" [ref=e2184] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mensday
+        - listitem [ref=e2185]:
+          - link "FILTER" [ref=e2186] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/filter
+        - listitem [ref=e2187]:
+          - link "LINEN_PANT" [ref=e2188] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/linen_pant
+        - listitem [ref=e2189]:
+          - link "CITIZEN" [ref=e2190] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/citizen
+        - listitem [ref=e2191]:
+          - link "CHOCOLATE CAKES" [ref=e2192] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chocolate_cakes
+        - listitem [ref=e2193]:
+          - link "BEDROOM" [ref=e2194] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bedroom
+        - listitem [ref=e2195]:
+          - link "GRILLES" [ref=e2196] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/grilles
+        - listitem [ref=e2197]:
+          - link "LIONCO_MATTRESS" [ref=e2198] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lionco_mattress
+        - listitem [ref=e2199]:
+          - link "CHAIRS" [ref=e2200] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chairs
+        - listitem [ref=e2201]:
+          - link "EARRING" [ref=e2202] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/earring
+        - listitem [ref=e2203]:
+          - link "PINS" [ref=e2204] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pins
+        - listitem [ref=e2205]:
+          - link "RED ROSES" [ref=e2206] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/red_roses
+        - listitem [ref=e2207]:
+          - link "JUTE_STRING" [ref=e2208] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/jute_string
+        - listitem [ref=e2209]:
+          - link "GYM" [ref=e2210] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gym
+        - listitem [ref=e2211]:
+          - link "CURREN" [ref=e2212] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/curren
+        - listitem [ref=e2213]:
+          - link "PAJAMA_SET" [ref=e2214] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pajama_set
+        - listitem [ref=e2215]:
+          - link "SPA CEYLON" [ref=e2216] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/spa_ceylon
+        - listitem [ref=e2217]:
+          - link "EVENT" [ref=e2218] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/event
+        - listitem [ref=e2219]:
+          - link "T SHIRT" [ref=e2220] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/t_shirt
+        - listitem [ref=e2221]:
+          - link "SPONGES" [ref=e2222] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sponges
+        - listitem [ref=e2223]:
+          - link "RED-FLOWERS" [ref=e2224] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/red-flowers
+        - listitem [ref=e2225]:
+          - link "NADU" [ref=e2226] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nadu
+        - listitem [ref=e2227]:
+          - link "DIWALI" [ref=e2228] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/diwali
+        - listitem [ref=e2229]:
+          - link "MENS WATCH" [ref=e2230] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mens_watch
+        - listitem [ref=e2231]:
+          - link "CHINO" [ref=e2232] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chino
+        - listitem [ref=e2233]:
+          - link "YOGA-MATS" [ref=e2234] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/yoga-mats
+        - listitem [ref=e2235]:
+          - link "HONEY" [ref=e2236] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/honey
+        - listitem [ref=e2237]:
+          - link "FITNESS-ACCESSORIES" [ref=e2238] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fitness-accessories
+        - listitem [ref=e2239]:
+          - link "MEN WALLET" [ref=e2240] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/men_wallet
+        - listitem [ref=e2241]:
+          - link "WIRELESS_MICROPHONE" [ref=e2242] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wireless_microphone
+        - listitem [ref=e2243]:
+          - link "TABLE LAMP" [ref=e2244] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/table_lamp
+        - listitem [ref=e2245]:
+          - link "SLIM" [ref=e2246] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/slim
+        - listitem [ref=e2247]:
+          - link "FITNESS_EQUIPMENTS" [ref=e2248] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fitness_equipments
+        - listitem [ref=e2249]:
+          - link "SWARNA_MAHAL" [ref=e2250] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/swarna_mahal
+        - listitem [ref=e2251]:
+          - link "INTIMATE_APPAREL" [ref=e2252] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/intimate_apparel
+        - listitem [ref=e2253]:
+          - link "COOKIES" [ref=e2254] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cookies
+        - listitem [ref=e2255]:
+          - link "DR._RASHEL" [ref=e2256] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dr._rashel
+        - listitem [ref=e2257]:
+          - link "SMARTWATCH" [ref=e2258] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/smartwatch
+        - listitem [ref=e2259]:
+          - link "KINGSBURY CAKES" [ref=e2260] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kingsbury_cakes
+        - listitem [ref=e2261]:
+          - link "OPTICS" [ref=e2262] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/optics
+        - listitem [ref=e2263]:
+          - link "GIFT BOXES" [ref=e2264] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_boxes
+        - listitem [ref=e2265]:
+          - link "BASKET_BALL" [ref=e2266] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/basket_ball
+        - listitem [ref=e2267]:
+          - link "SMART_PHONES" [ref=e2268] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/smart_phones
+        - listitem [ref=e2269]:
+          - link "ELEGANT_SAREE" [ref=e2270] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/elegant_saree
+        - listitem [ref=e2271]:
+          - link "ELECTRIC_KETTLE" [ref=e2272] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/electric_kettle
+        - listitem [ref=e2273]:
+          - link "MARVEL" [ref=e2274] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/marvel
+        - listitem [ref=e2275]:
+          - link "SPRAYS" [ref=e2276] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sprays
+        - listitem [ref=e2277]:
+          - link "GAMING" [ref=e2278] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gaming
+        - listitem [ref=e2279]:
+          - link "SONY" [ref=e2280] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sony
+        - listitem [ref=e2281]:
+          - link "GIFTS FOR HIM-VALENTINE" [ref=e2282] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gifts_for_him-valentine
+        - listitem [ref=e2283]:
+          - link "COMPUTER_ACCESSORIES" [ref=e2284] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/computer_accessories
+        - listitem [ref=e2285]:
+          - link "BABY_FORMULA" [ref=e2286] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/baby_formula
+        - listitem [ref=e2287]:
+          - link "MINDFULNESS" [ref=e2288] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mindfulness
+        - listitem [ref=e2289]:
+          - link "FOG_LIGHTS" [ref=e2290] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fog_lights
+        - listitem [ref=e2291]:
+          - link "TRAVELING-BAG" [ref=e2292] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/traveling-bag
+        - listitem [ref=e2293]:
+          - link "SMART_BULB" [ref=e2294] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/smart_bulb
+        - listitem [ref=e2295]:
+          - link "SARONGS_LUNGI" [ref=e2296] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sarongs_lungi
+        - listitem [ref=e2297]:
+          - link "GROCERY" [ref=e2298] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/grocery
+        - listitem [ref=e2299]:
+          - link "SRI_LANKAN_CAKES" [ref=e2300] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sri_lankan_cakes
+        - listitem [ref=e2301]:
+          - link "LUNCH_BOX" [ref=e2302] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lunch_box
+        - listitem [ref=e2303]:
+          - link "TOY_VEHICLES" [ref=e2304] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/toy_vehicles
+        - listitem [ref=e2305]:
+          - link "DETTOL" [ref=e2306] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dettol
+        - listitem [ref=e2307]:
+          - link "BABY GIFT" [ref=e2308] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/baby_gift
+        - listitem [ref=e2309]:
+          - link "LITERATURE" [ref=e2310] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/literature
+        - listitem [ref=e2311]:
+          - link "PERFUME MEN" [ref=e2312] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/perfume_men
+        - listitem [ref=e2313]:
+          - link "SPREADS" [ref=e2314] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/spreads
+        - listitem [ref=e2315]:
+          - link "GRAPES" [ref=e2316] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/grapes
+        - listitem [ref=e2317]:
+          - link "QIT" [ref=e2318] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/qit
+        - listitem [ref=e2319]:
+          - link "CHRISTMAS_CAKE" [ref=e2320] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/christmas_cake
+        - listitem [ref=e2321]:
+          - link "HHCO" [ref=e2322] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hhco
+        - listitem [ref=e2323]:
+          - link "BODY" [ref=e2324] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/body
+        - listitem [ref=e2325]:
+          - link "TOY CAR" [ref=e2326] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/toy_car
+        - listitem [ref=e2327]:
+          - link "TOP" [ref=e2328] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/top
+        - listitem [ref=e2329]:
+          - link "NIGHT-LIGHTS" [ref=e2330] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/night-lights
+        - listitem [ref=e2331]:
+          - link "CAMPING-HIKING" [ref=e2332] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/camping-hiking
+        - listitem [ref=e2333]:
+          - link "CHILDREN_TRICYCLE" [ref=e2334] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/children_tricycle
+        - listitem [ref=e2335]:
+          - link "BAGGY_FIT_CROP_TOP" [ref=e2336] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/baggy_fit_crop_top
+        - listitem [ref=e2337]:
+          - link "CLIMBING" [ref=e2338] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/climbing
+        - listitem [ref=e2339]:
+          - link "BODY_SPRAY" [ref=e2340] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/body_spray
+        - listitem [ref=e2341]:
+          - link "PREMERO" [ref=e2342] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/premero
+        - listitem [ref=e2343]:
+          - link "NOODLES" [ref=e2344] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/noodles
+        - listitem [ref=e2345]:
+          - link "FRESH" [ref=e2346] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fresh
+        - listitem [ref=e2347]:
+          - link "CONTRACEPTIVES" [ref=e2348] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/contraceptives
+        - listitem [ref=e2349]:
+          - link "AUSTRALIA" [ref=e2350] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/australia
+        - listitem [ref=e2351]:
+          - link "PERSONALIZED_HOME_AND_LIVING" [ref=e2352] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/personalized_home_and_living
+        - listitem [ref=e2353]:
+          - link "SEQUIN_WORK_SAREES" [ref=e2354] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sequin_work_sarees
+        - listitem [ref=e2355]:
+          - link "SPIRITUAL_JEWELRY" [ref=e2356] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/spiritual_jewelry
+        - listitem [ref=e2357]:
+          - link "AIR" [ref=e2358] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/air
+        - listitem [ref=e2359]:
+          - link "LEXAR" [ref=e2360] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lexar
+        - listitem [ref=e2361]:
+          - link "SCREW-YOU" [ref=e2362] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/screw-you
+        - listitem [ref=e2363]:
+          - link "CURRY" [ref=e2364] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/curry
+        - listitem [ref=e2365]:
+          - link "CHAINS" [ref=e2366] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chains
+        - listitem [ref=e2367]:
+          - link "PERSONAL_DEVELOPMENT" [ref=e2368] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/personal_development
+        - listitem [ref=e2369]:
+          - link "PERFUME" [ref=e2370] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/perfume
+        - listitem [ref=e2371]:
+          - link "ARCHITECTURE" [ref=e2372] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/architecture
+        - listitem [ref=e2373]:
+          - link "SELF-HELP-ENGLISH" [ref=e2374] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/self-help-english
+        - listitem [ref=e2375]:
+          - link "NUTRITIONAL_DRINK" [ref=e2376] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nutritional_drink
+        - listitem [ref=e2377]:
+          - link "KNITTED_SWEATER" [ref=e2378] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/knitted_sweater
+        - listitem [ref=e2379]:
+          - link "DOG" [ref=e2380] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dog
+        - listitem [ref=e2381]:
+          - link "MOUTH_GAG" [ref=e2382] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mouth_gag
+        - listitem [ref=e2383]:
+          - link "BODY-SUITS" [ref=e2384] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/body-suits
+        - listitem [ref=e2385]:
+          - link "DOC" [ref=e2386] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/doc
+        - listitem [ref=e2387]:
+          - link "MYSU" [ref=e2388] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mysu
+        - listitem [ref=e2389]:
+          - link "INK_CARTRIDGE" [ref=e2390] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ink_cartridge
+        - listitem [ref=e2391]:
+          - link "DIARY" [ref=e2392] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/diary
+        - listitem [ref=e2393]:
+          - link "WEDDING_SAREES" [ref=e2394] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wedding_sarees
+        - listitem [ref=e2395]:
+          - link "KITCHEN-DINING" [ref=e2396] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kitchen-dining
+        - listitem [ref=e2397]:
+          - link "SEXY" [ref=e2398] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sexy
+        - listitem [ref=e2399]:
+          - link "CRACKERS" [ref=e2400] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/crackers
+        - listitem [ref=e2401]:
+          - link "GOOGLE PIXEL" [ref=e2402] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/google_pixel
+        - listitem [ref=e2403]:
+          - link "AIRPOD" [ref=e2404] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/airpod
+        - listitem [ref=e2405]:
+          - link "VICTORIA SECRET" [ref=e2406] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/victoria_secret
+        - listitem [ref=e2407]:
+          - link "HATS" [ref=e2408] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hats
+        - listitem [ref=e2409]:
+          - link "EXTRAIT_DE_PARFUM" [ref=e2410] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/extrait_de_parfum
+        - listitem [ref=e2411]:
+          - link "PREETHI" [ref=e2412] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/preethi
+        - listitem [ref=e2413]:
+          - link "ELECTRONIC_GIFTS" [ref=e2414] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/electronic_gifts
+        - listitem [ref=e2415]:
+          - link "SOMERSBY-BEER" [ref=e2416] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/somersby-beer
+        - listitem [ref=e2417]:
+          - link "NIGHTDRESS" [ref=e2418] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nightdress
+        - listitem [ref=e2419]:
+          - link "JOURNAL" [ref=e2420] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/journal
+        - listitem [ref=e2421]:
+          - link "HARISCHANDRA" [ref=e2422] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/harischandra
+        - listitem [ref=e2423]:
+          - link "KOTTU_ME" [ref=e2424] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kottu_me
+        - listitem [ref=e2425]:
+          - link "PRENEVSE" [ref=e2426] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/prenevse
+        - listitem [ref=e2427]:
+          - link "ELECTRICAL_APPLIANCES" [ref=e2428] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/electrical_appliances
+        - listitem [ref=e2429]:
+          - link "MICROLAB" [ref=e2430] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/microlab
+        - listitem [ref=e2431]:
+          - link "GRAPHICS_CARDS" [ref=e2432] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/graphics_cards
+        - listitem [ref=e2433]:
+          - link "APPLICATORS" [ref=e2434] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/applicators
+        - listitem [ref=e2435]:
+          - link "BABY_COLOGNE" [ref=e2436] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/baby_cologne
+        - listitem [ref=e2437]:
+          - link "LIGHTER" [ref=e2438] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lighter
+        - listitem [ref=e2439]:
+          - link "CUSTOM_LOVE_PILLOW" [ref=e2440] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/custom_love_pillow
+        - listitem [ref=e2441]:
+          - link "MICRO_USB" [ref=e2442] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/micro_usb
+        - listitem [ref=e2443]:
+          - link "MICROSCOPE" [ref=e2444] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/microscope
+        - listitem [ref=e2445]:
+          - link "SHEET_MASK" [ref=e2446] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sheet_mask
+        - listitem [ref=e2447]:
+          - link "HILTON" [ref=e2448] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hilton
+        - listitem [ref=e2449]:
+          - link "DELAY SPRAY" [ref=e2450] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/delay_spray
+        - listitem [ref=e2451]:
+          - link "AUTO_TOOLS_&_EQUIPMENT" [ref=e2452] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/auto_tools_&_equipment
+        - listitem [ref=e2453]:
+          - link "POUCH" [ref=e2454] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pouch
+        - listitem [ref=e2455]:
+          - link "BIKE_HELMET" [ref=e2456] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bike_helmet
+        - listitem [ref=e2457]:
+          - link "STRING_HOPPER" [ref=e2458] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/string_hopper
+        - listitem [ref=e2459]:
+          - link "COCONUT OIL" [ref=e2460] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/coconut_oil
+        - listitem [ref=e2461]:
+          - link "SOUVENIR" [ref=e2462] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/souvenir
+        - listitem [ref=e2463]:
+          - link "RICE AND CURRY" [ref=e2464] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/rice_and_curry
+        - listitem [ref=e2465]:
+          - link "STAND_FAN" [ref=e2466] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/stand_fan
+        - listitem [ref=e2467]:
+          - link "JUICES" [ref=e2468] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/juices
+        - listitem [ref=e2469]:
+          - link "BANGLE" [ref=e2470] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bangle
+        - listitem [ref=e2471]:
+          - link "CHILDRENS_DAY" [ref=e2472] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/childrens_day
+        - listitem [ref=e2473]:
+          - link "ANKLE_SOCKS" [ref=e2474] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ankle_socks
+        - listitem [ref=e2475]:
+          - link "BOAT" [ref=e2476] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/boat
+        - listitem [ref=e2477]:
+          - link "PLANTS" [ref=e2478] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/plants
+        - listitem [ref=e2479]:
+          - link "COOKWARE-SETS" [ref=e2480] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cookware-sets
+        - listitem [ref=e2481]:
+          - link "FROCK" [ref=e2482] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/frock
+        - listitem [ref=e2483]:
+          - link "MOUSE" [ref=e2484] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mouse
+        - listitem [ref=e2485]:
+          - link "ANTI_AGEING" [ref=e2486] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/anti_ageing
+        - listitem [ref=e2487]:
+          - link "SATINY" [ref=e2488] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/satiny
+        - listitem [ref=e2489]:
+          - link "MINIFIGURE" [ref=e2490] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/minifigure
+        - listitem [ref=e2491]:
+          - link "DILMAH" [ref=e2492] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dilmah
+        - listitem [ref=e2493]:
+          - link "SAFETY" [ref=e2494] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/safety
+        - listitem [ref=e2495]:
+          - link "PAINTING_BRUSHES" [ref=e2496] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/painting_brushes
+        - listitem [ref=e2497]:
+          - link "DECK_SHOE" [ref=e2498] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/deck_shoe
+        - listitem [ref=e2499]:
+          - link "VAPES" [ref=e2500] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vapes
+        - listitem [ref=e2501]:
+          - link "CRICKET" [ref=e2502] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cricket
+        - listitem [ref=e2503]:
+          - link "PIJAMA" [ref=e2504] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pijama
+        - listitem [ref=e2505]:
+          - link "RATTLE" [ref=e2506] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/rattle
+        - listitem [ref=e2507]:
+          - link "FOILING_PAPER" [ref=e2508] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/foiling_paper
+        - listitem [ref=e2509]:
+          - link "BUILDING_BLOCKS" [ref=e2510] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/building_blocks
+        - listitem [ref=e2511]:
+          - link "ROSEMARY" [ref=e2512] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/rosemary
+        - listitem [ref=e2513]:
+          - link "USB_HUB" [ref=e2514] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/usb_hub
+        - listitem [ref=e2515]:
+          - link "INSULIN" [ref=e2516] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/insulin
+        - listitem [ref=e2517]:
+          - link "CRYSTAL_PLAQUE" [ref=e2518] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/crystal_plaque
+        - listitem [ref=e2519]:
+          - link "CHRISTMAS TREES" [ref=e2520] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/christmas_trees
+        - listitem [ref=e2521]:
+          - link "SHAVERS" [ref=e2522] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/shavers
+        - listitem [ref=e2523]:
+          - link "TOP SELLERS-VALENTINE" [ref=e2524] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/top_sellers-valentine
+        - listitem [ref=e2525]:
+          - link "HOBBY_ELECTRONICS" [ref=e2526] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hobby_electronics
+        - listitem [ref=e2527]:
+          - link "MAKEUP" [ref=e2528] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/makeup
+        - listitem [ref=e2529]:
+          - link "RIBBON CAKE" [ref=e2530] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ribbon_cake
+        - listitem [ref=e2531]:
+          - link "PENDANT_SET" [ref=e2532] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pendant_set
+        - listitem [ref=e2533]:
+          - link "NOKIA-PHONE" [ref=e2534] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nokia-phone
+        - listitem [ref=e2535]:
+          - link "IRON" [ref=e2536] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/iron
+        - listitem [ref=e2537]:
+          - link "SEWING" [ref=e2538] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sewing
+        - listitem [ref=e2539]:
+          - link "FINAGLE" [ref=e2540] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/finagle
+        - listitem [ref=e2541]:
+          - link "BELT" [ref=e2542] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/belt
+        - listitem [ref=e2543]:
+          - link "FRESH FLOWERS" [ref=e2544] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fresh_flowers
+        - listitem [ref=e2545]:
+          - link "TANKS" [ref=e2546] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tanks
+        - listitem [ref=e2547]:
+          - link "SUGAR" [ref=e2548] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sugar
+        - listitem [ref=e2549]:
+          - link "STITCH SOFT TOY" [ref=e2550] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/stitch_soft_toy
+        - listitem [ref=e2551]:
+          - link "HAPPY" [ref=e2552] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/happy
+        - listitem [ref=e2553]:
+          - link "INDIA" [ref=e2554] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/india
+        - listitem [ref=e2555]:
+          - link "CABBAGE" [ref=e2556] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cabbage
+        - listitem [ref=e2557]:
+          - link "GERARD" [ref=e2558] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gerard
+        - listitem [ref=e2559]:
+          - link "FISH-OIL" [ref=e2560] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fish-oil
+        - listitem [ref=e2561]:
+          - link "FLOUR" [ref=e2562] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/flour
+        - listitem [ref=e2563]:
+          - link "CONDIMENTS" [ref=e2564] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/condiments
+        - listitem [ref=e2565]:
+          - link "GRIPS" [ref=e2566] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/grips
+        - listitem [ref=e2567]:
+          - link "BABY-PERSONAL-CARE" [ref=e2568] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/baby-personal-care
+        - listitem [ref=e2569]:
+          - link "ALCOHOL" [ref=e2570] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/alcohol
+        - listitem [ref=e2571]:
+          - link "VEHICLES" [ref=e2572] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vehicles
+        - listitem [ref=e2573]:
+          - link "BATMAN" [ref=e2574] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/batman
+        - listitem [ref=e2575]:
+          - link "SETS" [ref=e2576] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sets
+        - listitem [ref=e2577]:
+          - link "BASEUS" [ref=e2578] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/baseus
+        - listitem [ref=e2579]:
+          - link "CARPET" [ref=e2580] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/carpet
+        - listitem [ref=e2581]:
+          - link "GPS" [ref=e2582] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gps
+        - listitem [ref=e2583]:
+          - link "TOYOTA" [ref=e2584] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/toyota
+        - listitem [ref=e2585]:
+          - link "CHOCOLATE_GATEAU" [ref=e2586] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chocolate_gateau
+        - listitem [ref=e2587]:
+          - link "YARDLEY" [ref=e2588] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/yardley
+        - listitem [ref=e2589]:
+          - link "DJI" [ref=e2590] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dji
+        - listitem [ref=e2591]:
+          - link "PEDIASURE" [ref=e2592] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pediasure
+        - listitem [ref=e2593]:
+          - link "EVANGELINE" [ref=e2594] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/evangeline
+        - listitem [ref=e2595]:
+          - link "SPEAKER" [ref=e2596] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/speaker
+        - listitem [ref=e2597]:
+          - link "SAWAN" [ref=e2598] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sawan
+        - listitem [ref=e2599]:
+          - link "SOBAKO" [ref=e2600] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sobako
+        - listitem [ref=e2601]:
+          - link "STARTERS" [ref=e2602] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/starters
+        - listitem [ref=e2603]:
+          - link "MICROWAVE_OVEN" [ref=e2604] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/microwave_oven
+        - listitem [ref=e2605]:
+          - link "TIE" [ref=e2606] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tie
+        - listitem [ref=e2607]:
+          - link "WATER" [ref=e2608] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/water
+        - listitem [ref=e2609]:
+          - link "BATH_SCRUBBER" [ref=e2610] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bath_scrubber
+        - listitem [ref=e2611]:
+          - link "CRAYONS" [ref=e2612] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/crayons
+        - listitem [ref=e2613]:
+          - link "FRANCE" [ref=e2614] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/france
+        - listitem [ref=e2615]:
+          - link "WINE" [ref=e2616] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wine
+        - listitem [ref=e2617]:
+          - link "PRESCHOOL_BAG" [ref=e2618] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/preschool_bag
+        - listitem [ref=e2619]:
+          - link "LITERACY_TOOLS" [ref=e2620] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/literacy_tools
+        - listitem [ref=e2621]:
+          - link "GRINDER" [ref=e2622] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/grinder
+        - listitem [ref=e2623]:
+          - link "GREETING_CARD_BIRTHDAY" [ref=e2624] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/greeting_card_birthday
+        - listitem [ref=e2625]:
+          - link "AUTOMOBILE" [ref=e2626] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/automobile
+        - listitem [ref=e2627]:
+          - link "POPS" [ref=e2628] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pops
+        - listitem [ref=e2629]:
+          - link "BIRTHDAY FLOWERS" [ref=e2630] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birthday_flowers
+        - listitem [ref=e2631]:
+          - link "PURPLE" [ref=e2632] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/purple
+        - listitem [ref=e2633]:
+          - link "KNIFE" [ref=e2634] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/knife
+        - listitem [ref=e2635]:
+          - link "DRONES" [ref=e2636] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/drones
+        - listitem [ref=e2637]:
+          - link "MOBILE" [ref=e2638] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mobile
+        - listitem [ref=e2639]:
+          - link "MEETION" [ref=e2640] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/meetion
+        - listitem [ref=e2641]:
+          - link "LED_TV" [ref=e2642] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/led_tv
+        - listitem [ref=e2643]:
+          - link "PAPER-PRODUCTS" [ref=e2644] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/paper-products
+        - listitem [ref=e2645]:
+          - link "MINI" [ref=e2646] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mini
+        - listitem [ref=e2647]:
+          - link "HAND BAGS" [ref=e2648] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hand_bags
+        - listitem [ref=e2649]:
+          - link "PAINTING" [ref=e2650] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/painting
+        - listitem [ref=e2651]:
+          - link "FIRST SMILE" [ref=e2652] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/first_smile
+        - listitem [ref=e2653]:
+          - link "PENDRIVE" [ref=e2654] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pendrive
+        - listitem [ref=e2655]:
+          - link "ABS" [ref=e2656] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/abs
+        - listitem [ref=e2657]:
+          - link "ROOM_DECOR" [ref=e2658] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/room_decor
+        - listitem [ref=e2659]:
+          - link "HD_TV" [ref=e2660] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hd_tv
+        - listitem [ref=e2661]:
+          - link "SPIDERMAN" [ref=e2662] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/spiderman
+        - listitem [ref=e2663]:
+          - link "SITTING" [ref=e2664] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sitting
+        - listitem [ref=e2665]:
+          - link "BREAD" [ref=e2666] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bread
+        - listitem [ref=e2667]:
+          - link "FEATURE_PHONES" [ref=e2668] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/feature_phones
+        - listitem [ref=e2669]:
+          - link "FAMILY_PACK" [ref=e2670] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/family_pack
+        - listitem [ref=e2671]:
+          - link "POCHCHI_KADE" [ref=e2672] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pochchi_kade
+        - listitem [ref=e2673]:
+          - link "POOL" [ref=e2674] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pool
+        - listitem [ref=e2675]:
+          - link "CITRUS" [ref=e2676] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/citrus
+        - listitem [ref=e2677]:
+          - link "PRESTIGE" [ref=e2678] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/prestige
+        - listitem [ref=e2679]:
+          - link "GALAXY" [ref=e2680] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/galaxy
+        - listitem [ref=e2681]:
+          - link "GEORGETTE_SAREE" [ref=e2682] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/georgette_saree
+        - listitem [ref=e2683]:
+          - link "SUNFLOWER" [ref=e2684] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sunflower
+        - listitem [ref=e2685]:
+          - link "KOREAN_COSMETICS" [ref=e2686] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/korean_cosmetics
+        - listitem [ref=e2687]:
+          - link "GIFT HAMPER" [ref=e2688] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_hamper
+        - listitem [ref=e2689]:
+          - link "WEDDING" [ref=e2690] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wedding
+        - listitem [ref=e2691]:
+          - link "HARRY_POTTER" [ref=e2692] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/harry_potter
+        - listitem [ref=e2693]:
+          - link "KETTLE" [ref=e2694] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kettle
+        - listitem [ref=e2695]:
+          - link "STICKER" [ref=e2696] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sticker
+        - listitem [ref=e2697]:
+          - link "MINI_FRIDGES" [ref=e2698] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mini_fridges
+        - listitem [ref=e2699]:
+          - link "WATCH" [ref=e2700] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/watch
+        - listitem [ref=e2701]:
+          - link "TOOTHPASTE_HOLDER" [ref=e2702] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/toothpaste_holder
+        - listitem [ref=e2703]:
+          - link "T-SHIRTS" [ref=e2704] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/t-shirts
+        - listitem [ref=e2705]:
+          - link "LEASHES" [ref=e2706] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/leashes
+        - listitem [ref=e2707]:
+          - link "COILS" [ref=e2708] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/coils
+        - listitem [ref=e2709]:
+          - link "WEIGHT_LOSS" [ref=e2710] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/weight_loss
+        - listitem [ref=e2711]:
+          - link "MOSQUITO" [ref=e2712] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mosquito
+        - listitem [ref=e2713]:
+          - link "METAL_PROTECTOR" [ref=e2714] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/metal_protector
+        - listitem [ref=e2715]:
+          - link "JBL_PARTYBOX" [ref=e2716] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/jbl_partybox
+        - listitem [ref=e2717]:
+          - link "FOOD" [ref=e2718] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/food
+        - listitem [ref=e2719]:
+          - link "ROLLER" [ref=e2720] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/roller
+        - listitem [ref=e2721]:
+          - link "MILK" [ref=e2722] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/milk
+        - listitem [ref=e2723]:
+          - link "HEADPHONE" [ref=e2724] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/headphone
+        - listitem [ref=e2725]:
+          - link "CROSSBODY_BAGS" [ref=e2726] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/crossbody_bags
+        - listitem [ref=e2727]:
+          - link "GMC" [ref=e2728] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gmc
+        - listitem [ref=e2729]:
+          - link "BRAS" [ref=e2730] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bras
+        - listitem [ref=e2731]:
+          - link "FRUIT" [ref=e2732] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fruit
+        - listitem [ref=e2733]:
+          - link "BUTTPLUG" [ref=e2734] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/buttplug
+        - listitem [ref=e2735]:
+          - link "BLUSH" [ref=e2736] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/blush
+        - listitem [ref=e2737]:
+          - link "GRASIANO" [ref=e2738] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/grasiano
+        - listitem [ref=e2739]:
+          - link "LOCAL_HIGH_SCHOOL_TEXT_BOOKS" [ref=e2740] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/local_high_school_text_books
+        - listitem [ref=e2741]:
+          - link "SPRINGS" [ref=e2742] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/springs
+        - listitem [ref=e2743]:
+          - link "CAMISOLE" [ref=e2744] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/camisole
+        - listitem [ref=e2745]:
+          - link "CHOCOLATE BOX" [ref=e2746] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chocolate_box
+        - listitem [ref=e2747]:
+          - link "COMMODE_SEAT" [ref=e2748] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/commode_seat
+        - listitem [ref=e2749]:
+          - link "JELLY" [ref=e2750] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/jelly
+        - listitem [ref=e2751]:
+          - link "LEGO" [ref=e2752] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lego
+        - listitem [ref=e2753]:
+          - link "MOBILE_CASES" [ref=e2754] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mobile_cases
+        - listitem [ref=e2755]:
+          - link "CABLE" [ref=e2756] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cable
+        - listitem [ref=e2757]:
+          - link "GRAINS" [ref=e2758] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/grains
+        - listitem [ref=e2759]:
+          - link "POWER BANK" [ref=e2760] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/power_bank
+        - listitem [ref=e2761]:
+          - link "GIFT_FOR_DAD" [ref=e2762] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_for_dad
+        - listitem [ref=e2763]:
+          - link "HILTON CAKE" [ref=e2764] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hilton_cake
+        - listitem [ref=e2765]:
+          - link "SIDDHALEPA" [ref=e2766] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/siddhalepa
+        - listitem [ref=e2767]:
+          - link "BRUSHES" [ref=e2768] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/brushes
+        - listitem [ref=e2769]:
+          - link "TOSHIBA" [ref=e2770] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/toshiba
+        - listitem [ref=e2771]:
+          - link "COOKERS" [ref=e2772] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cookers
+        - listitem [ref=e2773]:
+          - link "HAIR CLIPS" [ref=e2774] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hair_clips
+        - listitem [ref=e2775]:
+          - link "BENTO CAKE" [ref=e2776] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bento_cake
+        - listitem [ref=e2777]:
+          - link "RESTAURANT" [ref=e2778] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/restaurant
+        - listitem [ref=e2779]:
+          - link "ADHESIVES" [ref=e2780] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/adhesives
+        - listitem [ref=e2781]:
+          - link "CUTTING_BOARDS" [ref=e2782] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cutting_boards
+        - listitem [ref=e2783]:
+          - link "CHIFFON_SAREES" [ref=e2784] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chiffon_sarees
+        - listitem [ref=e2785]:
+          - link "GOOGLE" [ref=e2786] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/google
+        - listitem [ref=e2787]:
+          - link "TEA" [ref=e2788] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tea
+        - listitem [ref=e2789]:
+          - link "ROLL_ON_DEODORANT" [ref=e2790] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/roll_on_deodorant
+        - listitem [ref=e2791]:
+          - link "PADDLES" [ref=e2792] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/paddles
+        - listitem [ref=e2793]:
+          - link "BONDAGE" [ref=e2794] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bondage
+        - listitem [ref=e2795]:
+          - link "VALENTINE" [ref=e2796] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/valentine
+        - listitem [ref=e2797]:
+          - link "LEISURE" [ref=e2798] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/leisure
+        - listitem [ref=e2799]:
+          - link "WATER_BED_PRICE_IN_SRI_LANKA" [ref=e2800] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/water_bed_price_in_sri_lanka
+        - listitem [ref=e2801]:
+          - link "SINGLE" [ref=e2802] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/single
+        - listitem [ref=e2803]:
+          - link "PEPPER" [ref=e2804] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pepper
+        - listitem [ref=e2805]:
+          - link "WOMENS_DAY" [ref=e2806] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/womens_day
+        - listitem [ref=e2807]:
+          - link "SCISSOR" [ref=e2808] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/scissor
+        - listitem [ref=e2809]:
+          - link "BOTTOMS" [ref=e2810] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bottoms
+        - listitem [ref=e2811]:
+          - link "COMBO_GIFTS" [ref=e2812] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/combo_gifts
+        - listitem [ref=e2813]:
+          - link "MICRO_SD_CARDS" [ref=e2814] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/micro_sd_cards
+        - listitem [ref=e2815]:
+          - link "BIRTHDAY_CAKE_FOR_FATHER" [ref=e2816] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birthday_cake_for_father
+        - listitem [ref=e2817]:
+          - link "OATS" [ref=e2818] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/oats
+        - listitem [ref=e2819]:
+          - link "BRIDE_TO_BE_CAKE" [ref=e2820] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bride_to_be_cake
+        - listitem [ref=e2821]:
+          - link "OUTDOOR" [ref=e2822] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/outdoor
+        - listitem [ref=e2823]:
+          - link "WASHING" [ref=e2824] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/washing
+        - listitem [ref=e2825]:
+          - link "BEST_GIFTS_FOR_MOM" [ref=e2826] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/best_gifts_for_mom
+        - listitem [ref=e2827]:
+          - link "CAKE_FOR_MOM" [ref=e2828] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cake_for_mom
+        - listitem [ref=e2829]:
+          - link "FLOOR" [ref=e2830] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/floor
+        - listitem [ref=e2831]:
+          - link "TOOTHBRUSH" [ref=e2832] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/toothbrush
+        - listitem [ref=e2833]:
+          - link "BARAKA-NATURALS-KAPRUKA" [ref=e2834] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/baraka-naturals-kapruka
+        - listitem [ref=e2835]:
+          - link "PROJECTOR" [ref=e2836] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/projector
+        - listitem [ref=e2837]:
+          - link "SCHOOL" [ref=e2838] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/school
+        - listitem [ref=e2839]:
+          - link "KIT KAT" [ref=e2840] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kit_kat
+        - listitem [ref=e2841]:
+          - link "MASSAGER" [ref=e2842] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/massager
+        - listitem [ref=e2843]:
+          - link "BATH-BODY" [ref=e2844] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bath-body
+        - listitem [ref=e2845]:
+          - link "WALLET" [ref=e2846] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wallet
+        - listitem [ref=e2847]:
+          - link "TISSUES" [ref=e2848] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tissues
+        - listitem [ref=e2849]:
+          - link "SOAP" [ref=e2850] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/soap
+        - listitem [ref=e2851]:
+          - link "REUSABLECONDOM" [ref=e2852] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/reusablecondom
+        - listitem [ref=e2853]:
+          - link "ENGLISH_CHILDREN_BOOKS" [ref=e2854] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/english_children_books
+        - listitem [ref=e2855]:
+          - link "HAJJ" [ref=e2856] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hajj
+        - listitem [ref=e2857]:
+          - link "INJECTOR" [ref=e2858] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/injector
+        - listitem [ref=e2859]:
+          - link "OMEGA" [ref=e2860] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/omega
+        - listitem [ref=e2861]:
+          - link "MIDI_DRESS" [ref=e2862] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/midi_dress
+        - listitem [ref=e2863]:
+          - link "BEER" [ref=e2864] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/beer
+        - listitem [ref=e2865]:
+          - link "ROPES" [ref=e2866] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ropes
+        - listitem [ref=e2867]:
+          - link "LAPTOP_STANDS" [ref=e2868] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/laptop_stands
+        - listitem [ref=e2869]:
+          - link "FAST_CHARGER" [ref=e2870] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fast_charger
+        - listitem [ref=e2871]:
+          - link "STREAMERS" [ref=e2872] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/streamers
+        - listitem [ref=e2873]:
+          - link "ZAMORAH" [ref=e2874] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/zamorah
+        - listitem [ref=e2875]:
+          - link "BIRTH" [ref=e2876] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birth
+        - listitem [ref=e2877]:
+          - link "LINEN_SAREES" [ref=e2878] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/linen_sarees
+        - listitem [ref=e2879]:
+          - link "BEEF" [ref=e2880] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/beef
+        - listitem [ref=e2881]:
+          - link "DESKTOP_COMPUTER" [ref=e2882] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/desktop_computer
+        - listitem [ref=e2883]:
+          - link "FLOORS" [ref=e2884] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/floors
+        - listitem [ref=e2885]:
+          - link "FRUIT_JUICE" [ref=e2886] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fruit_juice
+        - listitem [ref=e2887]:
+          - link "HAIR" [ref=e2888] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hair
+        - listitem [ref=e2889]:
+          - link "BASICGAMING" [ref=e2890] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/basicgaming
+        - listitem [ref=e2891]:
+          - link "RECHARGEABLE_TRIMMER" [ref=e2892] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/rechargeable_trimmer
+        - listitem [ref=e2893]:
+          - link "COCONUT" [ref=e2894] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/coconut
+        - listitem [ref=e2895]:
+          - link "ABANS" [ref=e2896] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/abans
+        - listitem [ref=e2897]:
+          - link "CHARTS" [ref=e2898] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/charts
+        - listitem [ref=e2899]:
+          - link "PREGNANCY_PILLOW" [ref=e2900] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pregnancy_pillow
+        - listitem [ref=e2901]:
+          - link "BEDS" [ref=e2902] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/beds
+        - listitem [ref=e2903]:
+          - link "VACUUM_CLEANERS" [ref=e2904] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vacuum_cleaners
+        - listitem [ref=e2905]:
+          - link "MUG" [ref=e2906] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mug
+        - listitem [ref=e2907]:
+          - link "MATTRESS_PAD" [ref=e2908] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mattress_pad
+        - listitem [ref=e2909]:
+          - link "MACHINERY" [ref=e2910] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/machinery
+        - listitem [ref=e2911]:
+          - link "FUNERAL_FLOWERSS" [ref=e2912] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/funeral_flowerss
+        - listitem [ref=e2913]:
+          - link "WAFFLE" [ref=e2914] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/waffle
+        - listitem [ref=e2915]:
+          - link "COSMETICS" [ref=e2916] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cosmetics
+        - listitem [ref=e2917]:
+          - link "GARDEN" [ref=e2918] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/garden
+        - listitem [ref=e2919]:
+          - link "CUBIC_ZIRCONIA_RING" [ref=e2920] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cubic_zirconia_ring
+        - listitem [ref=e2921]:
+          - link "CROSSBODY" [ref=e2922] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/crossbody
+        - listitem [ref=e2923]:
+          - link "MANGO_TREE" [ref=e2924] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mango_tree
+        - listitem [ref=e2925]:
+          - link "GIFT_FOR_MOM" [ref=e2926] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_for_mom
+        - listitem [ref=e2927]:
+          - link "FOR HIM" [ref=e2928] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/for_him
+        - listitem [ref=e2929]:
+          - link "XBOX_GAMES" [ref=e2930] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/xbox_games
+        - listitem [ref=e2931]:
+          - link "PEARS" [ref=e2932] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pears
+        - listitem [ref=e2933]:
+          - link "TRADITIONAL_LUNGI" [ref=e2934] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/traditional_lungi
+        - listitem [ref=e2935]:
+          - link "NOVEL" [ref=e2936] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/novel
+        - listitem [ref=e2937]:
+          - link "PET_BOWL" [ref=e2938] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pet_bowl
+        - listitem [ref=e2939]:
+          - link "ROMPER" [ref=e2940] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/romper
+        - listitem [ref=e2941]:
+          - link "LUBE" [ref=e2942] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lube
+        - listitem [ref=e2943]:
+          - link "PEDALS" [ref=e2944] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pedals
+        - listitem [ref=e2945]:
+          - link "FRIED RICE" [ref=e2946] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fried_rice
+        - listitem [ref=e2947]:
+          - link "YELLOW-FLOWERS" [ref=e2948] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/yellow-flowers
+        - listitem [ref=e2949]:
+          - link "COLLAGEN" [ref=e2950] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/collagen
+        - listitem [ref=e2951]:
+          - link "GREETING_CARDS" [ref=e2952] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/greeting_cards
+        - listitem [ref=e2953]:
+          - link "ISLANDLUX" [ref=e2954] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/islandlux
+        - listitem [ref=e2955]:
+          - link "GIRLFRIENDDAY" [ref=e2956] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/girlfriendday
+        - listitem [ref=e2957]:
+          - link "NIGHTGOWN" [ref=e2958] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nightgown
+        - listitem [ref=e2959]:
+          - link "ELECTRIC_SPORTS_BIKE_FOR_KIDS" [ref=e2960] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/electric_sports_bike_for_kids
+        - listitem [ref=e2961]:
+          - link "OSARI_SAREES" [ref=e2962] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/osari_sarees
+        - listitem [ref=e2963]:
+          - link "ONIONS" [ref=e2964] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/onions
+        - listitem [ref=e2965]:
+          - link "BENTO CAKES" [ref=e2966] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bento_cakes
+        - listitem [ref=e2967]:
+          - link "WIJAYA-PRODUCTS" [ref=e2968] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wijaya-products
+        - listitem [ref=e2969]:
+          - link "TILDA" [ref=e2970] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tilda
+        - listitem [ref=e2971]:
+          - link "BASEBALL-SOFTBALL" [ref=e2972] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/baseball-softball
+        - listitem [ref=e2973]:
+          - link "PLANTER" [ref=e2974] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/planter
+        - listitem [ref=e2975]:
+          - link "HERO_BIKE" [ref=e2976] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hero_bike
+        - listitem [ref=e2977]:
+          - link "BEANBAG" [ref=e2978] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/beanbag
+        - listitem [ref=e2979]:
+          - link "MULTI_PLUG" [ref=e2980] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/multi_plug
+        - listitem [ref=e2981]:
+          - link "DOMINOS" [ref=e2982] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dominos
+        - listitem [ref=e2983]:
+          - link "TUMBLER" [ref=e2984] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tumbler
+        - listitem [ref=e2985]:
+          - link "FITNESS" [ref=e2986] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fitness
+        - listitem [ref=e2987]:
+          - link "DJ-KARAOKE-ELECTRONIC-MUSIC" [ref=e2988] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dj-karaoke-electronic-music
+        - listitem [ref=e2989]:
+          - link "DAD" [ref=e2990] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dad
+        - listitem [ref=e2991]:
+          - link "PERSONAL LUBRICANTS" [ref=e2992] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/personal_lubricants
+        - listitem [ref=e2993]:
+          - link "BABY ITEMS" [ref=e2994] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/baby_items
+        - listitem [ref=e2995]:
+          - link "PARTNER_CENTRAL" [ref=e2996] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/partner_central
+        - listitem [ref=e2997]:
+          - link "CACTUS" [ref=e2998] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cactus
+        - listitem [ref=e2999]:
+          - link "PROCESSOR" [ref=e3000] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/processor
+        - listitem [ref=e3001]:
+          - link "MANGO" [ref=e3002] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mango
+        - listitem [ref=e3003]:
+          - link "PRINTERS" [ref=e3004] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/printers
+        - listitem [ref=e3005]:
+          - link "FACE WASH" [ref=e3006] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/face_wash
+        - listitem [ref=e3007]:
+          - link "TENTS" [ref=e3008] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tents
+        - listitem [ref=e3009]:
+          - link "SAME_DAY_DELIVERY" [ref=e3010] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/same_day_delivery
+        - listitem [ref=e3011]:
+          - link "CLEANERS" [ref=e3012] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cleaners
+        - listitem [ref=e3013]:
+          - link "E-VOUCHERS" [ref=e3014] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/e-vouchers
+        - listitem [ref=e3015]:
+          - link "WHISKEY" [ref=e3016] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/whiskey
+        - listitem [ref=e3017]:
+          - link "GIFT VOUCHER" [ref=e3018] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_voucher
+        - listitem [ref=e3019]:
+          - link "VOLLEY_BALL" [ref=e3020] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/volley_ball
+        - listitem [ref=e3021]:
+          - link "NYLON" [ref=e3022] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nylon
+        - listitem [ref=e3023]:
+          - link "INDOOR" [ref=e3024] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/indoor
+        - listitem [ref=e3025]:
+          - link "SLIPPERS" [ref=e3026] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/slippers
+        - listitem [ref=e3027]:
+          - link "EXERCISE-FITNESS" [ref=e3028] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/exercise-fitness
+        - listitem [ref=e3029]:
+          - link "BEAR" [ref=e3030] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bear
+        - listitem [ref=e3031]:
+          - link "STAINLESS_STEEL_LUNCH_BOX" [ref=e3032] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/stainless_steel_lunch_box
+        - listitem [ref=e3033]:
+          - link "BRACES" [ref=e3034] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/braces
+        - listitem [ref=e3035]:
+          - link "MRF" [ref=e3036] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mrf
+        - listitem [ref=e3037]:
+          - link "NATIONAL" [ref=e3038] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/national
+        - listitem [ref=e3039]:
+          - link "DESSERTS" [ref=e3040] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/desserts
+        - listitem [ref=e3041]:
+          - link "HAND-TOOLS" [ref=e3042] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hand-tools
+        - listitem [ref=e3043]:
+          - link "FRUIT CAKE" [ref=e3044] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fruit_cake
+        - listitem [ref=e3045]:
+          - link "LUBRICANT" [ref=e3046] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lubricant
+        - listitem [ref=e3047]:
+          - link "COCKTAIL" [ref=e3048] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cocktail
+        - listitem [ref=e3049]:
+          - link "TELEVISION" [ref=e3050] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/television
+        - listitem [ref=e3051]:
+          - link "SUSTAGEN" [ref=e3052] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sustagen
+        - listitem [ref=e3053]:
+          - link "DRIVE" [ref=e3054] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/drive
+        - listitem [ref=e3055]:
+          - link "PILLOW" [ref=e3056] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pillow
+        - listitem [ref=e3057]:
+          - link "COTTON_SAREES" [ref=e3058] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cotton_sarees
+        - listitem [ref=e3059]:
+          - link "RELIGIOUS_GIFTS" [ref=e3060] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/religious_gifts
+        - listitem [ref=e3061]:
+          - link "EYEWEAR" [ref=e3062] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/eyewear
+        - listitem [ref=e3063]:
+          - link "PS_GAMES" [ref=e3064] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ps_games
+        - listitem [ref=e3065]:
+          - link "TRAVEL_BAGS" [ref=e3066] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/travel_bags
+        - listitem [ref=e3067]:
+          - link "PIANO_COURSE" [ref=e3068] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/piano_course
+        - listitem [ref=e3069]:
+          - link "HOME_AND_LIFESTYLE_SERVICES" [ref=e3070] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/home_and_lifestyle_services
+        - listitem [ref=e3071]:
+          - link "LUVESENCE" [ref=e3072] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/luvesence
+        - listitem [ref=e3073]:
+          - link "YAMS" [ref=e3074] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/yams
+        - listitem [ref=e3075]:
+          - link "KONDAM" [ref=e3076] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kondam
+        - listitem [ref=e3077]:
+          - link "DIGITAL-GOODS" [ref=e3078] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/digital-goods
+        - listitem [ref=e3079]:
+          - link "SINGER" [ref=e3080] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/singer
+        - listitem [ref=e3081]:
+          - link "TOYS" [ref=e3082] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/toys
+        - listitem [ref=e3083]:
+          - link "MUNCHEE" [ref=e3084] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/munchee
+        - listitem [ref=e3085]:
+          - link "KEYCHAINS" [ref=e3086] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/keychains
+        - listitem [ref=e3087]:
+          - link "CHESS" [ref=e3088] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chess
+        - listitem [ref=e3089]:
+          - link "BENTO" [ref=e3090] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bento
+        - listitem [ref=e3091]:
+          - link "FOR_HER" [ref=e3092] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/for_her
+        - listitem [ref=e3093]:
+          - link "CHINO_PANTS" [ref=e3094] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chino_pants
+        - listitem [ref=e3095]:
+          - link "RED_VELVET" [ref=e3096] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/red_velvet
+        - listitem [ref=e3097]:
+          - link "LINEN_SHIRT" [ref=e3098] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/linen_shirt
+        - listitem [ref=e3099]:
+          - link "COTTON" [ref=e3100] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cotton
+        - listitem [ref=e3101]:
+          - link "MIXERS" [ref=e3102] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mixers
+        - listitem [ref=e3103]:
+          - link "BATH_&_BODY" [ref=e3104] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bath_&_body
+        - listitem [ref=e3105]:
+          - link "WHEEL CHAIR" [ref=e3106] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wheel_chair
+        - listitem [ref=e3107]:
+          - link "IRONBULL" [ref=e3108] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ironbull
+        - listitem [ref=e3109]:
+          - link "STRAPS" [ref=e3110] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/straps
+        - listitem [ref=e3111]:
+          - link "ROSES" [ref=e3112] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/roses
+        - listitem [ref=e3113]:
+          - link "RACK" [ref=e3114] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/rack
+        - listitem [ref=e3115]:
+          - link "POPCORN" [ref=e3116] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/popcorn
+        - listitem [ref=e3117]:
+          - link "WATER BOTTLE" [ref=e3118] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/water_bottle
+        - listitem [ref=e3119]:
+          - link "MICE" [ref=e3120] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mice
+        - listitem [ref=e3121]:
+          - link "PHONE-SAMSUNG" [ref=e3122] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/phone-samsung
+        - listitem [ref=e3123]:
+          - link "FENDERS" [ref=e3124] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fenders
+        - listitem [ref=e3125]:
+          - link "CLOTHING-VALENTINE" [ref=e3126] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/clothing-valentine
+        - listitem [ref=e3127]:
+          - link "POP_GRIPS" [ref=e3128] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pop_grips
+        - listitem [ref=e3129]:
+          - link "VIDEO" [ref=e3130] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/video
+        - listitem [ref=e3131]:
+          - link "MOP" [ref=e3132] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mop
+        - listitem [ref=e3133]:
+          - link "SHOWER" [ref=e3134] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/shower
+        - listitem [ref=e3135]:
+          - link "FACE_CREAM" [ref=e3136] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/face_cream
+        - listitem [ref=e3137]:
+          - link "SPRAY_PAINT" [ref=e3138] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/spray_paint
+        - listitem [ref=e3139]:
+          - link "KIDS_BIKES" [ref=e3140] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kids_bikes
+        - listitem [ref=e3141]:
+          - link "HARNESSES" [ref=e3142] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/harnesses
+        - listitem [ref=e3143]:
+          - link "PINEAPPLE" [ref=e3144] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pineapple
+        - listitem [ref=e3145]:
+          - link "RED VELVET CAKE" [ref=e3146] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/red_velvet_cake
+        - listitem [ref=e3147]:
+          - link "SHARPENERS" [ref=e3148] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sharpeners
+        - listitem [ref=e3149]:
+          - link "GOLD CHAIN" [ref=e3150] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gold_chain
+        - listitem [ref=e3151]:
+          - link "HAIR-BRUSHES-COMBS" [ref=e3152] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hair-brushes-combs
+        - listitem [ref=e3153]:
+          - link "D-VITAMIN" [ref=e3154] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/d-vitamin
+        - listitem [ref=e3155]:
+          - link "PARTY_HEADWEAR" [ref=e3156] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/party_headwear
+        - listitem [ref=e3157]:
+          - link "SISTER_BIRTHDAY_GIFT" [ref=e3158] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sister_birthday_gift
+        - listitem [ref=e3159]:
+          - link "MP3" [ref=e3160] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mp3
+        - listitem [ref=e3161]:
+          - link "UNICORN" [ref=e3162] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/unicorn
+        - listitem [ref=e3163]:
+          - link "UMBRELLA" [ref=e3164] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/umbrella
+        - listitem [ref=e3165]:
+          - link "AUTOMATIC" [ref=e3166] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/automatic
+        - listitem [ref=e3167]:
+          - link "HAYLOU" [ref=e3168] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/haylou
+        - listitem [ref=e3169]:
+          - link "LIGHT_BULBS" [ref=e3170] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/light_bulbs
+        - listitem [ref=e3171]:
+          - link "CLIPS_PINS" [ref=e3172] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/clips_pins
+        - listitem [ref=e3173]:
+          - link "NEW_ADDITIONS" [ref=e3174] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/new_additions
+        - listitem [ref=e3175]:
+          - link "ATLAS" [ref=e3176] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/atlas
+        - listitem [ref=e3177]:
+          - link "SPONGE" [ref=e3178] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sponge
+        - listitem [ref=e3179]:
+          - link "DRESSES" [ref=e3180] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dresses
+        - listitem [ref=e3181]:
+          - link "CHOCLATE CAKE" [ref=e3182] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/choclate_cake
+        - listitem [ref=e3183]:
+          - link "STATIONARY" [ref=e3184] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/stationary
+        - listitem [ref=e3185]:
+          - link "CLEAR_ELECTRIC_RICE_COOKER" [ref=e3186] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/clear_electric_rice_cooker
+        - listitem [ref=e3187]:
+          - link "SCALE_FOR_WEIGHT" [ref=e3188] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/scale_for_weight
+        - listitem [ref=e3189]:
+          - link "PRINGLES" [ref=e3190] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pringles
+        - listitem [ref=e3191]:
+          - link "DUNHILL" [ref=e3192] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dunhill
+        - listitem [ref=e3193]:
+          - link "GLASSWARE" [ref=e3194] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/glassware
+        - listitem [ref=e3195]:
+          - link "KITCHEN-TABLE-LINENS-ACCESSORIES" [ref=e3196] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kitchen-table-linens-accessories
+        - listitem [ref=e3197]:
+          - link "YULE LOG" [ref=e3198] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/yule_log
+        - listitem [ref=e3199]:
+          - link "PINK_ROSES" [ref=e3200] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pink_roses
+        - listitem [ref=e3201]:
+          - link "HELMET" [ref=e3202] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/helmet
+        - listitem [ref=e3203]:
+          - link "JUMPING_ROPE" [ref=e3204] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/jumping_rope
+        - listitem [ref=e3205]:
+          - link "KURTA" [ref=e3206] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kurta
+        - listitem [ref=e3207]:
+          - link "INDOOR PLANTS" [ref=e3208] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/indoor_plants
+        - listitem [ref=e3209]:
+          - link "PUDDING_MIX" [ref=e3210] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pudding_mix
+        - listitem [ref=e3211]:
+          - link "OUTDOOR-GRILLS" [ref=e3212] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/outdoor-grills
+        - listitem [ref=e3213]:
+          - link "GAMING_ITEMS" [ref=e3214] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gaming_items
+        - listitem [ref=e3215]:
+          - link "FLOWERS" [ref=e3216] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/flowers
+        - listitem [ref=e3217]:
+          - link "KIDS_TOYS" [ref=e3218] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kids_toys
+        - listitem [ref=e3219]:
+          - link "GINGER" [ref=e3220] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ginger
+        - listitem [ref=e3221]:
+          - link "POINTER_DEVICES" [ref=e3222] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pointer_devices
+        - listitem [ref=e3223]:
+          - link "GAG" [ref=e3224] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gag
+        - listitem [ref=e3225]:
+          - link "KAPRUKA" [ref=e3226] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kapruka
+        - listitem [ref=e3227]:
+          - link "WIPER_BLADES" [ref=e3228] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wiper_blades
+        - listitem [ref=e3229]:
+          - link "BATIK" [ref=e3230] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/batik
+        - listitem [ref=e3231]:
+          - link "DRINKS" [ref=e3232] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/drinks
+        - listitem [ref=e3233]:
+          - link "CHARGING_CABLE" [ref=e3234] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/charging_cable
+        - listitem [ref=e3235]:
+          - link "KITCHEN_TOOLS" [ref=e3236] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kitchen_tools
+        - listitem [ref=e3237]:
+          - link "MUSICAL_INSTRUMENTS" [ref=e3238] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/musical_instruments
+        - listitem [ref=e3239]:
+          - link "ELECTRIC" [ref=e3240] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/electric
+        - listitem [ref=e3241]:
+          - link "PENCIL_FOR_DRAWING" [ref=e3242] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pencil_for_drawing
+        - listitem [ref=e3243]:
+          - link "ENCHANTEUR" [ref=e3244] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/enchanteur
+        - listitem [ref=e3245]:
+          - link "POWER_ADAPTERS" [ref=e3246] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/power_adapters
+        - listitem [ref=e3247]:
+          - link "SEX_DOLL" [ref=e3248] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sex_doll
+        - listitem [ref=e3249]:
+          - link "PLATE" [ref=e3250] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/plate
+        - listitem [ref=e3251]:
+          - link "BEARDOIL" [ref=e3252] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/beardoil
+        - listitem [ref=e3253]:
+          - link "MATTRESSES" [ref=e3254] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mattresses
+        - listitem [ref=e3255]:
+          - link "MISS_YOU_CARDS" [ref=e3256] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/miss_you_cards
+        - listitem [ref=e3257]:
+          - link "CLOTH RACK" [ref=e3258] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cloth_rack
+        - listitem [ref=e3259]:
+          - link "HERBAL_CAPSULES" [ref=e3260] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/herbal_capsules
+        - listitem [ref=e3261]:
+          - link "PENS" [ref=e3262] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pens
+        - listitem [ref=e3263]:
+          - link "TOOLS-BRUSHES" [ref=e3264] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tools-brushes
+        - listitem [ref=e3265]:
+          - link "HUMIDIFIERS" [ref=e3266] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/humidifiers
+        - listitem [ref=e3267]:
+          - link "TOWER CAKE" [ref=e3268] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tower_cake
+        - listitem [ref=e3269]:
+          - link "VASE" [ref=e3270] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vase
+        - listitem [ref=e3271]:
+          - link "BATHROOM_CLEANER" [ref=e3272] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bathroom_cleaner
+        - listitem [ref=e3273]:
+          - link "PALAZZO_PANTS" [ref=e3274] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/palazzo_pants
+        - listitem [ref=e3275]:
+          - link "SCRAP" [ref=e3276] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/scrap
+        - listitem [ref=e3277]:
+          - link "SCHOOL_MEMORABILIA" [ref=e3278] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/school_memorabilia
+        - listitem [ref=e3279]:
+          - link "BREUDHER" [ref=e3280] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/breudher
+        - listitem [ref=e3281]:
+          - link "CORPORATE_GIFTS" [ref=e3282] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/corporate_gifts
+        - listitem [ref=e3283]:
+          - link "BLUE FLOWERS" [ref=e3284] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/blue_flowers
+        - listitem [ref=e3285]:
+          - link "BATH" [ref=e3286] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bath
+        - listitem [ref=e3287]:
+          - link "TEATS" [ref=e3288] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/teats
+        - listitem [ref=e3289]:
+          - link "FASHION" [ref=e3290] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fashion
+        - listitem [ref=e3291]:
+          - link "BURGER_KING" [ref=e3292] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/burger_king
+        - listitem [ref=e3293]:
+          - link "BRIDGE" [ref=e3294] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bridge
+        - listitem [ref=e3295]:
+          - link "IRON_BOX" [ref=e3296] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/iron_box
+        - listitem [ref=e3297]:
+          - link "REFRIGERATOR" [ref=e3298] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/refrigerator
+        - listitem [ref=e3299]:
+          - link "CADBURY" [ref=e3300] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cadbury
+        - listitem [ref=e3301]:
+          - link "PS5" [ref=e3302] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ps5
+        - listitem [ref=e3303]:
+          - link "BLUES" [ref=e3304] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/blues
+        - listitem [ref=e3305]:
+          - link "GEORGETTE_SAREES" [ref=e3306] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/georgette_sarees
+        - listitem [ref=e3307]:
+          - link "SUITS" [ref=e3308] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/suits
+        - listitem [ref=e3309]:
+          - link "ALOE-VERA" [ref=e3310] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/aloe-vera
+        - listitem [ref=e3311]:
+          - link "SMART WATCH" [ref=e3312] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/smart_watch
+        - listitem [ref=e3313]:
+          - link "READY_TO_EAT" [ref=e3314] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ready_to_eat
+        - listitem [ref=e3315]:
+          - link "KEY_COVER" [ref=e3316] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/key_cover
+        - listitem [ref=e3317]:
+          - link "SWADESHI_SOAP" [ref=e3318] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/swadeshi_soap
+        - listitem [ref=e3319]:
+          - link "ORGANIZER" [ref=e3320] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/organizer
+        - listitem [ref=e3321]:
+          - link "BASEBALL_&_SOFTBALL" [ref=e3322] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/baseball_&_softball
+        - listitem [ref=e3323]:
+          - link "ANDROID_TABLET" [ref=e3324] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/android_tablet
+        - listitem [ref=e3325]:
+          - link "FIT-HONDA" [ref=e3326] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fit-honda
+        - listitem [ref=e3327]:
+          - link "RACKETS" [ref=e3328] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/rackets
+        - listitem [ref=e3329]:
+          - link "GIFT FOR MEN" [ref=e3330] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_for_men
+        - listitem [ref=e3331]:
+          - link "FRESH MILK" [ref=e3332] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fresh_milk
+        - listitem [ref=e3333]:
+          - link "EDUCATIONAL" [ref=e3334] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/educational
+        - listitem [ref=e3335]:
+          - link "G_STRING" [ref=e3336] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/g_string
+        - listitem [ref=e3337]:
+          - link "VIVO_Y93" [ref=e3338] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vivo_y93
+        - listitem [ref=e3339]:
+          - link "REMOTE CAR" [ref=e3340] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/remote_car
+        - listitem [ref=e3341]:
+          - link "CHICKEN" [ref=e3342] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chicken
+        - listitem [ref=e3343]:
+          - link "RED WINE" [ref=e3344] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/red_wine
+        - listitem [ref=e3345]:
+          - link "CEILING_FAN" [ref=e3346] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ceiling_fan
+        - listitem [ref=e3347]:
+          - link "ANNIVERSARY" [ref=e3348] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/anniversary
+        - listitem [ref=e3349]:
+          - link "HANDWASH" [ref=e3350] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/handwash
+        - listitem [ref=e3351]:
+          - link "UK" [ref=e3352] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/uk
+        - listitem [ref=e3353]:
+          - link "MEN_BELTS" [ref=e3354] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/men_belts
+        - listitem [ref=e3355]:
+          - link "BARS" [ref=e3356] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bars
+        - listitem [ref=e3357]:
+          - link "COUS-COUS" [ref=e3358] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cous-cous
+        - listitem [ref=e3359]:
+          - link "AMMA" [ref=e3360] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/amma
+        - listitem [ref=e3361]:
+          - link "HANDCUFFS" [ref=e3362] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/handcuffs
+        - listitem [ref=e3363]:
+          - link "HAIRCUTTER" [ref=e3364] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/haircutter
+        - listitem [ref=e3365]:
+          - link "DAIRY_MILK_CHOCOLATE" [ref=e3366] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dairy_milk_chocolate
+        - listitem [ref=e3367]:
+          - link "CLOTHES" [ref=e3368] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/clothes
+        - listitem [ref=e3369]:
+          - link "SUITCASES" [ref=e3370] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/suitcases
+        - listitem [ref=e3371]:
+          - link "PYTHON" [ref=e3372] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/python
+        - listitem [ref=e3373]:
+          - link "HAVIT" [ref=e3374] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/havit
+        - listitem [ref=e3375]:
+          - link "MEN'S_WALLET" [ref=e3376] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/men's_wallet
+        - listitem [ref=e3377]:
+          - link "HIGHLIGHTERS" [ref=e3378] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/highlighters
+        - listitem [ref=e3379]:
+          - link "BQUEEN" [ref=e3380] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bqueen
+        - listitem [ref=e3381]:
+          - link "PAMPERS" [ref=e3382] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pampers
+        - listitem [ref=e3383]:
+          - link "VAPE" [ref=e3384] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vape
+        - listitem [ref=e3385]:
+          - link "LENSES" [ref=e3386] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lenses
+        - listitem [ref=e3387]:
+          - link "HAIR_STYLER" [ref=e3388] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hair_styler
+        - listitem [ref=e3389]:
+          - link "CROP" [ref=e3390] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/crop
+        - listitem [ref=e3391]:
+          - link "PIMPLE" [ref=e3392] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pimple
+        - listitem [ref=e3393]:
+          - link "AIR_TREATMENT" [ref=e3394] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/air_treatment
+        - listitem [ref=e3395]:
+          - link "HAND BAG" [ref=e3396] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hand_bag
+        - listitem [ref=e3397]:
+          - link "ROSE FLOWER" [ref=e3398] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/rose_flower
+        - listitem [ref=e3399]:
+          - link "SANITARY_NAPKINS" [ref=e3400] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sanitary_napkins
+        - listitem [ref=e3401]:
+          - link "TIES" [ref=e3402] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ties
+        - listitem [ref=e3403]:
+          - link "PLAYSTATION" [ref=e3404] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/playstation
+        - listitem [ref=e3405]:
+          - link "DRAPES" [ref=e3406] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/drapes
+        - listitem [ref=e3407]:
+          - link "FILES" [ref=e3408] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/files
+        - listitem [ref=e3409]:
+          - link "BROWNIES" [ref=e3410] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/brownies
+        - listitem [ref=e3411]:
+          - link "CUP" [ref=e3412] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cup
+        - listitem [ref=e3413]:
+          - link "PENIS PUMP" [ref=e3414] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/penis_pump
+        - listitem [ref=e3415]:
+          - link "MENS PERFUME" [ref=e3416] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mens_perfume
+        - listitem [ref=e3417]:
+          - link "GIFTWEAR" [ref=e3418] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/giftwear
+        - listitem [ref=e3419]:
+          - link "GRADUATION GIFT" [ref=e3420] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/graduation_gift
+        - listitem [ref=e3421]:
+          - link "HOODIES_IN_SRI_LANKA" [ref=e3422] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hoodies_in_sri_lanka
+        - listitem [ref=e3423]:
+          - link "JBL" [ref=e3424] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/jbl
+        - listitem [ref=e3425]:
+          - link "LUCKY" [ref=e3426] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lucky
+        - listitem [ref=e3427]:
+          - link "CHEESE_BENTO_CAKES" [ref=e3428] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cheese_bento_cakes
+        - listitem [ref=e3429]:
+          - link "BOYFRIENDSDAY" [ref=e3430] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/boyfriendsday
+        - listitem [ref=e3431]:
+          - link "LADIES_SHOES" [ref=e3432] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ladies_shoes
+        - listitem [ref=e3433]:
+          - link "EASTER" [ref=e3434] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/easter
+        - listitem [ref=e3435]:
+          - link "MANCHESTER-CIGARETTES" [ref=e3436] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/manchester-cigarettes
+        - listitem [ref=e3437]:
+          - link "PHONES" [ref=e3438] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/phones
+        - listitem [ref=e3439]:
+          - link "TOPS" [ref=e3440] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tops
+        - listitem [ref=e3441]:
+          - link "ACTION_FIGURES" [ref=e3442] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/action_figures
+        - listitem [ref=e3443]:
+          - link "KIDS_CLOTHING" [ref=e3444] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kids_clothing
+        - listitem [ref=e3445]:
+          - link "WALL_CHARGER" [ref=e3446] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wall_charger
+        - listitem [ref=e3447]:
+          - link "PINK-FLOWERS" [ref=e3448] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pink-flowers
+        - listitem [ref=e3449]:
+          - link "CREATINE" [ref=e3450] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/creatine
+        - listitem [ref=e3451]:
+          - link "GLUE" [ref=e3452] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/glue
+        - listitem [ref=e3453]:
+          - link "GATEAU CAKE" [ref=e3454] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gateau_cake
+        - listitem [ref=e3455]:
+          - link "STATIONERY_&_CRAFT" [ref=e3456] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/stationery_&_craft
+        - listitem [ref=e3457]:
+          - link "JAM" [ref=e3458] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/jam
+        - listitem [ref=e3459]:
+          - link "AIRCOOLER" [ref=e3460] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/aircooler
+        - listitem [ref=e3461]:
+          - link "POWER-BANKS" [ref=e3462] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/power-banks
+        - listitem [ref=e3463]:
+          - link "LASER_JET_PRINTER" [ref=e3464] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/laser_jet_printer
+        - listitem [ref=e3465]:
+          - link "WOMENS-LINGERIE-SLEEPWEAR" [ref=e3466] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/womens-lingerie-sleepwear
+        - listitem [ref=e3467]:
+          - link "ANNIVERSARY_GIFTS" [ref=e3468] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/anniversary_gifts
+        - listitem [ref=e3469]:
+          - link "UNANDUWA" [ref=e3470] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/unanduwa
+        - listitem [ref=e3471]:
+          - link "SSD" [ref=e3472] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ssd
+        - listitem [ref=e3473]:
+          - link "CHAMATHKA" [ref=e3474] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chamathka
+        - listitem [ref=e3475]:
+          - link "SUN_SHADES" [ref=e3476] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sun_shades
+        - listitem [ref=e3477]:
+          - link "HAIR DRYER" [ref=e3478] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hair_dryer
+        - listitem [ref=e3479]:
+          - link "GIRLSDRESS" [ref=e3480] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/girlsdress
+        - listitem [ref=e3481]:
+          - link "SAWS" [ref=e3482] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/saws
+        - listitem [ref=e3483]:
+          - link "ANTIQUE_FINISH_JEWELRY" [ref=e3484] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/antique_finish_jewelry
+        - listitem [ref=e3485]:
+          - link "HAIR_REMOVERS" [ref=e3486] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hair_removers
+        - listitem [ref=e3487]:
+          - link "ASUS" [ref=e3488] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/asus
+        - listitem [ref=e3489]:
+          - link "TREATS" [ref=e3490] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/treats
+        - listitem [ref=e3491]:
+          - link "SEX_TOYS_FOR_MEN" [ref=e3492] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sex_toys_for_men
+        - listitem [ref=e3493]:
+          - link "DARTS" [ref=e3494] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/darts
+        - listitem [ref=e3495]:
+          - link "HOME_LIFESTYLE" [ref=e3496] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/home_lifestyle
+        - listitem [ref=e3497]:
+          - link "SWIMMING" [ref=e3498] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/swimming
+        - listitem [ref=e3499]:
+          - link "ART_DESIGN" [ref=e3500] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/art_design
+        - listitem [ref=e3501]:
+          - link "FADNA" [ref=e3502] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fadna
+        - listitem [ref=e3503]:
+          - link "TRIMMER" [ref=e3504] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/trimmer
+        - listitem [ref=e3505]:
+          - link "WALKERS" [ref=e3506] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/walkers
+        - listitem [ref=e3507]:
+          - link "SNAKE_PLANT" [ref=e3508] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/snake_plant
+        - listitem [ref=e3509]:
+          - link "ROUTER" [ref=e3510] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/router
+        - listitem [ref=e3511]:
+          - link "NIGHTWEAR" [ref=e3512] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nightwear
+        - listitem [ref=e3513]:
+          - link "ROOTS" [ref=e3514] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/roots
+        - listitem [ref=e3515]:
+          - link "DOG_FOOD" [ref=e3516] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dog_food
+        - listitem [ref=e3517]:
+          - link "HANDLOOM SAREE" [ref=e3518] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/handloom_saree
+        - listitem [ref=e3519]:
+          - link "LAMP" [ref=e3520] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lamp
+        - listitem [ref=e3521]:
+          - link "REALISTIC_VAGINA" [ref=e3522] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/realistic_vagina
+        - listitem [ref=e3523]:
+          - link "MOBILES-TABLETS" [ref=e3524] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mobiles-tablets
+        - listitem [ref=e3525]:
+          - link "AIR-CONDITIONING" [ref=e3526] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/air-conditioning
+        - listitem [ref=e3527]:
+          - link "CURD" [ref=e3528] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/curd
+        - listitem [ref=e3529]:
+          - link "TYRE_ZAPPER" [ref=e3530] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tyre_zapper
+        - listitem [ref=e3531]:
+          - link "STRAWBERRY" [ref=e3532] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/strawberry
+        - listitem [ref=e3533]:
+          - link "BEDDING_SETS" [ref=e3534] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bedding_sets
+        - listitem [ref=e3535]:
+          - link "OILY_SKIN" [ref=e3536] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/oily_skin
+        - listitem [ref=e3537]:
+          - link "CHRISTMAS GIFTS" [ref=e3538] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/christmas_gifts
+        - listitem [ref=e3539]:
+          - link "LINER" [ref=e3540] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/liner
+        - listitem [ref=e3541]:
+          - link "MEN" [ref=e3542] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/men
+        - listitem [ref=e3543]:
+          - link "DIAPERING-POTTY" [ref=e3544] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/diapering-potty
+        - listitem [ref=e3545]:
+          - link "LINEN" [ref=e3546] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/linen
+        - listitem [ref=e3547]:
+          - link "BDSM" [ref=e3548] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bdsm
+        - listitem [ref=e3549]:
+          - link "PASTA" [ref=e3550] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pasta
+        - listitem [ref=e3551]:
+          - link "DIMMER" [ref=e3552] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dimmer
+        - listitem [ref=e3553]:
+          - link "WATCHES" [ref=e3554] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/watches
+        - listitem [ref=e3555]:
+          - link "NEW_ZEALAND" [ref=e3556] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/new_zealand
+        - listitem [ref=e3557]:
+          - link "BABY_GEAR" [ref=e3558] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/baby_gear
+        - listitem [ref=e3559]:
+          - link "EARTH ESSENCE" [ref=e3560] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/earth_essence
+        - listitem [ref=e3561]:
+          - link "VANILLA CAKE" [ref=e3562] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vanilla_cake
+        - listitem [ref=e3563]:
+          - link "JEWELLERY" [ref=e3564] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/jewellery
+        - listitem [ref=e3565]:
+          - link "TIRAMISU" [ref=e3566] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tiramisu
+        - listitem [ref=e3567]:
+          - link "SLINGS" [ref=e3568] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/slings
+        - listitem [ref=e3569]:
+          - link "POWER_SUPPLY" [ref=e3570] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/power_supply
+        - listitem [ref=e3571]:
+          - link "SCENTED" [ref=e3572] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/scented
+        - listitem [ref=e3573]:
+          - link "SWEATSHIRTS" [ref=e3574] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sweatshirts
+        - listitem [ref=e3575]:
+          - link "BIRTHDAY DECORATIONS" [ref=e3576] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birthday_decorations
+        - listitem [ref=e3577]:
+          - link "DECORATIVE" [ref=e3578] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/decorative
+        - listitem [ref=e3579]:
+          - link "TONER" [ref=e3580] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/toner
+        - listitem [ref=e3581]:
+          - link "ONLINE_PHARMACY_WITH_HOME_DELIVERY" [ref=e3582] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/online_pharmacy_with_home_delivery
+        - listitem [ref=e3583]:
+          - link "DEODORANT" [ref=e3584] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/deodorant
+        - listitem [ref=e3585]:
+          - link "PREGRANCY" [ref=e3586] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pregrancy
+        - listitem [ref=e3587]:
+          - link "BEANS" [ref=e3588] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/beans
+        - listitem [ref=e3589]:
+          - link "ELECTRIC_KETTLES_THERMO_POTS" [ref=e3590] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/electric_kettles_thermo_pots
+        - listitem [ref=e3591]:
+          - link "SWEATER" [ref=e3592] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sweater
+        - listitem [ref=e3593]:
+          - link "PLATES" [ref=e3594] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/plates
+        - listitem [ref=e3595]:
+          - link "CHOCOLATE_FUDGE_CAKE" [ref=e3596] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chocolate_fudge_cake
+        - listitem [ref=e3597]:
+          - link "WIDE_LEG_PANT" [ref=e3598] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wide_leg_pant
+        - listitem [ref=e3599]:
+          - link "NIVIA" [ref=e3600] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nivia
+        - listitem [ref=e3601]:
+          - link "CANON" [ref=e3602] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/canon
+        - listitem [ref=e3603]:
+          - link "PENDAN" [ref=e3604] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pendan
+        - listitem [ref=e3605]:
+          - link "PERSONALIZED_GIFTS" [ref=e3606] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/personalized_gifts
+        - listitem [ref=e3607]:
+          - link "SCHOOL-SUPPLIES" [ref=e3608] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/school-supplies
+        - listitem [ref=e3609]:
+          - link "ABAYAS" [ref=e3610] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/abayas
+        - listitem [ref=e3611]:
+          - link "WRITING_PADS" [ref=e3612] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/writing_pads
+        - listitem [ref=e3613]:
+          - link "FUEL" [ref=e3614] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fuel
+        - listitem [ref=e3615]:
+          - link "RABBIT" [ref=e3616] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/rabbit
+        - listitem [ref=e3617]:
+          - link "NAPKIN_PAD" [ref=e3618] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/napkin_pad
+        - listitem [ref=e3619]:
+          - link "GIFT VOUCHERS" [ref=e3620] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_vouchers
+        - listitem [ref=e3621]:
+          - link "PREMIO" [ref=e3622] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/premio
+        - listitem [ref=e3623]:
+          - link "MICKEY_MOUSE" [ref=e3624] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mickey_mouse
+        - listitem [ref=e3625]:
+          - link "STRAP_ON" [ref=e3626] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/strap_on
+        - listitem [ref=e3627]:
+          - link "FRAME" [ref=e3628] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/frame
+        - listitem [ref=e3629]:
+          - link "COW" [ref=e3630] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cow
+        - listitem [ref=e3631]:
+          - link "TABLET_COVERS" [ref=e3632] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tablet_covers
+        - listitem [ref=e3633]:
+          - link "FESTIVE_WEAR" [ref=e3634] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/festive_wear
+        - listitem [ref=e3635]:
+          - link "ARRACK" [ref=e3636] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/arrack
+        - listitem [ref=e3637]:
+          - link "CHOCOLATE GIFT BOX" [ref=e3638] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chocolate_gift_box
+        - listitem [ref=e3639]:
+          - link "MINI BENTO CAKES" [ref=e3640] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mini_bento_cakes
+        - listitem [ref=e3641]:
+          - link "BONES" [ref=e3642] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bones
+        - listitem [ref=e3643]:
+          - link "ELECTRIC-KETTLES-THERMO-POTS" [ref=e3644] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/electric-kettles-thermo-pots
+        - listitem [ref=e3645]:
+          - link "COTTON_SAREE" [ref=e3646] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cotton_saree
+        - listitem [ref=e3647]:
+          - link "WASHING_MACHINES" [ref=e3648] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/washing_machines
+        - listitem [ref=e3649]:
+          - link "MENS" [ref=e3650] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mens
+        - listitem [ref=e3651]:
+          - link "MD" [ref=e3652] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/md
+        - listitem [ref=e3653]:
+          - link "SATIN_SAREES" [ref=e3654] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/satin_sarees
+        - listitem [ref=e3655]:
+          - link "NUTS_HAMPER" [ref=e3656] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nuts_hamper
+        - listitem [ref=e3657]:
+          - link "GLOW" [ref=e3658] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/glow
+        - listitem [ref=e3659]:
+          - link "4K_TV" [ref=e3660] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/4k_tv
+        - listitem [ref=e3661]:
+          - link "NOTE BOOK" [ref=e3662] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/note_book
+        - listitem [ref=e3663]:
+          - link "BABY_OILS" [ref=e3664] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/baby_oils
+        - listitem [ref=e3665]:
+          - link "TOYOTA_RAIZE" [ref=e3666] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/toyota_raize
+        - listitem [ref=e3667]:
+          - link "SCREEN_PROTECTORS" [ref=e3668] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/screen_protectors
+        - listitem [ref=e3669]:
+          - link "HIGH_WAIST_PANT" [ref=e3670] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/high_waist_pant
+        - listitem [ref=e3671]:
+          - link "MILK POWDER" [ref=e3672] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/milk_powder
+        - listitem [ref=e3673]:
+          - link "LEGAL" [ref=e3674] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/legal
+        - listitem [ref=e3675]:
+          - link "RADIATOR" [ref=e3676] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/radiator
+        - listitem [ref=e3677]:
+          - link "GIFT_SETS_FOR_HER" [ref=e3678] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_sets_for_her
+        - listitem [ref=e3679]:
+          - link "FOR_MOTHER" [ref=e3680] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/for_mother
+        - listitem [ref=e3681]:
+          - link "DRYER" [ref=e3682] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dryer
+        - listitem [ref=e3683]:
+          - link "LAPTOP" [ref=e3684] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/laptop
+        - listitem [ref=e3685]:
+          - link "LP" [ref=e3686] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lp
+        - listitem [ref=e3687]:
+          - link "JEWELRY" [ref=e3688] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/jewelry
+        - listitem [ref=e3689]:
+          - link "SKIN-CARE" [ref=e3690] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/skin-care
+        - listitem [ref=e3691]:
+          - link "COOLING-HEATING" [ref=e3692] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cooling-heating
+        - listitem [ref=e3693]:
+          - link "CALLUS_REMOVER" [ref=e3694] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/callus_remover
+        - listitem [ref=e3695]:
+          - link "FLASHES" [ref=e3696] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/flashes
+        - listitem [ref=e3697]:
+          - link "LENOVO" [ref=e3698] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lenovo
+        - listitem [ref=e3699]:
+          - link "STATIONERY-CRAFT" [ref=e3700] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/stationery-craft
+        - listitem [ref=e3701]:
+          - link "LG" [ref=e3702] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lg
+        - listitem [ref=e3703]:
+          - link "AIR_CONDITIONER" [ref=e3704] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/air_conditioner
+        - listitem [ref=e3705]:
+          - link "GIFT BOX" [ref=e3706] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_box
+        - listitem [ref=e3707]:
+          - link "K-POP" [ref=e3708] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/k-pop
+        - listitem [ref=e3709]:
+          - link "DECORATIONS" [ref=e3710] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/decorations
+        - listitem [ref=e3711]:
+          - link "JUICERS" [ref=e3712] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/juicers
+        - listitem [ref=e3713]:
+          - link "PUZZLE" [ref=e3714] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/puzzle
+        - listitem [ref=e3715]:
+          - link "ELDER_CARE" [ref=e3716] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/elder_care
+        - listitem [ref=e3717]:
+          - link "FUDGE" [ref=e3718] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fudge
+        - listitem [ref=e3719]:
+          - link "WALL CLOCK" [ref=e3720] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wall_clock
+        - listitem [ref=e3721]:
+          - link "RAZORS" [ref=e3722] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/razors
+        - listitem [ref=e3723]:
+          - link "UTILITIES" [ref=e3724] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/utilities
+        - listitem [ref=e3725]:
+          - link "FOUNDATION" [ref=e3726] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/foundation
+        - listitem [ref=e3727]:
+          - link "BASKET" [ref=e3728] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/basket
+        - listitem [ref=e3729]:
+          - link "TOBLERONE" [ref=e3730] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/toblerone
+        - listitem [ref=e3731]:
+          - link "TABLECLOTH" [ref=e3732] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tablecloth
+        - listitem [ref=e3733]:
+          - link "CINNAMONGRAND" [ref=e3734] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cinnamongrand
+        - listitem [ref=e3735]:
+          - link "EDUCATION" [ref=e3736] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/education
+        - listitem [ref=e3737]:
+          - link "CAPTAIN_AMERICA" [ref=e3738] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/captain_america
+        - listitem [ref=e3739]:
+          - link "UNIBALL" [ref=e3740] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/uniball
+        - listitem [ref=e3741]:
+          - link "JANET" [ref=e3742] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/janet
+        - listitem [ref=e3743]:
+          - link "CHRISTMAS" [ref=e3744] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/christmas
+        - listitem [ref=e3745]:
+          - link "IKEA" [ref=e3746] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ikea
+        - listitem [ref=e3747]:
+          - link "COMIC_BOOKS" [ref=e3748] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/comic_books
+        - listitem [ref=e3749]:
+          - link "GEOMETRY_SETS" [ref=e3750] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/geometry_sets
+        - listitem [ref=e3751]:
+          - link "MOM_TO_BE" [ref=e3752] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mom_to_be
+        - listitem [ref=e3753]:
+          - link "CAKES" [ref=e3754] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cakes
+        - listitem [ref=e3755]:
+          - link "MUSIC_CDS" [ref=e3756] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/music_cds
+        - listitem [ref=e3757]:
+          - link "BEAUTY_TOOLS_AND_ACCESSORIES" [ref=e3758] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/beauty_tools_and_accessories
+        - listitem [ref=e3759]:
+          - link "GRANOLA" [ref=e3760] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/granola
+        - listitem [ref=e3761]:
+          - link "INSTANT_MIXES" [ref=e3762] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/instant_mixes
+        - listitem [ref=e3763]:
+          - link "FASHION_GIFT_SETS" [ref=e3764] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fashion_gift_sets
+        - listitem [ref=e3765]:
+          - link "ADULT TOYS" [ref=e3766] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/adult_toys
+        - listitem [ref=e3767]:
+          - link "BEDROOM_FURNITURE" [ref=e3768] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bedroom_furniture
+        - listitem [ref=e3769]:
+          - link "ANKLE_SOCK" [ref=e3770] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ankle_sock
+        - listitem [ref=e3771]:
+          - link "PENCILS_ART" [ref=e3772] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pencils_art
+        - listitem [ref=e3773]:
+          - link "STORAGE" [ref=e3774] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/storage
+        - listitem [ref=e3775]:
+          - link "PEAS" [ref=e3776] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/peas
+        - listitem [ref=e3777]:
+          - link "SOUNDBAR" [ref=e3778] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/soundbar
+        - listitem [ref=e3779]:
+          - link "BLANKET" [ref=e3780] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/blanket
+        - listitem [ref=e3781]:
+          - link "TRAVELLING_BAGS_SRI_LANKA" [ref=e3782] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/travelling_bags_sri_lanka
+        - listitem [ref=e3783]:
+          - link "TV PRICES SRI LANKA" [ref=e3784] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tv_prices_sri_lanka
+        - listitem [ref=e3785]:
+          - link "FLASH_DRIVE" [ref=e3786] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/flash_drive
+        - listitem [ref=e3787]:
+          - link "BAGS" [ref=e3788] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bags
+        - listitem [ref=e3789]:
+          - link "CREAM" [ref=e3790] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cream
+        - listitem [ref=e3791]:
+          - link "NUTRITION" [ref=e3792] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nutrition
+        - listitem [ref=e3793]:
+          - link "TV PRICES SRI LANKA" [ref=e3794] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tv_prices_sri_lanka
+        - listitem [ref=e3795]:
+          - link "AVOCADOS" [ref=e3796] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/avocados
+        - listitem [ref=e3797]:
+          - link "SPORTS-TRAVEL" [ref=e3798] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sports-travel
+        - listitem [ref=e3799]:
+          - link "BATHROOM" [ref=e3800] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bathroom
+        - listitem [ref=e3801]:
+          - link "TOILET" [ref=e3802] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/toilet
+        - listitem [ref=e3803]:
+          - link "FRAMES" [ref=e3804] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/frames
+        - listitem [ref=e3805]:
+          - link "GIFT" [ref=e3806] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift
+        - listitem [ref=e3807]:
+          - link "CINNAMON" [ref=e3808] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cinnamon
+        - listitem [ref=e3809]:
+          - link "E VOUCHERS" [ref=e3810] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/e_vouchers
+        - listitem [ref=e3811]:
+          - link "DIPS" [ref=e3812] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dips
+        - listitem [ref=e3813]:
+          - link "MOBILE PHONES" [ref=e3814] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mobile_phones
+        - listitem [ref=e3815]:
+          - link "CONNECTERS" [ref=e3816] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/connecters
+        - listitem [ref=e3817]:
+          - link "BUTTER" [ref=e3818] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/butter
+        - listitem [ref=e3819]:
+          - link "SCRUBS" [ref=e3820] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/scrubs
+        - listitem [ref=e3821]:
+          - link "ACNE" [ref=e3822] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/acne
+        - listitem [ref=e3823]:
+          - link "KRAFT CHEESE" [ref=e3824] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kraft_cheese
+        - listitem [ref=e3825]:
+          - link "FLORAL" [ref=e3826] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/floral
+        - listitem [ref=e3827]:
+          - link "SCOOTER" [ref=e3828] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/scooter
+        - listitem [ref=e3829]:
+          - link "MONEY" [ref=e3830] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/money
+        - listitem [ref=e3831]:
+          - link "GAME_STORE" [ref=e3832] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/game_store
+        - listitem [ref=e3833]:
+          - link "SMART" [ref=e3834] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/smart
+        - listitem [ref=e3835]:
+          - link "SHIRT" [ref=e3836] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/shirt
+        - listitem [ref=e3837]:
+          - link "AIR_FRESHENERS" [ref=e3838] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/air_fresheners
+        - listitem [ref=e3839]:
+          - link "WIRELESS MOUSE" [ref=e3840] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wireless_mouse
+        - listitem [ref=e3841]:
+          - link "WAIST" [ref=e3842] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/waist
+        - listitem [ref=e3843]:
+          - link "TOOLS_AND_MACHINERY" [ref=e3844] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tools_and_machinery
+        - listitem [ref=e3845]:
+          - link "PETAL" [ref=e3846] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/petal
+        - listitem [ref=e3847]:
+          - link "TEXT_BOOK" [ref=e3848] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/text_book
+        - listitem [ref=e3849]:
+          - link "ORGANZA_SAREES" [ref=e3850] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/organza_sarees
+        - listitem [ref=e3851]:
+          - link "DECORATION" [ref=e3852] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/decoration
+        - listitem [ref=e3853]:
+          - link "SWITCHES_PRICE_IN_SRI_LANKA" [ref=e3854] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/switches_price_in_sri_lanka
+        - listitem [ref=e3855]:
+          - link "BIRTHDAY_CAKE_FOR_DAD" [ref=e3856] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birthday_cake_for_dad
+        - listitem [ref=e3857]:
+          - link "FRAGRANCES" [ref=e3858] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fragrances
+        - listitem [ref=e3859]:
+          - link "HP" [ref=e3860] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hp
+        - listitem [ref=e3861]:
+          - link "DRONE" [ref=e3862] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/drone
+        - listitem [ref=e3863]:
+          - link "LADIES_WATCHES" [ref=e3864] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ladies_watches
+        - listitem [ref=e3865]:
+          - link "FORMULA-1" [ref=e3866] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/formula-1
+        - listitem [ref=e3867]:
+          - link "EGGS" [ref=e3868] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/eggs
+        - listitem [ref=e3869]:
+          - link "ATAPIRIKARA" [ref=e3870] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/atapirikara
+        - listitem [ref=e3871]:
+          - link "NUMBER_SETS" [ref=e3872] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/number_sets
+        - listitem [ref=e3873]:
+          - link "CHRISTMAS CAKES" [ref=e3874] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/christmas_cakes
+        - listitem [ref=e3875]:
+          - link "DEVILLED_CHICKEN" [ref=e3876] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/devilled_chicken
+        - listitem [ref=e3877]:
+          - link "HAND_PUPPET" [ref=e3878] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hand_puppet
+        - listitem [ref=e3879]:
+          - link "ELECTRIC_KETTLES_&_THERMO_POTS" [ref=e3880] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/electric_kettles_&_thermo_pots
+        - listitem [ref=e3881]:
+          - link "CHASTITY_CAGE" [ref=e3882] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chastity_cage
+        - listitem [ref=e3883]:
+          - link "CARGO_PANT" [ref=e3884] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cargo_pant
+        - listitem [ref=e3885]:
+          - link "POWER" [ref=e3886] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/power
+        - listitem [ref=e3887]:
+          - link "CUFFLINKS" [ref=e3888] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cufflinks
+        - listitem [ref=e3889]:
+          - link "CHANTS" [ref=e3890] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chants
+        - listitem [ref=e3891]:
+          - link "WAFERS" [ref=e3892] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wafers
+        - listitem [ref=e3893]:
+          - link "SMART_SWITCHES" [ref=e3894] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/smart_switches
+        - listitem [ref=e3895]:
+          - link "PLASTIC_LUNCH_BOX" [ref=e3896] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/plastic_lunch_box
+        - listitem [ref=e3897]:
+          - link "ORIENT" [ref=e3898] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/orient
+        - listitem [ref=e3899]:
+          - link "CUCUMBER" [ref=e3900] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cucumber
+        - listitem [ref=e3901]:
+          - link "KIWI" [ref=e3902] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kiwi
+        - listitem [ref=e3903]:
+          - link "CELLOPHANE_SHEETS" [ref=e3904] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cellophane_sheets
+        - listitem [ref=e3905]:
+          - link "TABLET" [ref=e3906] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tablet
+        - listitem [ref=e3907]:
+          - link "PUZZLES" [ref=e3908] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/puzzles
+        - listitem [ref=e3909]:
+          - link "TABLES" [ref=e3910] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tables
+        - listitem [ref=e3911]:
+          - link "MUGS" [ref=e3912] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mugs
+        - listitem [ref=e3913]:
+          - link "BLUELIGHT_GLASSES" [ref=e3914] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bluelight_glasses
+        - listitem [ref=e3915]:
+          - link "RIBBED_TOP" [ref=e3916] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ribbed_top
+        - listitem [ref=e3917]:
+          - link "PLEATED_SKIRT" [ref=e3918] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pleated_skirt
+        - listitem [ref=e3919]:
+          - link "TAMIL" [ref=e3920] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tamil
+        - listitem [ref=e3921]:
+          - link "BIRTHDAY CAKE CHOCOLATE" [ref=e3922] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birthday_cake_chocolate
+        - listitem [ref=e3923]:
+          - link "HAND_POUCH" [ref=e3924] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hand_pouch
+        - listitem [ref=e3925]:
+          - link "SALT" [ref=e3926] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/salt
+        - listitem [ref=e3927]:
+          - link "LIGHTING" [ref=e3928] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/lighting
+        - listitem [ref=e3929]:
+          - link "YOGHURT" [ref=e3930] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/yoghurt
+        - listitem [ref=e3931]:
+          - link "ONLINE_ELECTRONICS_AND_GADGETS" [ref=e3932] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/online_electronics_and_gadgets
+        - listitem [ref=e3933]:
+          - link "BATIK_SAREES" [ref=e3934] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/batik_sarees
+        - listitem [ref=e3935]:
+          - link "CONDOM" [ref=e3936] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/condom
+        - listitem [ref=e3937]:
+          - link "RICHLIFE" [ref=e3938] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/richlife
+        - listitem [ref=e3939]:
+          - link "CORPORATE" [ref=e3940] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/corporate
+        - listitem [ref=e3941]:
+          - link "DESKTOP_DECOR" [ref=e3942] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/desktop_decor
+        - listitem [ref=e3943]:
+          - link "MELONS" [ref=e3944] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/melons
+        - listitem [ref=e3945]:
+          - link "DARK CHOCOLATE" [ref=e3946] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dark_chocolate
+        - listitem [ref=e3947]:
+          - link "TEXTBOOKS" [ref=e3948] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/textbooks
+        - listitem [ref=e3949]:
+          - link "PILL_CONTAINERS" [ref=e3950] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pill_containers
+        - listitem [ref=e3951]:
+          - link "HANDBAGS_AND_TRAVEL_ACCESSORIES" [ref=e3952] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/handbags_and_travel_accessories
+        - listitem [ref=e3953]:
+          - link "CAR_ACCESSORIES" [ref=e3954] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/car_accessories
+        - listitem [ref=e3955]:
+          - link "WEDGES" [ref=e3956] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wedges
+        - listitem [ref=e3957]:
+          - link "LEATHER_WALLET" [ref=e3958] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/leather_wallet
+        - listitem [ref=e3959]:
+          - link "CRAB" [ref=e3960] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/crab
+        - listitem [ref=e3961]:
+          - link "NUTELLA" [ref=e3962] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nutella
+        - listitem [ref=e3963]:
+          - link "GIFT PACK" [ref=e3964] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_pack
+        - listitem [ref=e3965]:
+          - link "RIDING_GEAR" [ref=e3966] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/riding_gear
+        - listitem [ref=e3967]:
+          - link "CAKE AND FLOWERS" [ref=e3968] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cake_and_flowers
+        - listitem [ref=e3969]:
+          - link "BABY" [ref=e3970] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/baby
+        - listitem [ref=e3971]:
+          - link "HAMMER" [ref=e3972] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hammer
+        - listitem [ref=e3973]:
+          - link "STRAWBERRY CAKE" [ref=e3974] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/strawberry_cake
+        - listitem [ref=e3975]:
+          - link "PAJAMAS_SET" [ref=e3976] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pajamas_set
+        - listitem [ref=e3977]:
+          - link "CARTOON" [ref=e3978] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cartoon
+        - listitem [ref=e3979]:
+          - link "KEYBOARD" [ref=e3980] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/keyboard
+        - listitem [ref=e3981]:
+          - link "SHIFT_DRESS" [ref=e3982] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/shift_dress
+        - listitem [ref=e3983]:
+          - link "BIRTHDAY CANDLES" [ref=e3984] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birthday_candles
+        - listitem [ref=e3985]:
+          - link "STROKERS" [ref=e3986] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/strokers
+        - listitem [ref=e3987]:
+          - link "GIFT_FOR_WIFE" [ref=e3988] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gift_for_wife
+        - listitem [ref=e3989]:
+          - link "ENGLISH_TEXT_BOOKS" [ref=e3990] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/english_text_books
+        - listitem [ref=e3991]:
+          - link "MUSCLE_SUPPORT_TAPE" [ref=e3992] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/muscle_support_tape
+        - listitem [ref=e3993]:
+          - link "OUTLET" [ref=e3994] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/outlet
+        - listitem [ref=e3995]:
+          - link "SOCKS" [ref=e3996] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/socks
+        - listitem [ref=e3997]:
+          - link "CPU_COOLER" [ref=e3998] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cpu_cooler
+        - listitem [ref=e3999]:
+          - link "YOUNG" [ref=e4000] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/young
+        - listitem [ref=e4001]:
+          - link "WATER_PURIFIER" [ref=e4002] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/water_purifier
+        - listitem [ref=e4003]:
+          - link "SMIGGLE" [ref=e4004] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/smiggle
+        - listitem [ref=e4005]:
+          - link "SEX_TOYS_FOR_WOMEN" [ref=e4006] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sex_toys_for_women
+        - listitem [ref=e4007]:
+          - link "LEARNING_TOYS" [ref=e4008] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/learning_toys
+        - listitem [ref=e4009]:
+          - link "WHITEBOARD" [ref=e4010] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/whiteboard
+        - listitem [ref=e4011]:
+          - link "CLOCK" [ref=e4012] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/clock
+        - listitem [ref=e4013]:
+          - link "VIBRATOR" [ref=e4014] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vibrator
+        - listitem [ref=e4015]:
+          - link "ANCHOR" [ref=e4016] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/anchor
+        - listitem [ref=e4017]:
+          - link "BIRTHDAY_CAKE_FOR_MOM" [ref=e4018] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birthday_cake_for_mom
+        - listitem [ref=e4019]:
+          - link "SHAWARMA" [ref=e4020] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/shawarma
+        - listitem [ref=e4021]:
+          - link "CHEESE" [ref=e4022] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cheese
+        - listitem [ref=e4023]:
+          - link "MISSHA" [ref=e4024] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/missha
+        - listitem [ref=e4025]:
+          - link "KIDS-CHAIRS" [ref=e4026] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kids-chairs
+        - listitem [ref=e4027]:
+          - link "KITS" [ref=e4028] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kits
+        - listitem [ref=e4029]:
+          - link "BEE_HONEY" [ref=e4030] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bee_honey
+        - listitem [ref=e4031]:
+          - link "PHOTO FRAME" [ref=e4032] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/photo_frame
+        - listitem [ref=e4033]:
+          - link "KITCHEN_GADGETS" [ref=e4034] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kitchen_gadgets
+        - listitem [ref=e4035]:
+          - link "MOTHER BIRTHDAY" [ref=e4036] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mother_birthday
+        - listitem [ref=e4037]:
+          - link "PUBLIC_SPEAKING" [ref=e4038] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/public_speaking
+        - listitem [ref=e4039]:
+          - link "SUN_LIGHT" [ref=e4040] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/sun_light
+        - listitem [ref=e4041]:
+          - link "MOTOR_CYCLE" [ref=e4042] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/motor_cycle
+        - listitem [ref=e4043]:
+          - link "STRINGS" [ref=e4044] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/strings
+        - listitem [ref=e4045]:
+          - link "CANDY" [ref=e4046] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/candy
+        - listitem [ref=e4047]:
+          - link "ELDERS'_DAY" [ref=e4048] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/elders'_day
+        - listitem [ref=e4049]:
+          - link "WIFE_APPRECIATION_DAY" [ref=e4050] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/wife_appreciation_day
+        - listitem [ref=e4051]:
+          - link "TENNIS" [ref=e4052] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/tennis
+        - listitem [ref=e4053]:
+          - link "OLIVE" [ref=e4054] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/olive
+        - listitem [ref=e4055]:
+          - link "TELESCOPE" [ref=e4056] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/telescope
+        - listitem [ref=e4057]:
+          - link "VEGETABLE" [ref=e4058] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/vegetable
+        - listitem [ref=e4059]:
+          - link "CO_ORDS" [ref=e4060] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/co_ords
+        - listitem [ref=e4061]:
+          - link "ANKLETS" [ref=e4062] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/anklets
+        - listitem [ref=e4063]:
+          - link "PLAYSETS" [ref=e4064] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/playsets
+        - listitem [ref=e4065]:
+          - link "FAIRY_LIGHT" [ref=e4066] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fairy_light
+        - listitem [ref=e4067]:
+          - link "FRUIT BASKET" [ref=e4068] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fruit_basket
+        - listitem [ref=e4069]:
+          - link "EXERCISE-MATS" [ref=e4070] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/exercise-mats
+        - listitem [ref=e4071]:
+          - link "GOLF" [ref=e4072] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/golf
+        - listitem [ref=e4073]:
+          - link "GOLD" [ref=e4074] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/gold
+        - listitem [ref=e4075]:
+          - link "LEAVES" [ref=e4076] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/leaves
+        - listitem [ref=e4077]:
+          - link "SEAFOOD" [ref=e4078] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/seafood
+        - listitem [ref=e4079]:
+          - link "NINTENDO_SWITCH_GAMES" [ref=e4080] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nintendo_switch_games
+        - listitem [ref=e4081]:
+          - link "DOVE" [ref=e4082] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dove
+        - listitem [ref=e4083]:
+          - link "ENSURE" [ref=e4084] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ensure
+        - listitem [ref=e4085]:
+          - link "SCHOOL BAG" [ref=e4086] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/school_bag
+        - listitem [ref=e4087]:
+          - link "BAJAJ" [ref=e4088] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bajaj
+        - listitem [ref=e4089]:
+          - link "GROCERIES" [ref=e4090] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/groceries
+        - listitem [ref=e4091]:
+          - link "SMALL" [ref=e4092] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/small
+        - listitem [ref=e4093]:
+          - link "KEWILI" [ref=e4094] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/kewili
+        - listitem [ref=e4095]:
+          - link "SPA VOUCHERS" [ref=e4096] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/spa_vouchers
+        - listitem [ref=e4097]:
+          - link "JEWELERY" [ref=e4098] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/jewelery
+        - listitem [ref=e4099]:
+          - link "FAST" [ref=e4100] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fast
+        - listitem [ref=e4101]:
+          - link "DOORS" [ref=e4102] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/doors
+        - listitem [ref=e4103]:
+          - link "COLLAR" [ref=e4104] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/collar
+        - listitem [ref=e4105]:
+          - link "PACKAGE_PICKUP" [ref=e4106] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/package_pickup
+        - listitem [ref=e4107]:
+          - link "EARPHONES" [ref=e4108] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/earphones
+        - listitem [ref=e4109]:
+          - link "ZIPPO" [ref=e4110] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/zippo
+        - listitem [ref=e4111]:
+          - link "AIR FRESHENER" [ref=e4112] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/air_freshener
+        - listitem [ref=e4113]:
+          - link "BIRTHDAY_CAKE_FOR_HUSBAND" [ref=e4114] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/birthday_cake_for_husband
+        - listitem [ref=e4115]:
+          - link "BOWLS" [ref=e4116] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bowls
+        - listitem [ref=e4117]:
+          - link "TRACKERS" [ref=e4118] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/trackers
+        - listitem [ref=e4119]:
+          - link "CHOCOLATE CAKE" [ref=e4120] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/chocolate_cake
+        - listitem [ref=e4121]:
+          - link "SCALE" [ref=e4122] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/scale
+        - listitem [ref=e4123]:
+          - link "ACCESSORIES_ACCENTS" [ref=e4124] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/accessories_accents
+        - listitem [ref=e4125]:
+          - link "FOLDERS" [ref=e4126] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/folders
+        - listitem [ref=e4127]:
+          - link "HOMINS" [ref=e4128] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/homins
+        - listitem [ref=e4129]:
+          - link "SPEARMINT_TEA" [ref=e4130] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/spearmint_tea
+        - listitem [ref=e4131]:
+          - link "PIZZA" [ref=e4132] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pizza
+        - listitem [ref=e4133]:
+          - link "CONDIMENT-DRESSING" [ref=e4134] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/condiment-dressing
+        - listitem [ref=e4135]:
+          - link "PENDANTS" [ref=e4136] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pendants
+        - listitem [ref=e4137]:
+          - link "FRUITS" [ref=e4138] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/fruits
+        - listitem [ref=e4139]:
+          - link "COVERS" [ref=e4140] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/covers
+        - listitem [ref=e4141]:
+          - link "ANODS" [ref=e4142] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/anods
+        - listitem [ref=e4143]:
+          - link "JACKETS" [ref=e4144] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/jackets
+        - listitem [ref=e4145]:
+          - link "EARBUD" [ref=e4146] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/earbud
+        - listitem [ref=e4147]:
+          - link "GREEN CABIN" [ref=e4148] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/green_cabin
+        - listitem [ref=e4149]:
+          - link "ELLIPTICALS" [ref=e4150] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/ellipticals
+        - listitem [ref=e4151]:
+          - link "NIGHT-CREAM" [ref=e4152] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/night-cream
+        - listitem [ref=e4153]:
+          - link "HANDSFREE" [ref=e4154] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/handsfree
+        - listitem [ref=e4155]:
+          - link "ASSORTMENT_BOX" [ref=e4156] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/assortment_box
+        - listitem [ref=e4157]:
+          - link "COUNTING_TOOLS" [ref=e4158] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/counting_tools
+        - listitem [ref=e4159]:
+          - link "MIXED" [ref=e4160] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/mixed
+        - listitem [ref=e4161]:
+          - link "NESCAFE" [ref=e4162] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/nescafe
+        - listitem [ref=e4163]:
+          - link "GEEMY" [ref=e4164] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/geemy
+        - listitem [ref=e4165]:
+          - link "SAMSUNG" [ref=e4166] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/samsung
+        - listitem [ref=e4167]:
+          - link "FLATS" [ref=e4168] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/flats
+        - listitem [ref=e4169]:
+          - link "DRESS" [ref=e4170] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/dress
+        - listitem [ref=e4171]:
+          - link "BASEBALL_SOFTBALL" [ref=e4172] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/baseball_softball
+        - listitem [ref=e4173]:
+          - link "WOMEN" [ref=e4174] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/women
+        - listitem [ref=e4175]:
+          - link "TEDDY" [ref=e4176] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/teddy
+        - listitem [ref=e4177]:
+          - link "SUPERSUN" [ref=e4178] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/supersun
+        - listitem [ref=e4179]:
+          - link "EPSON_PRINTER" [ref=e4180] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/epson_printer
+        - listitem [ref=e4181]:
+          - link "WOODAPPLE" [ref=e4182] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/woodapple
+        - listitem [ref=e4183]:
+          - link "ACRYLIC_PAINT_TUBES" [ref=e4184] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/acrylic_paint_tubes
+        - listitem [ref=e4185]:
+          - link "MICROWAVES" [ref=e4186] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/microwaves
+        - listitem [ref=e4187]:
+          - link "AIR_CONDITION" [ref=e4188] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/air_condition
+        - listitem [ref=e4189]:
+          - link "CUTTING" [ref=e4190] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cutting
+        - listitem [ref=e4191]:
+          - link "ROLE_PLAYING" [ref=e4192] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/role_playing
+        - listitem [ref=e4193]:
+          - link "PEDICURE" [ref=e4194] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/pedicure
+        - listitem [ref=e4195]:
+          - link "MEAT" [ref=e4196] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/meat
+        - listitem [ref=e4197]:
+          - link "STONE_N_STRING" [ref=e4198] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/stone_n_string
+        - listitem [ref=e4199]:
+          - link "HAMPERS" [ref=e4200] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/hampers
+        - listitem [ref=e4201]:
+          - link "GET_WELL_SOON_CARDS" [ref=e4202] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/get_well_soon_cards
+        - listitem [ref=e4203]:
+          - link "PEANUT BUTTER" [ref=e4204] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/peanut_butter
+        - listitem [ref=e4205]:
+          - link "BEDDING_BATH" [ref=e4206] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/bedding_bath
+        - listitem [ref=e4207]:
+          - link "CINNAMON_LAKESIDE" [ref=e4208] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/cinnamon_lakeside
+        - listitem [ref=e4209]:
+          - link "MANCHESTER CIGARETTES" [ref=e4210] [cursor=pointer]:
+            - /url: https://www.kapruka.com/find_online/manchester_cigarettes
+```
+
+# Test source
+
+```ts
+  1  | import {Page,Locator,expect} from '@playwright/test';
+  2  | import {BasePage_SOLID } from './BasePage_SOLID';
+  3  | 
+  4  | export class ScrollPage extends BasePage_SOLID
+  5  | {
+  6  |     readonly bestSellerHeader:Locator;
+  7  |     readonly eventsLink:Locator;
+  8  |     readonly specialEventsHeader:Locator;
+  9  | 
+  10 |     constructor(page:Page)
+  11 |     {
+  12 |         super(page);
+  13 |         this.bestSellerHeader=page.getByRole('heading',{name: 'Gifts to Sri Lanka - Best Sellers'});
+  14 |         this.eventsLink=page.getByRole('link',({name:'Events'}))
+  15 |         this.specialEventsHeader=page.getByRole('heading',{name:'Special Events'})
+  16 |     }
+  17 |     async goto():Promise<void>
+  18 |     {
+  19 |         await this.navigate('/');     
+  20 |     }
+  21 | 
+  22 |     async gotoEventsPage():Promise<void>
+  23 |     {
+  24 |         await this.navigate('/shops/events_home.jsp');
+  25 |     }
+  26 |    
+  27 |      async isLoaded(): Promise<void> 
+  28 |     {
+> 29 |         await this.bestSellerHeader.waitFor({state:"visible"});
+     |                                     ^ Error: locator.waitFor: Test timeout of 30000ms exceeded.
+  30 |         await this.eventsLink.waitFor({state:'visible'});      
+  31 |     }
+  32 | 
+  33 |        async scrollToHeader():Promise<void>
+  34 |     {
+  35 |         await this.scrollToLocator(this.bestSellerHeader);
+  36 |     } 
+  37 | 
+  38 |        async scrollToEventHeader():Promise<void>
+  39 |     {
+  40 |         await this.click(this.eventsLink);
+  41 |         await this.scrollToLocator(this.specialEventsHeader);
+  42 |     } 
+  43 |     }
+```

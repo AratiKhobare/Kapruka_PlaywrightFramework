@@ -27,5 +27,10 @@ export abstract class BasePage_SOLID
         await locator.waitFor({state:'visible'});
         await locator.fill(value);
     }
+
+    async scrollToLocator(locator:Locator):Promise<void>
+    {
+        await locator.scrollIntoViewIfNeeded();
+    }
     abstract isLoaded():Promise<void>;
 }
