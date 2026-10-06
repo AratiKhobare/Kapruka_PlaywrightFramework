@@ -14,8 +14,8 @@ node_modules/
 !env.example
 
 # Allure
-allure_results/
-allure_report/
+allure-results/
+allure-report/
 
 # VS Code
 .vscode/
